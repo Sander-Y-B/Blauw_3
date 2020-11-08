@@ -19,9 +19,8 @@ public class Enemy : MonoBehaviour
     public float walkPointRange;
 
     //Attacking
-    public float timeBetweenAttacks;
+    public float timeBetweenAttacks, damage;
     bool alreadyAttacked;
-    public GameObject projectile;
 
     //States
     public float sightRange, attackRange;
@@ -29,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("PlayerBody").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -105,7 +104,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
         print("attaaack!");
     }
