@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class RangedEnemy : Enemy
 {
+    public GameObject bulletPrefab, currentBullet;
+    public float bulletSpeed;
     public override void Attack()
     {
-        //shoot projectile
+        currentBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        currentBullet.GetComponent<Projectile>().speed = bulletSpeed;
+        currentBullet.GetComponent<Projectile>().damage = damage;
     }
 }
