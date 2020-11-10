@@ -5,7 +5,6 @@ using UnityEngine;
 public class DungeonGeneration : DungeonGeneratorMaster
 {
     public GameObject[] connectionPoints;
-    private int spawnRoom;
 
     void Start()
     {
@@ -23,10 +22,10 @@ public class DungeonGeneration : DungeonGeneratorMaster
         {
             foreach (GameObject connectionPoint in connectionPoints)
             {
-                spawnRoom = Random.Range(0, 2);
-                if (spawnRoom == 0)
+                if (Random.Range(0, 3) == 0)
                 {
-                    
+
+                    roomsBuilt++;
                 }
             }
         }
@@ -36,7 +35,11 @@ public class DungeonGeneration : DungeonGeneratorMaster
     {
         foreach (GameObject connectionPoint in connectionPoints)
         {
-            
+            RaycastHit hit;
+            if(Physics.Raycast(connectionPoint.transform.position, connectionPoint.transform.TransformDirection(Vector3.forward), out hit, 5))
+            {
+                connectionPoint.SetActive(true);
+            }
         }
     }
 }
