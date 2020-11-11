@@ -13,6 +13,8 @@ public class GunManager : MonoBehaviour
     GameObject shotPoint;
     GameObject currentGunBody;
 
+    public GameObject bullet;
+
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class GunManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SpawnNewGun();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
         }
     }
 
