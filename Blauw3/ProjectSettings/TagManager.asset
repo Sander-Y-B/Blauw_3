@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Connector
+  - GunLoaderPoint
+  - GunBarrelPoint
+  - ShotPoint
   layers:
   - Default
   - TransparentFX
