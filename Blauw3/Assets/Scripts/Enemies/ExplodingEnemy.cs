@@ -12,8 +12,9 @@ public class ExplodingEnemy : Enemy
             if (hitCollider.transform.gameObject.name == "PlayerBody")
             {
                 hitCollider.GetComponent<Health>().DoDamage(damage);
-                Destroy(gameObject);
             }
         }
+        Destroy(gameObject);
+
     }
 }
