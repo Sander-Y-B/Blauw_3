@@ -2,52 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DungeonGeneration : DungeonGeneratorMaster
+public class DungeonGeneration : MonoBehaviour
 {
-    public GameObject[] connectionPoints;
 
     void Start()
     {
-
+        
     }
+
 
     void Update()
     {
         
     }
-
-    public void Room()
-    {
-        if(roomsBuilt < maxRooms)
-        {
-            foreach (GameObject connectionPoint in connectionPoints)
-            {
-                if (Random.Range(0, 3) == 0)
-                {
-
-                    roomsBuilt++;
-                }
-            }
-        }
-    }
-
-    public void CheckConnectors()
-    {
-        foreach (GameObject connectionPoint in connectionPoints)
-        {
-            RaycastHit hit;
-            if(Physics.Raycast(connectionPoint.transform.position, connectionPoint.transform.TransformDirection(Vector3.forward), out hit, 5))
-            {
-                connectionPoint.SetActive(true);
-            }
-        }
-    }
 }
-
-/*
- * check if "doors" already have rooms
- * if so, connect
- * randomly spawn room at "door" for every room
- * if room spawned connect
- * repeat process for spawned room
+/* for each room for each door
+ * if door not connected
+ * check if room for room
+ * if so random spawn room
+ * add instantiated room to room list
+ * check if doors can connect, if so random connect
+ * if no new rooms spawned and min rooms has not been hit, run again
+ * else stop
+ * 
+ * 
+ * make some limitations to room spawns
  */
