@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DungeonGeneration : MonoBehaviour
 {
+    public GameObject[] Rooms;
 
     void Start()
     {
@@ -14,6 +15,31 @@ public class DungeonGeneration : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void InstanciateRooms()
+    {
+        foreach (GameObject Room in Rooms)
+        {
+            foreach (GameObject Door in Room.GetComponent<Room>().Doors)
+            {
+                if(Door.GetComponent<Door>().connected == false && Random.Range(0,3) == 0)
+                {
+                    RaycastHit hit;
+                    if(Physics.Raycast(Door.transform.position, Door.transform.TransformDirection(Vector3.forward), out hit, 5))
+                    {
+                        if(hit.collider == null)
+                        {
+                            // instantiate room
+                            // add to room list
+                            // check if door can connect
+                            // rooms spanwed ++
+                            // current rooms ++
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 /* for each room for each door
