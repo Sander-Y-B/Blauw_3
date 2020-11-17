@@ -5,6 +5,7 @@ using UnityEngine;
 public class DungeonGeneration : MonoBehaviour
 {
     public GameObject[] Rooms;
+    public GameObject RoomPrefab;
 
     void Start()
     {
@@ -40,6 +41,11 @@ public class DungeonGeneration : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void DecideLocation()
+    {
+
     }
 }
 /* for each room for each door

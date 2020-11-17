@@ -5,13 +5,6 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public bool connected;
-
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-        
-    }
+    public Vector3 spawnRoomLocation;
+    public string cardinalDirection;
 }
