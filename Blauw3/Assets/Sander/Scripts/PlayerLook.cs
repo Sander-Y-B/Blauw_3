@@ -6,7 +6,7 @@ public class PlayerLook : MonoBehaviour
 {
     public bool lookAllow = true;
 
-    public float mouseSense = 15;
+    public float mouseSense = 100;
     public Transform playerBody;
     private float xRotation = 0f;
 
