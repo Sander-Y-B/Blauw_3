@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DungeonGeneration : MonoBehaviour
 {
-    public GameObject[] Rooms;
+    public List<GameObject> Rooms;
     public GameObject RoomPrefab;
+    private GameObject justSpawnedRoom;
 
     void Start()
     {
@@ -31,6 +32,8 @@ public class DungeonGeneration : MonoBehaviour
                     {
                         if(hit.collider == null)
                         {
+                            justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
+                            Rooms.Add(justSpawnedRoom);
                             // instantiate room
                             // add to room list
                             // check if door can connect
@@ -43,9 +46,12 @@ public class DungeonGeneration : MonoBehaviour
         }
     }
 
-    private void DecideLocation()
+    private void DecideLocation(GameObject listGameObject)
     {
+        foreach (GameObject Door in listGameObject.GetComponent<Room>().Doors)
+        {
 
+        }
     }
 }
 /* for each room for each door
