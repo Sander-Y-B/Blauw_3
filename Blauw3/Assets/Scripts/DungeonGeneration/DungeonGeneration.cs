@@ -44,7 +44,7 @@ public class DungeonGeneration : MonoBehaviour
         }
     }
 
-    private void DecideLocation(GameObject listGameObject, GameObject spawnedFrom)
+    private void DecideDoor(GameObject listGameObject, GameObject spawnedFrom)
     {
         foreach (GameObject Door in listGameObject.GetComponent<Room>().Doors)
         {

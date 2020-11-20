@@ -134,12 +134,12 @@ GameObject:
   - component: {fileID: 48424761}
   - component: {fileID: 48424760}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &48424760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -208,11 +208,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48424759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1021007032}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &113377923
 GameObject:
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 113377926}
   - component: {fileID: 113377925}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DoorBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,11 +241,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113377923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1021007032}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &113377925
 BoxCollider:
@@ -331,16 +331,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141190189}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 555342712}
   - {fileID: 652164051}
   - {fileID: 725035650}
+  - {fileID: 555342712}
   m_Father: {fileID: 1100450784}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &141190191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,9 +355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connected: 0
   isThereARoomHere: 0
-  spawnRoomLocation: {fileID: 0}
-  wall: {fileID: 0}
-  hallway: {fileID: 0}
+  spawnRoomLocation: {fileID: 652164050}
+  wall: {fileID: 725035649}
+  hallway: {fileID: 555342708}
 --- !u!1 &211444229
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,12 +371,12 @@ GameObject:
   - component: {fileID: 211444231}
   - component: {fileID: 211444230}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &211444230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -445,11 +445,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211444229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1242522496}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228872520
 GameObject:
@@ -497,10 +497,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Doors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1242522495}
+  - {fileID: 1021007031}
+  - {fileID: 1509772972}
+  - {fileID: 141190189}
 --- !u!1 &235957455
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 235957459}
   - component: {fileID: 235957458}
   - component: {fileID: 235957457}
-  - component: {fileID: 235957456}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -521,21 +520,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &235957456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235957455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b2c5e318de58f42a9355fa2968dd8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomsBuilt: 0
-  maxRooms: 0
-  connectionPoints: []
 --- !u!65 &235957457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -620,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515966975}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RoomChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,11 +618,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515966974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1509772973}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &555342708
 GameObject:
@@ -653,12 +637,12 @@ GameObject:
   - component: {fileID: 555342710}
   - component: {fileID: 555342709}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &555342709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -727,11 +711,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555342708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 141190190}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &652164050
 GameObject:
@@ -743,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652164051}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RoomChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,11 +741,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652164050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 141190190}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657285759
 GameObject:
@@ -868,7 +852,7 @@ GameObject:
   - component: {fileID: 715077797}
   - component: {fileID: 715077796}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DoorBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,11 +866,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715077794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1242522496}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &715077796
 BoxCollider:
@@ -961,7 +945,7 @@ GameObject:
   - component: {fileID: 725035652}
   - component: {fileID: 725035651}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DoorBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,11 +959,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725035649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 141190190}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &725035651
 BoxCollider:
@@ -1051,7 +1035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748956459}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RoomChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1065,11 +1049,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748956458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1021007032}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021007031
 GameObject:
@@ -1095,16 +1079,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021007031}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -16, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 48424763}
   - {fileID: 748956459}
   - {fileID: 113377924}
+  - {fileID: 48424763}
   m_Father: {fileID: 1100450784}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1021007033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,9 +1103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connected: 0
   isThereARoomHere: 0
-  spawnRoomLocation: {fileID: 0}
-  wall: {fileID: 0}
-  hallway: {fileID: 0}
+  spawnRoomLocation: {fileID: 748956458}
+  wall: {fileID: 113377923}
+  hallway: {fileID: 48424759}
 --- !u!1 &1100450783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,12 +1165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242522495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 211444233}
   - {fileID: 2085857164}
   - {fileID: 715077795}
+  - {fileID: 211444233}
   m_Father: {fileID: 1100450784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1232,12 +1216,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509772972}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -16}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1793131118}
   - {fileID: 515966975}
   - {fileID: 1974902246}
+  - {fileID: 1793131118}
   m_Father: {fileID: 1100450784}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1255,9 +1239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connected: 0
   isThereARoomHere: 0
-  spawnRoomLocation: {fileID: 0}
-  wall: {fileID: 0}
-  hallway: {fileID: 0}
+  spawnRoomLocation: {fileID: 515966974}
+  wall: {fileID: 1974902245}
+  hallway: {fileID: 1793131114}
 --- !u!1 &1568577328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,12 +1338,12 @@ GameObject:
   - component: {fileID: 1793131116}
   - component: {fileID: 1793131115}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1793131115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1428,11 +1412,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793131114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1509772973}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1974902245
 GameObject:
@@ -1447,7 +1431,7 @@ GameObject:
   - component: {fileID: 1974902248}
   - component: {fileID: 1974902247}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DoorBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1461,11 +1445,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974902245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1509772973}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1974902247
 BoxCollider:
@@ -1537,7 +1521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085857164}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RoomChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1551,9 +1535,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085857163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1242522496}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
