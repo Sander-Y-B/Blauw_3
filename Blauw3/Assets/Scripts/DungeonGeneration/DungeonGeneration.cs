@@ -34,8 +34,6 @@ public class DungeonGeneration : MonoBehaviour
                         {
                             justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
                             Rooms.Add(justSpawnedRoom);
-                            // instantiate room
-                            // add to room list
                             // check if door can connect
                             // rooms spanwed ++
                             // current rooms ++
@@ -46,7 +44,7 @@ public class DungeonGeneration : MonoBehaviour
         }
     }
 
-    private void DecideLocation(GameObject listGameObject)
+    private void DecideLocation(GameObject listGameObject, GameObject spawnedFrom)
     {
         foreach (GameObject Door in listGameObject.GetComponent<Room>().Doors)
         {
