@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
+    public UIManager uiManager;
     public float maxHealth = 10;
     public float currentHealth = 10;
 
@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
         {
             currentHealth = currentHealth - dmg;
         }
-        
+        uiManager.UpdateHealthBar(currentHealth, maxHealth);
     }
 
     public void DoHeal (float heal)
@@ -34,11 +34,13 @@ public class Health : MonoBehaviour
             currentHealth = currentHealth + heal;
 
         }
+        uiManager.UpdateHealthBar(currentHealth, maxHealth);
     }
 
     void Death()
     {
         print(gameObject + " died");
+        print("go commit sudoku ya fuck");
     }
 
 

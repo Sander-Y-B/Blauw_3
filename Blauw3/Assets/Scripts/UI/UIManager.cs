@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static bool isPaused;
+    private float newPercent;
     public GameObject player, pause, options, mainPause;
-    public Slider mainSlider, musicSlider, sfxSlider;
+    public Slider mainSlider, musicSlider, sfxSlider, healthSlider;
 
     private void Update()
     {
@@ -15,6 +16,12 @@ public class UIManager : MonoBehaviour
         {
             TogglePause();
         }
+    }
+
+    public void UpdateHealthBar(float newHealth, float maxHealth)
+    {
+        newPercent = newHealth/ maxHealth * 100;
+        healthSlider.value = newPercent;
     }
     public void TogglePause()
     {
