@@ -37,7 +37,7 @@ public class GunManager : MonoBehaviour
 
     void Start()
     {
-        UpdateGunStats();
+
     }
 
     void Update()
@@ -52,6 +52,7 @@ public class GunManager : MonoBehaviour
             Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
         }
     }
+
 
     void SpawnNewGun()
     {
@@ -70,6 +71,7 @@ public class GunManager : MonoBehaviour
             shotPoint = GameObject.FindWithTag("ShotPoint");
         }
 
+        UpdateGunStats();
     }
 
     void UpdateGunStats()
@@ -77,6 +79,18 @@ public class GunManager : MonoBehaviour
         bodyStats = currentBody.GetComponent<BasePart>();
         loaderStats = currentLoader.GetComponent<BasePart>();
         barrelStats = currentBarrel.GetComponent<BasePart>();
+
+
+        currentShotSpeed = bodyStats.baseShotSpeed;//+ or * mod
+        currentSpread = bodyStats.baseShotSpread;
+        currentScopedSpread = bodyStats.baseShotSpread - 0.5f;
+
+        currentDamge = loaderStats.baseDamage; 
+        currentClipsize = loaderStats.baseClipsize;
+        currentReloadeSpeed = loaderStats.baseReloadSpeed;
+
+        currentRecoil = barrelStats.baseRecoil;
+        //call naar de UI waar de stats op de UI worden geupdate
     }
 
     void UpdateGunPart(GameObject newPart)

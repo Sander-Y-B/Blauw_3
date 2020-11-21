@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
             pause.SetActive(true);
             isPaused = true;
             player.GetComponent<PlayerLook>().lookAllow = false;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
     public void OpenOptions()
