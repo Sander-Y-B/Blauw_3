@@ -7,6 +7,8 @@ public class DungeonGeneration : MonoBehaviour
     public List<GameObject> Rooms;
     public GameObject RoomPrefab;
     private GameObject justSpawnedRoom;
+    private int doorNumber;
+    private int doorNumber2;
 
     void Start()
     {
@@ -27,29 +29,47 @@ public class DungeonGeneration : MonoBehaviour
             {
                 if(Door.GetComponent<Door>().connected == false && Random.Range(0,3) == 0)
                 {
-                    RaycastHit hit;
-                    if(Physics.Raycast(Door.transform.position, Door.transform.TransformDirection(Vector3.forward), out hit, 5))
+                    if(Door.GetComponent<Door>().isThereARoomHere == false)
                     {
-                        if(hit.collider == null)
+                        justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
+                        Rooms.Add(justSpawnedRoom);
+                        DecideDoor(justSpawnedRoom, doorNumber);
+                        Door.GetComponent<Door>().Connect();
+                        foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
                         {
-                            justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
-                            Rooms.Add(justSpawnedRoom);
+                            if (justSpawnedDoor.GetComponent<Door>().connected == false && justSpawnedDoor.GetComponent<Door>().isThereARoomHere == true)
+                            {
+                                if(Random.Range(0,2) == 0)
+                                {
+
+                                }
+                            }
+                            doorNumber2++;
+                        }
+                        doorNumber2 = 0;
                             // check if door can connect
                             // rooms spanwed ++
                             // current rooms ++
-                        }
                     }
                 }
+                doorNumber++;
             }
+            doorNumber = 0;
         }
     }
 
-    private void DecideDoor(GameObject listGameObject, GameObject spawnedFrom)
+    private void DecideDoor(GameObject spawned, int door)
     {
-        foreach (GameObject Door in listGameObject.GetComponent<Room>().Doors)
+        if(door < 3)
         {
-
+            door += 2;
         }
+        else
+        {
+            door -= 2;
+        }
+
+        spawned.GetComponent<Room>().Doors[door].GetComponent<Door>().Connect();
     }
 }
 /* for each room for each door
