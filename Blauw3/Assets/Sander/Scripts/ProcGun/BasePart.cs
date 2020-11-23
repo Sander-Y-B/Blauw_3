@@ -19,6 +19,7 @@ public class BasePart : MonoBehaviour
     public int baseClipsize;
     public float baseReloadSpeed;
     public float baseDamage;
+    public float modShotSpeed;
 
     [Header("---Categorie: Barrel---")]
     public float baseRecoil;
