@@ -17,7 +17,7 @@ public class Room : MonoBehaviour
     {
         if(o.gameObject.tag == roomCheckerTagName)
         {
-            door = o.gameObject.GetComponent<Door>();
+            door = o.gameObject.GetComponentInParent<Door>();
             door.RoomAtSpawnLocation = gameObject;
             door.isThereARoomHere = true;
         }

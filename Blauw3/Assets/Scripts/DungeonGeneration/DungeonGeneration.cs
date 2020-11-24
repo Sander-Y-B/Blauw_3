@@ -4,63 +4,65 @@ using UnityEngine;
 
 public class DungeonGeneration : MonoBehaviour
 {
-    public List<GameObject> Rooms;
+    public int maxRoomAmount;
+    private int currentRoomAmount;
     public GameObject RoomPrefab;
+    public List<GameObject> Rooms;
     private GameObject justSpawnedRoom;
     private int doorNumber;
     private int doorNumber2;
 
     void Start()
     {
-        
+        InstanciateRooms();
     }
-
-
-    void Update()
-    {
-        
-    }
-
     public void InstanciateRooms()
     {
         foreach (GameObject Room in Rooms)
         {
             foreach (GameObject Door in Room.GetComponent<Room>().Doors)
             {
-                if(Door.GetComponent<Door>().connected == false && Random.Range(0,3) == 0)
+                if(currentRoomAmount < maxRoomAmount)
                 {
-                    if(Door.GetComponent<Door>().isThereARoomHere == false)
+                    if(Door.GetComponent<Door>().connected == false && Random.Range(0,3) == 0)
                     {
-                        justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
-                        Rooms.Add(justSpawnedRoom);
-                        DecideDoor(justSpawnedRoom, doorNumber);
-                        Door.GetComponent<Door>().Connect();
-                        foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
+                        if(Door.GetComponent<Door>().isThereARoomHere == false)
                         {
-                            if (justSpawnedDoor.GetComponent<Door>().connected == false && justSpawnedDoor.GetComponent<Door>().isThereARoomHere == true)
+                            justSpawnedRoom = Instantiate(RoomPrefab, Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
+                            Rooms.Add(justSpawnedRoom);
+                            currentRoomAmount++;
+                            DecideDoor(justSpawnedRoom, Door, doorNumber);
+                            foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
                             {
-                                if(Random.Range(0,2) == 0)
+                                if (justSpawnedDoor.GetComponent<Door>().connected == false && justSpawnedDoor.GetComponent<Door>().isThereARoomHere == true)
                                 {
-
+                                    if(Random.Range(0,2) == 0)
+                                    {
+                                        DecideDoor(justSpawnedDoor.GetComponent<Door>().RoomAtSpawnLocation, justSpawnedDoor, doorNumber2);
+                                    }
                                 }
+                                doorNumber2++;
                             }
-                            doorNumber2++;
+                            doorNumber2 = 0;
+                                // rooms spanwed ++
+                                // current rooms ++
                         }
-                        doorNumber2 = 0;
-                            // check if door can connect
-                            // rooms spanwed ++
-                            // current rooms ++
                     }
+                    doorNumber++;
                 }
-                doorNumber++;
             }
             doorNumber = 0;
         }
+        if(currentRoomAmount < maxRoomAmount)
+        {
+            InstanciateRooms();
+        }
     }
 
-    private void DecideDoor(GameObject spawned, int door)
+    private void DecideDoor(GameObject spawned, GameObject otherDoor, int door)
     {
-        if(door < 3)
+        print(door);
+        if(door < 2)
         {
             door += 2;
         }
@@ -70,6 +72,7 @@ public class DungeonGeneration : MonoBehaviour
         }
 
         spawned.GetComponent<Room>().Doors[door].GetComponent<Door>().Connect();
+        otherDoor.GetComponent<Door>().Connect();
     }
 }
 /* for each room for each door
