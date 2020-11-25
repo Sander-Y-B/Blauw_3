@@ -8,6 +8,8 @@ TagManager:
   - GunLoaderPoint
   - GunBarrelPoint
   - ShotPoint
+  - Enemy
+  - RoomChecker
   layers:
   - Default
   - TransparentFX
