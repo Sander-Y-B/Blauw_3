@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static bool isPaused;
     private float newPercent;
+    public TextMeshPro damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider;
 
@@ -16,6 +18,11 @@ public class UIManager : MonoBehaviour
         {
             TogglePause();
         }
+    }
+
+    public void UpdateStats(float damage, float shotSpeed, float spread, float scopeSpread, float clipSize, float reloadSpeed, float recoil)
+    {
+        damageText.text = damage.ToString();
     }
 
     public void UpdateHealthBar(float newHealth, float maxHealth)
