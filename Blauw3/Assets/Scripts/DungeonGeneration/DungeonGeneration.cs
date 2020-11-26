@@ -43,6 +43,7 @@ public class DungeonGeneration : MonoBehaviour
                                 if(doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                 {
                                     coordinatesChecker++;
+                                    doorScript.isThereARoomHere = true;
                                 }
                             }
                             if(coordinatesChecker < 1)
