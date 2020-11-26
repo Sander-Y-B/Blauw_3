@@ -9,9 +9,9 @@ public class DungeonGeneration : MonoBehaviour
     public int spawnRoomChance;
     public int connectDoorChance;
     public GameObject[] roomPrefabs;
-    public List<GameObject> Rooms;
+    public List<GameObject> rooms;
     [HideInInspector] public List<GameObject> occupiedCoordinates;
-    [HideInInspector] public List<GameObject> Rooms2;
+    [HideInInspector] public List<GameObject> tempRooms;
     private GameObject justSpawnedRoom;
     private Room roomScript;
     private Door doorScript;
@@ -21,12 +21,12 @@ public class DungeonGeneration : MonoBehaviour
 
     void Start()
     {
-        occupiedCoordinates.Add(Rooms[0]);
+        occupiedCoordinates.Add(rooms[0]);
         InstanciateRooms();
     }
     public void InstanciateRooms()
     {
-        foreach (GameObject Room in Rooms)
+        foreach (GameObject Room in rooms)
         {
             roomScript = Room.GetComponent<Room>();
             foreach (GameObject door in roomScript.Doors)
@@ -49,7 +49,7 @@ public class DungeonGeneration : MonoBehaviour
                             {
                                 justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0,roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
                                 occupiedCoordinates.Add(justSpawnedRoom);
-                                Rooms2.Add(justSpawnedRoom);
+                                tempRooms.Add(justSpawnedRoom);
                                 currentRoomAmount++;
                                 DecideDoor(justSpawnedRoom, door, doorNumber);
                                 foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
@@ -71,6 +71,7 @@ public class DungeonGeneration : MonoBehaviour
                                                 DecideDoor(doorScript.RoomAtSpawnLocation, justSpawnedDoor, doorNumber2);
                                             }
                                         }
+                                        doorScript.RoomAtSpawnLocation = null;
                                     }
                                     doorNumber2++;
                                 }
@@ -87,13 +88,13 @@ public class DungeonGeneration : MonoBehaviour
             }
             doorNumber = 0;
         }
-        if(Rooms2.Count > 0)
+        if(tempRooms.Count > 0)
         {
-            foreach(GameObject room in Rooms2)
+            foreach(GameObject room in tempRooms)
             {
-                Rooms.Add(room);
+                rooms.Add(room);
             }
-            Rooms2.Clear();
+            tempRooms.Clear();
         }
         if(currentRoomAmount < maxRoomAmount)
         {
