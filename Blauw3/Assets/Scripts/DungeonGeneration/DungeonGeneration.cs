@@ -6,58 +6,70 @@ public class DungeonGeneration : MonoBehaviour
 {
     public int maxRoomAmount;
     private int currentRoomAmount;
+    public int spawnRoomChance;
+    public int connectDoorChance;
     public GameObject[] roomPrefabs;
     public List<GameObject> Rooms;
-    public List<Vector3> occupiedCoordinates; //input first room manually
+    [HideInInspector] public List<GameObject> occupiedCoordinates;
     [HideInInspector] public List<GameObject> Rooms2;
     private GameObject justSpawnedRoom;
+    private Room roomScript;
+    private Door doorScript;
     private int doorNumber;
     private int doorNumber2;
     private int coordinatesChecker;
 
     void Start()
     {
+        occupiedCoordinates.Add(Rooms[0]);
         InstanciateRooms();
     }
     public void InstanciateRooms()
     {
         foreach (GameObject Room in Rooms)
         {
-
-            foreach (GameObject Door in Room.GetComponent<Room>().Doors)
+            roomScript = Room.GetComponent<Room>();
+            foreach (GameObject door in roomScript.Doors)
             {
+                doorScript = door.GetComponent<Door>();
                 if(currentRoomAmount < maxRoomAmount)
                 {
-                    if(Door.GetComponent<Door>().connected == false && Random.Range(0,3) == 0)
+                    if(doorScript.connected == false && Random.Range(0,spawnRoomChance) == 0)
                     {
-                        if(Door.GetComponent<Door>().isThereARoomHere == false)
+                        if(doorScript.isThereARoomHere == false)
                         {
-                            foreach(Vector3 coordinates in occupiedCoordinates)
+                            foreach(GameObject coordinates in occupiedCoordinates)
                             {
-                                if(Door.GetComponent<Door>().spawnRoomLocation.transform.position == coordinates)
+                                if(doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                 {
                                     coordinatesChecker++;
                                 }
                             }
                             if(coordinatesChecker < 1)
                             {
-                                justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0,roomPrefabs.Length)], Door.GetComponent<Door>().spawnRoomLocation.transform.position, Quaternion.identity);
-                                occupiedCoordinates.Add(justSpawnedRoom.transform.position);
+                                justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0,roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                occupiedCoordinates.Add(justSpawnedRoom);
                                 Rooms2.Add(justSpawnedRoom);
                                 currentRoomAmount++;
-                                DecideDoor(justSpawnedRoom, Door, doorNumber);
+                                DecideDoor(justSpawnedRoom, door, doorNumber);
                                 foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
                                 {
-                                    print(1);
-                                    if (justSpawnedDoor.GetComponent<Door>().connected == false && justSpawnedDoor.GetComponent<Door>().isThereARoomHere == true)
+                                    doorScript = justSpawnedDoor.GetComponent<Door>();
+                                    foreach (GameObject coordinates in occupiedCoordinates)
                                     {
-                                        print(2);
-                                        if(Random.Range(0,2) == 0)
+                                        if (doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                         {
-                                            print(3);
-                                            print(justSpawnedDoor);
-                                            print(justSpawnedDoor.GetComponent<Door>().RoomAtSpawnLocation);
-                                            DecideDoor(justSpawnedDoor.GetComponent<Door>().RoomAtSpawnLocation, justSpawnedDoor, doorNumber2);
+                                            doorScript.RoomAtSpawnLocation = coordinates;
+                                        }
+                                    }
+                                    if(doorScript.RoomAtSpawnLocation != null)
+                                    {
+                                        if (doorScript.connected == false)
+                                        {
+                                            if(Random.Range(0,connectDoorChance) == 0)
+                                            {
+                                                DecideDoor(doorScript.RoomAtSpawnLocation, justSpawnedDoor, doorNumber2);
+                                            }
                                         }
                                     }
                                     doorNumber2++;

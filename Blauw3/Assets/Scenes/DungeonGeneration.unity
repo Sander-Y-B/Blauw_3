@@ -248,7 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fce8baaa4a1b84e93a070850409d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRoomAmount: 50
+  maxRoomAmount: 500
+  spawnRoomChance: 3
+  connectDoorChance: 3
   roomPrefabs:
   - {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111, type: 3}
   - {fileID: 7848098635604046003, guid: 5a2e3ac5c11a3a342a11b726337e2e38, type: 3}
@@ -257,7 +259,7 @@ MonoBehaviour:
   Rooms:
   - {fileID: 228872520}
   occupiedCoordinates:
-  - {x: 0, y: 0, z: 0}
+  - {fileID: 228872520}
   Rooms2: []
 --- !u!4 &952398034
 Transform:
