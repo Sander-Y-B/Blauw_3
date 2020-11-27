@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5996970453042515470}
   m_Layer: 0
   m_Name: gunBod2
-  m_TagString: Untagged
+  m_TagString: GunBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   modShotSpread: 0
   modReloadSpeed: 0
   modScopedSpread: 0
+  partIndex: 1
 --- !u!1 &6368725508362069210
 GameObject:
   m_ObjectHideFlags: 0

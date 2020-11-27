@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7421624546997914835}
   m_Layer: 0
   m_Name: gunBarrel1
-  m_TagString: Untagged
+  m_TagString: GunBarrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   modShotSpread: 0
   modReloadSpeed: 0
   modScopedSpread: -1
+  selfRefPrefab: {fileID: 690587257454687290}
 --- !u!1 &6368725508362069210
 GameObject:
   m_ObjectHideFlags: 0

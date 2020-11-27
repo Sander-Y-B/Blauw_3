@@ -10,8 +10,8 @@ public class BulletScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        transform.Translate(0, 0, speed);
+    { 
+        transform.Translate(0, 0, speed * Time.deltaTime);
         
     }
 

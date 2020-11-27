@@ -26,5 +26,7 @@ public class BasePart : MonoBehaviour
     public float modShotSpread;
     public float modReloadSpeed;
     public float modScopedSpread; // AimedSpread heeft een base die word aangemaakt in runtime die hetzelfde is als de baseShotSpread.
-    
+
+    [Header("-!-Elke part moet dit hebben-!-")]
+    public int partIndex;
 }

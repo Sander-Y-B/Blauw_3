@@ -5,9 +5,10 @@ using UnityEngine;
 public class GunManager : MonoBehaviour
 {
     public bool canShoot = true;
-    public GameObject[] gunBodies;
-    public GameObject[] gunLoaders;
-    public GameObject[] gunBarrels;
+    [SerializeField] GameObject[] gunBodies;
+    [SerializeField] GameObject[] gunLoaders;
+    [SerializeField] GameObject[] gunBarrels;
+    public GameObject[] gunLoadout;
 
     GameObject loaderPoint;
     GameObject barrelPoint;
@@ -32,48 +33,43 @@ public class GunManager : MonoBehaviour
     GameObject bullet;
     GameObject newBullet;
 
+    public GameObject testPart;
+
     void Awake()
     {
-        SpawnNewGun();
+        SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SpawnNewGun();
-        }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            print("spread: "+currentSpread + " firerate: "+ currentShotSpeed);
-
+            StartCoroutine(UpdateGunPart(testPart));
         }
 
         if (Input.GetButton("Fire1"))
         {
-            Shoot();
+            Shoot(currentSpread);
+        }
+        if (Input.GetButton("Fire2")) 
+        {
+            Shoot(currentScopedSpread);
         }
     }
 
 
-    void SpawnNewGun()
+    void SpawnNewGun(GameObject body, GameObject loader, GameObject barrel)
     {
-        if (currentBody != null)
-        {
-            Destroy(currentBody);
-        }
-        else
-        {
-            currentBody = Instantiate(gunBodies[Random.Range(0, gunBodies.Length)], gameObject.transform, false);
-            loaderPoint = GameObject.FindGameObjectWithTag("GunLoaderPoint");
+        
+        currentBody = Instantiate(body, gameObject.transform, false);
+        loaderPoint = GameObject.FindGameObjectWithTag("GunLoaderPoint");
 
-            currentLoader = Instantiate(gunLoaders[Random.Range(0, gunLoaders.Length)], loaderPoint.transform, false);
-            barrelPoint = GameObject.FindWithTag("GunBarrelPoint");
+        currentLoader = Instantiate(loader, loaderPoint.transform, false);
+        barrelPoint = GameObject.FindWithTag("GunBarrelPoint");
 
-            currentBarrel = Instantiate(gunBarrels[Random.Range(0, gunBarrels.Length)], barrelPoint.transform, false);
-            shotPoint = GameObject.FindWithTag("ShotPoint");
-        }
+        currentBarrel = Instantiate(barrel, barrelPoint.transform, false);
+        shotPoint = GameObject.FindWithTag("ShotPoint");
 
         UpdateGunStats();
     }
@@ -96,32 +92,45 @@ public class GunManager : MonoBehaviour
 
         currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsBody.modRecoil;
         //call naar de UI waar de stats op de UI worden geupdate
+
+        gunLoadout[0] = gunBodies[statsBody.partIndex];
+        gunLoadout[1] = gunLoaders[statsLoader.partIndex];
+        gunLoadout[2] = gunBarrels[statsBarrel.partIndex];
     }
 
-    void UpdateGunPart(GameObject newPart)
+    IEnumerator UpdateGunPart(GameObject newPart)
     {
-        //select the part/category that needs to be replaced
-        //save the childeren of the TBR part (To Be Replaced)
-        //remove TBR part and instan the newPart
-        //place the saved childeren as child of the newPart 
-        //update the stat screen/Ui
+        switch (newPart.tag)
+        {
+            case "GunBody":
+                gunLoadout[0] = newPart;
+                break;
+            case "GunLoader":
+                gunLoadout[1] = newPart;
+                break;
+            case "GunBarrel":
+                gunLoadout[2] = newPart;
+                break;
+            default:
+                print("!!No tag or no object!!");
+                break;
+        }
+        Destroy(currentBody);
+        yield return new WaitForEndOfFrame();
+        SpawnNewGun(gunLoadout[0], gunLoadout[1], gunLoadout[2]);
     }
 
-    void Shoot()
+    void Shoot(float spreadAmount)
     {
         if (canShoot)
         {
             newBullet = Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
             newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
-            newBullet.GetComponent<BulletScript>().AddSpread(currentSpread);
+            newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
 
             StartCoroutine(ShotDelay());
-
             //play shot sound fx
-            
         }
- 
-
     }
 
     IEnumerator ShotDelay()
@@ -132,4 +141,5 @@ public class GunManager : MonoBehaviour
         
     }
 
+    
 }

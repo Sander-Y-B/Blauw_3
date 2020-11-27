@@ -183,6 +183,10 @@ MonoBehaviour:
   - {fileID: 690587257454687290, guid: 2bac27ba7ad064a498fb7be34335904e, type: 3}
   - {fileID: 690587257454687290, guid: 4d87aea112c3fda4a936ccecd418e5bb, type: 3}
   - {fileID: 690587257454687290, guid: 093ea9c974da8ad4ca884126826e3bf2, type: 3}
+  gunLoadout:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentDamge: 0
   currentShotSpeed: 0
   currentSpread: 0
@@ -190,6 +194,7 @@ MonoBehaviour:
   currentClipsize: 0
   currentReloadeSpeed: 0
   currentRecoil: 0
+  testPart: {fileID: 690587257454687290, guid: 8cd6f5e0e1b5bd34188eb8a9c5366d86, type: 3}
 --- !u!1 &1183935377
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +481,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 962142995238599043, guid: 19b40f6860edf094e8d6b524107b3034,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: mouseSense

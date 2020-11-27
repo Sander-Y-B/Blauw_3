@@ -10,6 +10,9 @@ TagManager:
   - ShotPoint
   - Enemy
   - RoomChecker
+  - GunBody
+  - GunLoader
+  - GunBarrel
   layers:
   - Default
   - TransparentFX
