@@ -6,14 +6,19 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
+    public Animator gunStatAnim;
     public static bool isPaused;
     private float newPercent;
-    public TextMeshPro damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
+    public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider;
 
     private void Update()
     {
+        if (Input.GetButtonDown("GunStat"))
+        {
+            gunStatAnim.SetBool("GunStat",!gunStatAnim.GetBool("GunStat"));
+        }
         if (Input.GetButtonDown("Cancel"))
         {
             TogglePause();
@@ -23,6 +28,12 @@ public class UIManager : MonoBehaviour
     public void UpdateStats(float damage, float shotSpeed, float spread, float scopeSpread, float clipSize, float reloadSpeed, float recoil)
     {
         damageText.text = damage.ToString();
+        shotSpeedText.text = shotSpeed.ToString();
+        spreadText.text = spread.ToString();
+        scopeSpreadText.text = scopeSpread.ToString();
+        clipSizeText.text = clipSize.ToString();
+        reloadSpeedText.text = reloadSpeed.ToString();
+        recoilText.text = recoil.ToString();
     }
 
     public void UpdateHealthBar(float newHealth, float maxHealth)
