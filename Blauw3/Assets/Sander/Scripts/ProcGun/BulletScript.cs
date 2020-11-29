@@ -12,7 +12,6 @@ public class BulletScript : MonoBehaviour
     void Update()
     { 
         transform.Translate(0, 0, speed * Time.deltaTime);
-        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +24,6 @@ public class BulletScript : MonoBehaviour
         else if (other.gameObject.layer == 8)
         {
             Destroy(gameObject);
-            
         }
        
     }

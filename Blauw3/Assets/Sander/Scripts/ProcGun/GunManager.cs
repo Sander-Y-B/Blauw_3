@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
-    public bool canShoot = true;
+    [HideInInspector] public bool canShoot = true;
     [SerializeField] GameObject[] gunBodies;
     [SerializeField] GameObject[] gunLoaders;
     [SerializeField] GameObject[] gunBarrels;
@@ -26,28 +26,24 @@ public class GunManager : MonoBehaviour
     [HideInInspector] public float currentShotSpeed;
     [HideInInspector] public float currentSpread;
     [HideInInspector] public float currentScopedSpread;
-    [HideInInspector] public float currentClipsize;
+    [HideInInspector] public float currentMaxClipsize;
     [HideInInspector] public float currentReloadeSpeed;
     [HideInInspector] public float currentRecoil;
 
     GameObject bullet;
     GameObject newBullet;
 
-    public GameObject testPart;
+    public AudioSource shotFx;
+    UIManager uIManager;
 
     void Awake()
     {
+        uIManager = FindObjectOfType<UIManager>();
         SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
     }
 
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            StartCoroutine(UpdateGunPart(testPart));
-        }
-
         if (Input.GetButton("Fire1"))
         {
             Shoot(currentSpread);
@@ -86,12 +82,22 @@ public class GunManager : MonoBehaviour
         currentSpread = statsBody.baseShotSpread + statsLoader.modShotSpread + statsBarrel.modShotSpread;
         currentScopedSpread = statsBody.baseShotSpread + statsLoader.modScopedSpread + statsBarrel.modScopedSpread - 0.5f;
 
+        if (currentScopedSpread <0)
+        {
+            currentScopedSpread = 0;
+        } 
+
         currentDamge = statsLoader.baseDamage + statsBody.modDamage + statsBarrel.modDamage;
-        currentClipsize = statsLoader.baseClipsize;
+        currentMaxClipsize = statsLoader.baseClipsize;
         currentReloadeSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
 
         currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsBody.modRecoil;
-        //call naar de UI waar de stats op de UI worden geupdate
+
+        if (uIManager != null)
+        {
+            uIManager.UpdateStats(currentDamge, currentShotSpeed, currentSpread, currentScopedSpread, currentMaxClipsize, currentReloadeSpeed, currentRecoil);
+        }
+
 
         gunLoadout[0] = gunBodies[statsBody.partIndex];
         gunLoadout[1] = gunLoaders[statsLoader.partIndex];
@@ -128,8 +134,9 @@ public class GunManager : MonoBehaviour
             newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
             newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
 
+            shotFx.Play();
             StartCoroutine(ShotDelay());
-            //play shot sound fx
+          
         }
     }
 
@@ -138,7 +145,6 @@ public class GunManager : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(currentShotSpeed);
         canShoot = true;
-        
     }
 
     
