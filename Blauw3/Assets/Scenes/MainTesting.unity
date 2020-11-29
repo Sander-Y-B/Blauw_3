@@ -2214,6 +2214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 3a65464becf68c94d91604aa786ff852, type: 2}
+  resInt: 0
+  resDrop: {fileID: 1414977057}
 --- !u!114 &345609757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2242,6 +2244,7 @@ MonoBehaviour:
   musicSlider: {fileID: 811897462}
   sfxSlider: {fileID: 537511933}
   healthSlider: {fileID: 187686422}
+  sensSlider: {fileID: 1302631948}
 --- !u!1 &365081433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5658,8 +5661,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1370900434}
   m_HandleRect: {fileID: 386444239}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 50
+  m_MaxValue: 550
   m_WholeNumbers: 0
   m_Value: 0.0001
   m_OnValueChanged:
@@ -6211,16 +6214,21 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 345609756}
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414977058
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,8 +11,13 @@ public class UIManager : MonoBehaviour
     private float newPercent;
     public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
-    public Slider mainSlider, musicSlider, sfxSlider, healthSlider;
+    public Slider mainSlider, musicSlider, sfxSlider, healthSlider, sensSlider;
 
+
+    private void Start()
+    {
+        player.GetComponentInChildren<PlayerLook>().mouseSense = PlayerPrefs.GetFloat("mouseSens");
+    }
     private void Update()
     {
         if (Input.GetButtonDown("GunStat"))
@@ -47,11 +52,7 @@ public class UIManager : MonoBehaviour
         {
             if (options.activeSelf == true)
             {
-                PlayerPrefs.SetFloat("mainVol", mainSlider.value);
-                PlayerPrefs.SetFloat("musicVol", musicSlider.value);
-                PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
-                options.SetActive(false);
-                mainPause.SetActive(true);
+                OpenMainPause();
             }
             pause.SetActive(false);
             player.GetComponent<PlayerLook>().lookAllow = true;
@@ -70,6 +71,7 @@ public class UIManager : MonoBehaviour
         mainSlider.value = PlayerPrefs.GetFloat("mainVol");
         musicSlider.value = PlayerPrefs.GetFloat("musicVol");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVol");
+        sensSlider.value = PlayerPrefs.GetFloat("mouseSens");
         mainPause.SetActive(false);
         options.SetActive(true);
     }
@@ -79,6 +81,8 @@ public class UIManager : MonoBehaviour
         PlayerPrefs.SetFloat("mainVol", mainSlider.value);
         PlayerPrefs.SetFloat("musicVol", musicSlider.value);
         PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
+        PlayerPrefs.SetFloat("mouseSens", sensSlider.value);
+        player.GetComponentInChildren<PlayerLook>().mouseSense = sensSlider.value;
         options.SetActive(false);
         mainPause.SetActive(true);
     }

@@ -10,7 +10,6 @@ public class PlayerLook : MonoBehaviour
     public Transform playerBody;
     private float xRotation = 0f;
 
-
     // Update is called once per frame
     void Update()
     {

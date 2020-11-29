@@ -8,12 +8,13 @@ using UnityEngine.Audio;
 public class MainMenu : MonoBehaviour
 {
     public GameObject main, options;
-    public Slider mainSlider, musicSlider, sfxSlider;
+    public Slider mainSlider, musicSlider, sfxSlider, sensSlider;
     public void OpenOptions()
     {
         mainSlider.value = PlayerPrefs.GetFloat("mainVol");
         musicSlider.value = PlayerPrefs.GetFloat("musicVol");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVol");
+        sensSlider.value = PlayerPrefs.GetFloat("mouseSens");
         main.SetActive(false);
         options.SetActive(true);
     }
@@ -23,6 +24,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("mainVol", mainSlider.value);
         PlayerPrefs.SetFloat("musicVol", musicSlider.value);
         PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
+        PlayerPrefs.SetFloat("mouseSens", sensSlider.value);
         options.SetActive(false);
         main.SetActive(true);
     }
