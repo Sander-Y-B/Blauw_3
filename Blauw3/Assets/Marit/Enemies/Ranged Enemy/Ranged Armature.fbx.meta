@@ -7,11 +7,11 @@ ModelImporter:
       74: -6865985502800507752
     second: Armature.001|Idle (Ranged)
   - first:
+      74: -3869871779507303637
+    second: Armature.001|MovingShoot (Ranged)
+  - first:
       74: -817107978243506581
     second: Armature.001|Shoot (Ranged)
-  - first:
-      74: -7702156884106843639
-    second: Armature.001|Shoot/walk (Ranged)
   - first:
       74: -7334253146383023835
     second: Armature.001|Walk (Ranged)
