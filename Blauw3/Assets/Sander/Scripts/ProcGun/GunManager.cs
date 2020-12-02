@@ -34,10 +34,13 @@ public class GunManager : MonoBehaviour
     GameObject newBullet;
 
     public AudioSource shotFx;
+
     UIManager uIManager;
+    PlayerLook playerLookScript;
 
     void Awake()
     {
+        playerLookScript = Camera.main.GetComponent<PlayerLook>();
         uIManager = FindObjectOfType<UIManager>();
         SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
     }
@@ -46,11 +49,7 @@ public class GunManager : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            Shoot(currentSpread);
-        }
-        if (Input.GetButton("Fire2")) 
-        {
-            Shoot(currentScopedSpread);
+            Shoot();
         }
     }
 
@@ -92,6 +91,7 @@ public class GunManager : MonoBehaviour
         currentReloadeSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
 
         currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsBody.modRecoil;
+        playerLookScript.UpdateRecoil(currentRecoil);
 
         if (uIManager != null)
         {
@@ -126,13 +126,25 @@ public class GunManager : MonoBehaviour
         SpawnNewGun(gunLoadout[0], gunLoadout[1], gunLoadout[2]);
     }
 
-    void Shoot(float spreadAmount)
+    void Shoot()
     {
+        float spreadAmount;
+
         if (canShoot)
         {
+            if (playerLookScript.isScoped)
+            {
+                spreadAmount = currentScopedSpread;
+            }
+            else
+            {
+                spreadAmount = currentSpread;
+            }
+
             newBullet = Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
             newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
             newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
+            playerLookScript.AddRecoil();
 
             shotFx.Play();
             StartCoroutine(ShotDelay());

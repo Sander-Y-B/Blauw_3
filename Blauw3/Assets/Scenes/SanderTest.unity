@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -407,6 +407,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
+        type: 3}
+      propertyPath: recoilRotation.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
+        type: 3}
+      propertyPath: recoilRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
+        type: 3}
+      propertyPath: recoilRotation.z
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
+        type: 3}
+      propertyPath: mouseSense
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 962142995371658064, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: m_Name
