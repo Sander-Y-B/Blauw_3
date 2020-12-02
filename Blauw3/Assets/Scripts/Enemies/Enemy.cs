@@ -95,9 +95,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        print("");
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) { DestroyEnemy();}
     }
     private void DestroyEnemy()
     {
