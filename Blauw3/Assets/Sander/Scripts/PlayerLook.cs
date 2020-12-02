@@ -22,9 +22,13 @@ public class PlayerLook : MonoBehaviour
     Vector3 rot;
     float newXRot;
 
+    float baseFov;
+    public float zoomFovOffset;
+
     void Awake()
     {
         mouseSense = mouseSense * 10;
+        UpdateFov();
     }
 
     // Update is called once per frame
@@ -47,13 +51,15 @@ public class PlayerLook : MonoBehaviour
             transform.localRotation = Quaternion.Euler(newXRot, rot.y, rot.z);
         }
 
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             isScoped = true;
+            Camera.main.fieldOfView -= zoomFovOffset;
         }
-        else
+        else if (Input.GetButtonUp("Fire2"))
         {
             isScoped = false;
+            Camera.main.fieldOfView = baseFov;
         }
 
     }
@@ -82,5 +88,12 @@ public class PlayerLook : MonoBehaviour
             currentRotation += new Vector3(-recoilRotation, 0f, Random.Range(-recoilRotation, recoilRotation));
         }
         
+    }
+
+    public void UpdateFov()
+    {
+        //Camera.main.fieldOfView = PlayerPrefs.GetFloat("fov");
+        baseFov = Camera.main.fieldOfView;
+
     }
 }
