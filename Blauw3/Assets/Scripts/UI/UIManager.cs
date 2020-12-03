@@ -13,11 +13,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, sensSlider;
-
-    private void Start()
-    {
-        player.GetComponentInChildren<PlayerLook>().mouseSense = PlayerPrefs.GetFloat("mouseSens");
-    }
     private void Update()
     {
         if (Input.GetButtonDown("GunStat"))
@@ -81,8 +76,7 @@ public class UIManager : MonoBehaviour
         PlayerPrefs.SetFloat("mainVol", mainSlider.value);
         PlayerPrefs.SetFloat("musicVol", musicSlider.value);
         PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
-        PlayerPrefs.SetFloat("mouseSens", sensSlider.value);
-        player.GetComponentInChildren<PlayerLook>().mouseSense = sensSlider.value;
+        player.GetComponentInChildren<PlayerLook>().mouseSense = PlayerPrefs.GetFloat("mouseSens");
         options.SetActive(false);
         mainPause.SetActive(true);
     }

@@ -30,9 +30,6 @@ public class SettingManager : MonoBehaviour
         resDrop.AddOptions(options);
         resDrop.value = currentResIndex;
         resDrop.RefreshShownValue();
-        mixer.SetFloat("MasterVol", Mathf.Log10(PlayerPrefs.GetFloat("mainVol")) * 20);
-        mixer.SetFloat("MusicVol", Mathf.Log10(PlayerPrefs.GetFloat("musicVol")) * 20);
-        mixer.SetFloat("SfxVol", Mathf.Log10(PlayerPrefs.GetFloat("sfxVol")) * 20);
     }
     public void SetMainVolume(float sliderValue)
     {
@@ -46,7 +43,10 @@ public class SettingManager : MonoBehaviour
     {
         mixer.SetFloat("SfxVol", Mathf.Log10(sliderValue) * 20);
     }
-
+    public void SetSens(float sliderValue)
+    {
+        PlayerPrefs.SetFloat("mouseSens", sliderValue);
+    }
     public void SetResolution(int resIndex)
     {
         Resolution resolution = resolutions[resIndex];

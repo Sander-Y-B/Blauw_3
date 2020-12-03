@@ -27,7 +27,7 @@ public class PlayerLook : MonoBehaviour
 
     void Awake()
     {
-        mouseSense = mouseSense * 10;
+        mouseSense = PlayerPrefs.GetFloat("mouseSens");
         UpdateFov();
     }
 
@@ -38,8 +38,8 @@ public class PlayerLook : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
 
-            float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * mouseSense * 10 * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSense * 10 * Time.deltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
