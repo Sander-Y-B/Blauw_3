@@ -42,6 +42,7 @@ public class DungeonGeneration : MonoBehaviour
                             {
                                 if(doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                 {
+                                    //print(coordinates.transform.position);
                                     coordinatesChecker++;
                                     doorScript.isThereARoomHere = true;
                                 }
@@ -49,6 +50,7 @@ public class DungeonGeneration : MonoBehaviour
                             if(coordinatesChecker < 1)
                             {
                                 justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0,roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                print(justSpawnedRoom.transform.position);
                                 occupiedCoordinates.Add(justSpawnedRoom);
                                 tempRooms.Add(justSpawnedRoom);
                                 currentRoomAmount++;
@@ -60,19 +62,20 @@ public class DungeonGeneration : MonoBehaviour
                                     {
                                         if (doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                         {
-                                            doorScript.RoomAtSpawnLocation = coordinates;
+                                            doorScript.isThereARoomHere = true;
+                                            doorScript.roomAtSpawnLocation = coordinates;
                                         }
                                     }
-                                    if(doorScript.RoomAtSpawnLocation != null)
+                                    if(doorScript.roomAtSpawnLocation != null)
                                     {
                                         if (doorScript.connected == false)
                                         {
                                             if(Random.Range(0,connectDoorChance) == 0)
                                             {
-                                                DecideDoor(doorScript.RoomAtSpawnLocation, justSpawnedDoor, doorNumber2);
+                                                DecideDoor(doorScript.roomAtSpawnLocation, justSpawnedDoor, doorNumber2);
                                             }
                                         }
-                                        doorScript.RoomAtSpawnLocation = null;
+                                        doorScript.roomAtSpawnLocation = null;
                                     }
                                     doorNumber2++;
                                 }
