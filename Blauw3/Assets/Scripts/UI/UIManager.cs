@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class UIManager : MonoBehaviour
 {
+    public AudioSource buttonSound;
     public Animator gunStatAnim;
     public static bool isPaused;
     private float newPercent;
@@ -89,6 +90,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
-
+    public void buttonPress()
+    {
+        buttonSound.Play();
+    }
 
 }

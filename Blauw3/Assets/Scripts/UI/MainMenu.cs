@@ -8,8 +8,14 @@ using EZCameraShake;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource buttonSound;
     public GameObject main, options;
     public Slider mainSlider, musicSlider, sfxSlider, sensSlider;
+
+    public void buttonPress()
+    {
+        buttonSound.Play();
+    }
     public void OpenOptions()
     {
         CameraShaker.Instance.ShakeOnce(4f, 1f, .1f, .1f);
