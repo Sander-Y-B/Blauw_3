@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
     public GameObject player, pause, options, mainPause;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, sensSlider;
 
-
     private void Start()
     {
         player.GetComponentInChildren<PlayerLook>().mouseSense = PlayerPrefs.GetFloat("mouseSens");
@@ -90,4 +89,6 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+
 }

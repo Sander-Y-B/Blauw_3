@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using EZCameraShake;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public Slider mainSlider, musicSlider, sfxSlider, sensSlider;
     public void OpenOptions()
     {
+        CameraShaker.Instance.ShakeOnce(4f, 1f, .1f, .1f);
         mainSlider.value = PlayerPrefs.GetFloat("mainVol");
         musicSlider.value = PlayerPrefs.GetFloat("musicVol");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVol");
@@ -21,6 +23,7 @@ public class MainMenu : MonoBehaviour
 
     public void OpenMain()
     {
+        CameraShaker.Instance.ShakeOnce(4f, 1f, .1f, .1f);
         PlayerPrefs.SetFloat("mainVol", mainSlider.value);
         PlayerPrefs.SetFloat("musicVol", musicSlider.value);
         PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
