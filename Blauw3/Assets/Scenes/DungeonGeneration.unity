@@ -121,6 +121,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &39681364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39681366}
+  - component: {fileID: 39681365}
+  m_Layer: 0
+  m_Name: DungeonGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &39681365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39681364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fce8baaa4a1b84e93a070850409d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRoomAmount: 200
+  spawnRoomChance: 3
+  connectDoorChance: 3
+  roomPrefabs:
+  - {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111, type: 3}
+  - {fileID: 7848098635604046003, guid: 5a2e3ac5c11a3a342a11b726337e2e38, type: 3}
+  - {fileID: 4482666640206494744, guid: 5f50fbf313f47b94c9dbce8c2f161fc4, type: 3}
+  - {fileID: 4034891500128876216, guid: df3d25f47d160be408385625a9caa7d7, type: 3}
+  rooms:
+  - {fileID: 228872520}
+  occupiedCoordinates: []
+  tempRooms: []
+--- !u!4 &39681366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39681364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228872520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111,
@@ -230,7 +285,7 @@ GameObject:
   - component: {fileID: 952398034}
   - component: {fileID: 952398033}
   m_Layer: 0
-  m_Name: DungeonGenerator
+  m_Name: DungeonGeneratorCoroutine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,10 +300,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 952398032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03fce8baaa4a1b84e93a070850409d60, type: 3}
+  m_Script: {fileID: 11500000, guid: 05298e6905190ee4498dfbed5a3ad48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRoomAmount: 500
+  maxRoomAmount: 200
   spawnRoomChance: 3
   connectDoorChance: 3
   roomPrefabs:
@@ -258,8 +313,7 @@ MonoBehaviour:
   - {fileID: 4482666640206494744, guid: 5f50fbf313f47b94c9dbce8c2f161fc4, type: 3}
   rooms:
   - {fileID: 228872520}
-  occupiedCoordinates:
-  - {fileID: 228872520}
+  occupiedCoordinates: []
   tempRooms: []
 --- !u!4 &952398034
 Transform:

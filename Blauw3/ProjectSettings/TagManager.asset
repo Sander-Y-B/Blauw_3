@@ -13,6 +13,7 @@ TagManager:
   - GunBody
   - GunLoader
   - GunBarrel
+  - Room
   layers:
   - Default
   - TransparentFX

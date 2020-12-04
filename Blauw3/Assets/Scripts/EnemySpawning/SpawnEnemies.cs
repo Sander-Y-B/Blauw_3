@@ -11,7 +11,7 @@ public class SpawnEnemies : MonoBehaviour
     public int[] spawnChanceEnemy;
     private int enemiesSpawnIndicator;
     public GameObject[] spawnPoints;
-    public List<GameObject> enemiesToSpawn;
+    public GameObject[] enemiesToSpawn;
     public List<GameObject> enemiesAlive;
     private GameObject justSpawnedEnemy;
     private float timeSinceLastSpawn;
@@ -27,12 +27,11 @@ public class SpawnEnemies : MonoBehaviour
     {
         if (roomCleared == false)
         {
-            if(timeSinceLastSpawn >= minTimeBetweenSpawns && currentEnemies < totalEnemies && enemiesAlive.Count < maxEnemiesAllowed)//spawns more enenmies, but not over a certain amount and there is a minimum wait time
+            if(timeSinceLastSpawn >= minTimeBetweenSpawns && currentEnemies < totalEnemies && enemiesAlive.Count < maxEnemiesAllowed)//spawns more enemies, but not over a certain amount and there is a minimum wait time
             {
                 indicateSpawnEnemy();
                 justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0 ,spawnPoints.Length)].transform.position, Quaternion.identity);
                 enemiesAlive.Add(justSpawnedEnemy);
-                enemiesToSpawn.Remove(justSpawnedEnemy);
                 currentEnemies++;
                 timeSinceLastSpawn = 0;
             }
@@ -56,7 +55,6 @@ public class SpawnEnemies : MonoBehaviour
             indicateSpawnEnemy();
             justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoint.transform.position, Quaternion.identity);
             enemiesAlive.Add(justSpawnedEnemy);
-            enemiesToSpawn.Remove(justSpawnedEnemy);
         }
         timerBool = true;
     }
