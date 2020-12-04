@@ -407,6 +407,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744001516, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBodies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunLoaders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBarrels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBodies.Array.data[0]
+      value: 
+      objectReference: {fileID: 6085950879291950749, guid: 0e1b3a5dbbaeeea468978cba076e31ee,
+        type: 3}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBarrels.Array.data[0]
+      value: 
+      objectReference: {fileID: 2680143116937868101, guid: 64ac7e534d9ce6b4e8327b9ae41b9576,
+        type: 3}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunLoaders.Array.data[0]
+      value: 
+      objectReference: {fileID: 7361042555633234493, guid: 0cd26738ee46e82468df77100d30ce48,
+        type: 3}
     - target: {fileID: 962142995238599045, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: recoilRotation.x

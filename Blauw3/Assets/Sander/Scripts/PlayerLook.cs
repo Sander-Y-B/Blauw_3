@@ -31,7 +31,6 @@ public class PlayerLook : MonoBehaviour
         UpdateFov();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (lookAllow)
@@ -48,7 +47,7 @@ public class PlayerLook : MonoBehaviour
             currentRotation = Vector3.Lerp(currentRotation, Vector3.zero, recoilReturnSpeed * Time.deltaTime);
             rot = Vector3.Slerp(rot, currentRotation, recoilRotationSpeed * Time.deltaTime);
             newXRot = rot.x + xRotation;
-            transform.localRotation = Quaternion.Euler(newXRot, rot.y, rot.z);
+            transform.localRotation = Quaternion.Euler(newXRot, 0f, rot.z);
         }
 
         if (Input.GetButtonDown("Fire2"))

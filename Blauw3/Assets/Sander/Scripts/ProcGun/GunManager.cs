@@ -27,16 +27,19 @@ public class GunManager : MonoBehaviour
     [HideInInspector] public float currentSpread;
     [HideInInspector] public float currentScopedSpread;
     [HideInInspector] public float currentMaxClipsize;
-    [HideInInspector] public float currentReloadeSpeed;
+    [HideInInspector] public float currentReloadSpeed;
     [HideInInspector] public float currentRecoil;
 
     GameObject bullet;
     GameObject newBullet;
 
+    public float currentAmmoAmount;
+
     public AudioSource shotFx;
 
     UIManager uIManager;
     PlayerLook playerLookScript;
+
 
     void Awake()
     {
@@ -51,6 +54,12 @@ public class GunManager : MonoBehaviour
         {
             Shoot();
         }
+        else if (Input.GetButtonDown("Reload"))
+        {
+            StartCoroutine(ReloadGun()); 
+            StopCoroutine(ReloadGun()); 
+        }
+        
     }
 
 
@@ -88,14 +97,15 @@ public class GunManager : MonoBehaviour
 
         currentDamge = statsLoader.baseDamage + statsBody.modDamage + statsBarrel.modDamage;
         currentMaxClipsize = statsLoader.baseClipsize;
-        currentReloadeSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
+        currentAmmoAmount = currentMaxClipsize;
+        currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
 
         currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsBody.modRecoil;
         playerLookScript.UpdateRecoil(currentRecoil);
 
         if (uIManager != null)
         {
-            uIManager.UpdateStats(currentDamge, currentShotSpeed, currentSpread, currentScopedSpread, currentMaxClipsize, currentReloadeSpeed, currentRecoil);
+            uIManager.UpdateStats(currentDamge, currentShotSpeed, currentSpread, currentScopedSpread, currentMaxClipsize, currentReloadSpeed, currentRecoil);
         }
 
 
@@ -132,22 +142,33 @@ public class GunManager : MonoBehaviour
 
         if (canShoot)
         {
-            if (playerLookScript.isScoped)
+            if (currentAmmoAmount >= 1)
             {
-                spreadAmount = currentScopedSpread;
+                if (playerLookScript.isScoped)
+                {
+                    spreadAmount = currentScopedSpread;
+                }
+                else
+                {
+                    spreadAmount = currentSpread;
+                }
+
+                newBullet = Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
+                newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
+                newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
+                playerLookScript.AddRecoil();
+
+                shotFx.Play();
+                currentAmmoAmount--;
+                StartCoroutine(ShotDelay()); 
+                StopCoroutine(ShotDelay()); 
             }
             else
             {
-                spreadAmount = currentSpread;
+                StartCoroutine(ReloadGun());
+                StopCoroutine(ReloadGun()); 
             }
-
-            newBullet = Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
-            newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
-            newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
-            playerLookScript.AddRecoil();
-
-            shotFx.Play();
-            StartCoroutine(ShotDelay());
+            
           
         }
     }
@@ -159,5 +180,15 @@ public class GunManager : MonoBehaviour
         canShoot = true;
     }
 
-    
+    IEnumerator ReloadGun()
+    {
+        if (canShoot)
+        {
+            canShoot = false;
+            yield return new WaitForSeconds(currentReloadSpeed);
+            currentAmmoAmount = currentMaxClipsize;
+            canShoot = true;
+        }
+
+    }
 }
