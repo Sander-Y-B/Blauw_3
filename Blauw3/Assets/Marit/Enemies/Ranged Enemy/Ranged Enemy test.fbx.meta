@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: c23273514930b214f91f640b090edd4e
+guid: effdf6eca22b9f04593753ff174c188b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
+  - first:
+      74: -629382057963851418
+    second: Armature.001|Death (Ranged)
   - first:
       74: -6865985502800507752
     second: Armature.001|Idle (Ranged)
