@@ -9,10 +9,10 @@ public class UIManager : MonoBehaviour
     public AudioSource buttonSound;
     public Animator gunStatAnim;
     public static bool isPaused;
-    private float newPercent;
+    private float newHealthPercent, newAmmoPercent;
     public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
-    public Slider mainSlider, musicSlider, sfxSlider, healthSlider, sensSlider;
+    public Slider mainSlider, musicSlider, sfxSlider, healthSlider, ammoSlider, sensSlider;
     private void Update()
     {
         if (Input.GetButtonDown("GunStat"))
@@ -38,8 +38,14 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealthBar(float newHealth, float maxHealth)
     {
-        newPercent = newHealth/ maxHealth * 100;
-        healthSlider.value = newPercent;
+        newHealthPercent = newHealth/ maxHealth * 100;
+        healthSlider.value = newHealthPercent;
+    }
+
+    public void UpdateAmmoBar(float newAmmo, float maxAmmo)
+    {
+        newAmmoPercent = newAmmo / maxAmmo * 100;
+        healthSlider.value = newAmmoPercent;
     }
     public void TogglePause()
     {
