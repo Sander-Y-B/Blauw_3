@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Enemy : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
+
+    private float maxHealth, healthPercent;
+
+    public Slider healthSlider;
 
     //Patroling
     public Vector3 walkPoint;
@@ -28,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        maxHealth = health;
         player = GameObject.Find("PlayerBody").transform;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -99,6 +105,8 @@ public class Enemy : MonoBehaviour
         health -= damage;
 
         if (health <= 0) { DestroyEnemy();}
+        healthPercent = health / maxHealth * 100;
+        healthSlider.value = healthPercent;
     }
     private void DestroyEnemy()
     {
