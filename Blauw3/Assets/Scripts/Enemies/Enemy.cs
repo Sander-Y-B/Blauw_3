@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
 
+    public Animator animator;
+
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
@@ -101,7 +103,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        print("");
         health -= damage;
 
         if (health <= 0) { DestroyEnemy();}
@@ -115,6 +116,6 @@ public class Enemy : MonoBehaviour
 
     public virtual void Attack()
     {
-        print("attaaack!");
+
     }
 }

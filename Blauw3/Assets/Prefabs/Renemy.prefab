@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 3385106693450596522}
+  animator: {fileID: 8655969624794770366}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
