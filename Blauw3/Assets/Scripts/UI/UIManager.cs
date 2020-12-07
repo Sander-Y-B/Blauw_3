@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
     public GameObject player, pause, options, mainPause;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, ammoSlider, sensSlider;
+
     private void Update()
     {
         if (Input.GetButtonDown("GunStat"))

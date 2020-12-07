@@ -160,6 +160,7 @@ public class GunManager : MonoBehaviour
 
                 shotFx.Play();
                 currentAmmoAmount--;
+                uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
                 StartCoroutine(ShotDelay()); 
                 StopCoroutine(ShotDelay()); 
             }
@@ -184,9 +185,11 @@ public class GunManager : MonoBehaviour
     {
         if (canShoot)
         {
+            
             canShoot = false;
             yield return new WaitForSeconds(currentReloadSpeed);
             currentAmmoAmount = currentMaxClipsize;
+            uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
             canShoot = true;
         }
 

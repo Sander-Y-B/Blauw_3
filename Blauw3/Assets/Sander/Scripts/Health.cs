@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
     void Death()
     {
         print(gameObject + " died");
-        print("go commit sudoku ya fuck");
+
     }
 
 
