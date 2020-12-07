@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerRoomInteraction : MonoBehaviour
 {
     public string roomTagName;
+    public SpawnEnemies spawnEnemies;
 
     public void OnTriggerEnter(Collider o)
     {
         if(o.gameObject.tag == roomTagName)
         {
-            o.gameObject.GetComponent<SpawnEnemies>().RoomStart();
+            spawnEnemies = o.gameObject.GetComponent<SpawnEnemies>();
+            spawnEnemies.roomStarted = true;
+            spawnEnemies.RoomStart();
         }
     }
 }
