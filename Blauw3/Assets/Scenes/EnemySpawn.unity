@@ -364,6 +364,7 @@ MonoBehaviour:
   - {fileID: 194747400783001321, guid: 3acaef721a0ec704fbabdaee9ef71541, type: 3}
   - {fileID: 886900462339418239, guid: cd566f0473e6bc043962078c78afa857, type: 3}
   enemiesAlive: []
+  roomStarted: 0
 --- !u!1 &957171059
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomTagName: Room
+  spawnEnemies: {fileID: 0}
 --- !u!136 &2019877696
 CapsuleCollider:
   m_ObjectHideFlags: 0

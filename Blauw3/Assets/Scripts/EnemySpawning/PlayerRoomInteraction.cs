@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRoomInteraction : MonoBehaviour
 {
     public string roomTagName;
-    public SpawnEnemies spawnEnemies;
+    private SpawnEnemies spawnEnemies;
 
     public void OnTriggerEnter(Collider o)
     {
