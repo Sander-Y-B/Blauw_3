@@ -24,6 +24,13 @@ public class ScalingText : MonoBehaviour
         transform.localScale = transform.localScale + new Vector3(0.1f, 0.1f, 0);
     }
 
+    public void OnButtonPress()
+    {
+        if (transform.localScale != baseScale)
+        {
+            transform.localScale = baseScale;
+        }
+    }
     public void OnMouseHoverStop()
     {
         transform.localScale = baseScale;
