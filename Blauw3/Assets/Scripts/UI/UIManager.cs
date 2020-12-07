@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     public void UpdateAmmoBar(float newAmmo, float maxAmmo)
     {
         newAmmoPercent = newAmmo / maxAmmo * 100;
-        healthSlider.value = newAmmoPercent;
+        ammoSlider.value = newAmmoPercent;
     }
     public void TogglePause()
     {
