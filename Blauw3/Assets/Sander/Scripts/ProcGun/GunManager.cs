@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
-    [HideInInspector] public bool canShoot = true;
+    [HideInInspector] public bool shootAllow = true; // this is for other scripts to completely prefent the player from shooting
+    bool canShoot = true; // this one is for functions here to prefent shooting
     [SerializeField] GameObject[] gunBodies;
     [SerializeField] GameObject[] gunLoaders;
     [SerializeField] GameObject[] gunBarrels;
@@ -100,7 +101,11 @@ public class GunManager : MonoBehaviour
         currentAmmoAmount = currentMaxClipsize;
         currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
 
-        currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsBody.modRecoil;
+        currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsLoader.modRecoil;
+        if (currentRecoil <0)
+        {
+            currentRecoil = 0;
+        }
         playerLookScript.UpdateRecoil(currentRecoil);
 
         if (uIManager != null)
@@ -114,7 +119,7 @@ public class GunManager : MonoBehaviour
         gunLoadout[2] = gunBarrels[statsBarrel.partIndex];
     }
 
-    IEnumerator UpdateGunPart(GameObject newPart)
+    public IEnumerator UpdateGunPart(GameObject newPart)
     {
         switch (newPart.tag)
         {
@@ -140,7 +145,7 @@ public class GunManager : MonoBehaviour
     {
         float spreadAmount;
 
-        if (canShoot)
+        if (canShoot && shootAllow)
         {
             if (currentAmmoAmount >= 1)
             {
@@ -160,7 +165,10 @@ public class GunManager : MonoBehaviour
 
                 shotFx.Play();
                 currentAmmoAmount--;
-                uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
+                if (uIManager != null)
+                {
+                    uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
+                }
                 StartCoroutine(ShotDelay()); 
                 StopCoroutine(ShotDelay()); 
             }
@@ -189,7 +197,10 @@ public class GunManager : MonoBehaviour
             canShoot = false;
             yield return new WaitForSeconds(currentReloadSpeed);
             currentAmmoAmount = currentMaxClipsize;
-            uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
+            if (uIManager != null)
+            {
+                uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);
+            }
             canShoot = true;
         }
 

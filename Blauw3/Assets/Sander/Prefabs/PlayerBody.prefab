@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744001515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.2, z: 0.5}
+  m_LocalPosition: {x: 0.5, y: -0.4, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 962142995238599044}
@@ -44,19 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f430404eaa0d124bbd51a341e1969d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canShoot: 1
+  shootAllow: 1
   gunBodies:
-  - {fileID: 690587257454687290, guid: 8cd6f5e0e1b5bd34188eb8a9c5366d86, type: 3}
-  - {fileID: 690587257454687290, guid: 2e0a74ea4300a5249bdd33847217faee, type: 3}
-  - {fileID: 690587257454687290, guid: 372bcce422b5bb44bbd99f7c5511e146, type: 3}
+  - {fileID: 6085950879291950749, guid: 0e1b3a5dbbaeeea468978cba076e31ee, type: 3}
   gunLoaders:
-  - {fileID: 690587257454687290, guid: 3b60734723fe9794bb53f8db3f762650, type: 3}
-  - {fileID: 690587257454687290, guid: ef90df86a7e8e8b41a0bea5dfb813379, type: 3}
-  - {fileID: 690587257454687290, guid: 7dc9420ff69f3024c8d905fe56f04386, type: 3}
+  - {fileID: 7361042555633234493, guid: 0cd26738ee46e82468df77100d30ce48, type: 3}
   gunBarrels:
-  - {fileID: 690587257454687290, guid: 2bac27ba7ad064a498fb7be34335904e, type: 3}
-  - {fileID: 690587257454687290, guid: 4d87aea112c3fda4a936ccecd418e5bb, type: 3}
-  - {fileID: 690587257454687290, guid: 093ea9c974da8ad4ca884126826e3bf2, type: 3}
+  - {fileID: 2680143116937868101, guid: 64ac7e534d9ce6b4e8327b9ae41b9576, type: 3}
   gunLoadout:
   - {fileID: 0}
   - {fileID: 0}
@@ -65,9 +59,10 @@ MonoBehaviour:
   currentShotSpeed: 0
   currentSpread: 0
   currentScopedSpread: 0
-  currentClipsize: 0
-  currentReloadeSpeed: 0
+  currentMaxClipsize: 0
+  currentReloadSpeed: 0
   currentRecoil: 0
+  currentAmmoAmount: 0
   shotFx: {fileID: 744001518}
 --- !u!82 &744001518
 AudioSource:
@@ -296,8 +291,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAllow: 1
-  mouseSense: 110
+  inShop: 0
+  mouseSense: 10
   playerBody: {fileID: 962142995371658070}
+  recoilRotationSpeed: 6
+  recoilReturnSpeed: 25
+  recoilRotation: 0
+  recoilRotationScoped: 0
+  isScoped: 0
+  zoomFovOffset: 10
 --- !u!1 &962142995371658064
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,8 +411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 100
+  currentHealth: 100
 --- !u!54 &962142995371658065
 Rigidbody:
   m_ObjectHideFlags: 0

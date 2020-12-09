@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public bool lookAllow = true;
+    public bool inShop = false;
 
     public float mouseSense = 100;
     public Transform playerBody;
@@ -54,6 +55,11 @@ public class PlayerLook : MonoBehaviour
         {
             isScoped = true;
             Camera.main.fieldOfView -= zoomFovOffset;
+
+            if (inShop)
+            {
+                
+            }
         }
         else if (Input.GetButtonUp("Fire2"))
         {
@@ -70,7 +76,6 @@ public class PlayerLook : MonoBehaviour
         {
             scopedRecoil = 0;
         }
-
         recoilRotation = recoil;
         recoilRotationScoped = scopedRecoil;
     }

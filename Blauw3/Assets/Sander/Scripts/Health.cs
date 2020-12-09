@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class Health : MonoBehaviour
     public float maxHealth = 10;
     public float currentHealth = 10;
 
-
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+    }
 
     public void DoDamage(float dmg)
     {
@@ -39,7 +43,7 @@ public class Health : MonoBehaviour
 
     void Death()
     {
-        print(gameObject + " died");
+        SceneManager.LoadScene(0);
 
     }
 
