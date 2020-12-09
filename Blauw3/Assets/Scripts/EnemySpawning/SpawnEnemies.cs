@@ -13,7 +13,7 @@ public class SpawnEnemies : MonoBehaviour
     [HideInInspector] public List<GameObject> doors;
     public GameObject[] spawnPoints;
     public GameObject[] enemiesToSpawn;
-    [HideInInspector] public List<GameObject> enemiesAlive;
+    public List<GameObject> enemiesAlive;
     private GameObject justSpawnedEnemy;
     private float timeSinceLastSpawn;
     private bool timerBool;
