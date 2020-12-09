@@ -46,7 +46,7 @@ public class SpawnEnemies : MonoBehaviour
                     timeSinceLastSpawn += Time.deltaTime;
                 }
 
-                if (totalEnemies == currentEnemies && enemiesAlive.Count == 0)
+                if (totalEnemies <= currentEnemies && enemiesAlive.Count == 0)
                 {
                     RoomCleared();
                 }
@@ -56,7 +56,7 @@ public class SpawnEnemies : MonoBehaviour
 
     public void RoomStart() //called when player enters the room for the first time (though an on trigger on the player)
     {
-        if (roomCleared == false)
+        if (roomCleared == false && roomStarted == false)
         {
             //temp close doors (no animation)
             foreach (GameObject door in doors)
@@ -73,6 +73,7 @@ public class SpawnEnemies : MonoBehaviour
                 currentEnemies++;
             }
             timerBool = true;
+            roomStarted = true;
         }
     }
 
