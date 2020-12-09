@@ -10,7 +10,7 @@ public class SpawnEnemies : MonoBehaviour
     public float minTimeBetweenSpawns;
     public int[] spawnChanceEnemy;
     private int enemiesSpawnIndicator;
-    [HideInInspector] public List<GameObject> doors;
+    public List<GameObject> doors;
     public GameObject[] spawnPoints;
     public GameObject[] enemiesToSpawn;
     public List<GameObject> enemiesAlive;
@@ -61,7 +61,7 @@ public class SpawnEnemies : MonoBehaviour
             //temp close doors (no animation)
             foreach (GameObject door in doors)
             {
-                door.gameObject.SetActive(true);
+                door.GetComponent<Door>().CloseDoors();
             }
 
             foreach (GameObject spawnPoint in spawnPoints)
@@ -82,7 +82,7 @@ public class SpawnEnemies : MonoBehaviour
         //temp open doors(no animation)
         foreach (GameObject door in doors)
         {
-            door.SetActive(false);
+            door.GetComponent<Door>().OpenDoors();
         }
 
         roomCleared = true;

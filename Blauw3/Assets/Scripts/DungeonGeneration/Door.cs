@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public GameObject spawnRoomLocation;
     public GameObject wall;
     public GameObject hallway;
+    public GameObject door;
 
 
 
@@ -19,5 +20,14 @@ public class Door : MonoBehaviour
         wall.SetActive(false);
         connected = true;
         isThereARoomHere = true;
+    }
+
+    public void CloseDoors()
+    {
+        door.SetActive(true);
+    }
+    public void OpenDoors()
+    {
+        door.SetActive(false);
     }
 }
