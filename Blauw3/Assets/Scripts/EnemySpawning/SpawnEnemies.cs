@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     public int totalEnemies;
-    private int currentEnemies;
     public int maxEnemiesAllowed;
+    public int currentEnemies;
     public float minTimeBetweenSpawns;
     public int[] spawnChanceEnemy;
     private int enemiesSpawnIndicator;
