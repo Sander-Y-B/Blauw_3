@@ -53,13 +53,13 @@ public class PlayerLook : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
-            isScoped = true;
-            Camera.main.fieldOfView -= zoomFovOffset;
-
-            if (inShop)
+            if (lookAllow)
             {
-                
+                isScoped = true;
+                Camera.main.fieldOfView -= zoomFovOffset;
             }
+
+
         }
         else if (Input.GetButtonUp("Fire2"))
         {

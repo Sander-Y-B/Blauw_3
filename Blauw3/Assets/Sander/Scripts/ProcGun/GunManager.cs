@@ -41,6 +41,7 @@ public class GunManager : MonoBehaviour
     UIManager uIManager;
     PlayerLook playerLookScript;
 
+    public GameObject testPart;
 
     void Awake()
     {
@@ -60,7 +61,13 @@ public class GunManager : MonoBehaviour
             StartCoroutine(ReloadGun()); 
             StopCoroutine(ReloadGun()); 
         }
-        
+
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StartCoroutine(UpdateGunPart(testPart));
+            print("neef");
+        }
     }
 
 
