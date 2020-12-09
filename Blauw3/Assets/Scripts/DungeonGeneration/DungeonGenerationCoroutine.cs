@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DungeonGenerationCoroutine : MonoBehaviour
 {
-    public GameObject winRoom;
     public int maxRoomAmount;
     private int currentRoomAmount;
     public int spawnRoomChance;

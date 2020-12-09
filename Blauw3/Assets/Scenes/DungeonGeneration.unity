@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05298e6905190ee4498dfbed5a3ad48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRoomAmount: 200
+  maxRoomAmount: 500
   spawnRoomChance: 3
   connectDoorChance: 3
   roomPrefabs:
