@@ -100,7 +100,7 @@ public class DungeonGenerationCoroutine : MonoBehaviour
             }
             tempRooms.Clear();
         }
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         if (currentRoomAmount < maxRoomAmount)
         {
             StartCoroutine(InstanciateRooms());

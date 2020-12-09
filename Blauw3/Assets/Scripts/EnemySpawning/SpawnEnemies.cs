@@ -10,6 +10,7 @@ public class SpawnEnemies : MonoBehaviour
     public float minTimeBetweenSpawns;
     public int[] spawnChanceEnemy;
     private int enemiesSpawnIndicator;
+    [HideInInspector] public List<GameObject> doors;
     public GameObject[] spawnPoints;
     public GameObject[] enemiesToSpawn;
     [HideInInspector] public List<GameObject> enemiesAlive;
@@ -35,6 +36,7 @@ public class SpawnEnemies : MonoBehaviour
                     indicateSpawnEnemy();
                     justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0 ,spawnPoints.Length)].transform.position, Quaternion.identity);
                     enemiesAlive.Add(justSpawnedEnemy);
+                    justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
                     currentEnemies++;
                     timeSinceLastSpawn = 0;
                 }
@@ -56,7 +58,12 @@ public class SpawnEnemies : MonoBehaviour
     {
         if(roomCleared == false)
         {
-            //close doors
+            //temp close doors (no animation)
+            foreach(GameObject door in doors)
+            {
+                door.gameObject.SetActive(true);
+            }
+
             foreach(GameObject spawnPoint in spawnPoints)
             {
                 indicateSpawnEnemy();
@@ -69,13 +76,19 @@ public class SpawnEnemies : MonoBehaviour
 
     public void RoomCleared()
     {
-        //open doors
+        //temp open doors(no animation)
+        foreach (GameObject door in doors)
+        {
+            if (door.activeInHierarchy == false) ;
+        }
+
         roomCleared = true;
     }
 
     public void indicateSpawnEnemy() //always call this before spawning an enemy
     {
-        enemiesSpawnIndicator = Random.Range(1, spawnChanceEnemy[0] + spawnChanceEnemy[1] + spawnChanceEnemy[2]);
+        enemiesSpawnIndicator = Random.Range(0, spawnChanceEnemy[0] + spawnChanceEnemy[1] + spawnChanceEnemy[2]);
+        enemiesSpawnIndicator++;
         if(enemiesSpawnIndicator <= spawnChanceEnemy[0])
         {
             enemiesSpawnIndicator = 0;

@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
 
     public Slider healthSlider;
 
+    public SpawnEnemies spawnEnemies;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -111,6 +113,7 @@ public class Enemy : MonoBehaviour
     }
     private void DestroyEnemy()
     {
+        spawnEnemies.enemiesAlive.Remove(gameObject);
         Destroy(gameObject);
     }
 
