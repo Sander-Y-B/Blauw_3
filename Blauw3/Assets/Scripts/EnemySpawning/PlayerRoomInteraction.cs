@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRoomInteraction : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerRoomInteraction : MonoBehaviour
             }
             else
             {
-                //win
+                SceneManager.LoadScene(0);
             }
         }
     }
