@@ -36,7 +36,7 @@ public class SpawnEnemies : MonoBehaviour
                     indicateSpawnEnemy();
                     justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
                     enemiesAlive.Add(justSpawnedEnemy);
-                    justSpawnedEnemy.GetComponent<TestEnemy>().spawnEnemies = this;
+                    justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
                     currentEnemies++;
                     timeSinceLastSpawn = 0;
                 }
@@ -69,7 +69,7 @@ public class SpawnEnemies : MonoBehaviour
                 indicateSpawnEnemy();
                 justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoint.transform.position, Quaternion.identity);
                 enemiesAlive.Add(justSpawnedEnemy);
-                justSpawnedEnemy.GetComponent<TestEnemy>().spawnEnemies = this;
+                justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
                 currentEnemies++;
             }
             timerBool = true;
