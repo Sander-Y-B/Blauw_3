@@ -14,7 +14,7 @@ public class ExplodingEnemy : Enemy
                 hitCollider.GetComponent<Health>().DoDamage(damage);
             }
         }
-        Destroy(gameObject);
+        DestroyEnemy();
 
     }
 }

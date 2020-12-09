@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         healthPercent = health / maxHealth * 100;
         healthSlider.value = healthPercent;
     }
-    private void DestroyEnemy()
+    public void DestroyEnemy()
     {
         spawnEnemies.enemiesAlive.Remove(gameObject);
         Destroy(gameObject);
