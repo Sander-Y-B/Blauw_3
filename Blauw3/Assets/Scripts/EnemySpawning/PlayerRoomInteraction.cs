@@ -11,8 +11,15 @@ public class PlayerRoomInteraction : MonoBehaviour
     {
         if(o.gameObject.tag == roomTagName)
         {
-            spawnEnemies = o.gameObject.GetComponent<SpawnEnemies>();
-            spawnEnemies.RoomStart();
+            if(o.gameObject.GetComponent<Room>().winRoom == false)
+            {
+                spawnEnemies = o.gameObject.GetComponent<SpawnEnemies>();
+                spawnEnemies.RoomStart();
+            }
+            else
+            {
+                //win
+            }
         }
     }
 }
