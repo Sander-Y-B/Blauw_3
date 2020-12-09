@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DungeonGenerationCoroutine : MonoBehaviour
 {
+    public GameObject winRoom;
     public int maxRoomAmount;
     private int currentRoomAmount;
     public int spawnRoomChance;
@@ -32,7 +33,7 @@ public class DungeonGenerationCoroutine : MonoBehaviour
             foreach (GameObject door in roomScript.Doors)
             {
                 doorScript = door.GetComponent<Door>();
-                if (currentRoomAmount < maxRoomAmount)
+                if (currentRoomAmount < maxRoomAmount - 1)
                 {
                     if (doorScript.connected == false && Random.Range(0, spawnRoomChance) == 0)
                     {
@@ -50,7 +51,11 @@ public class DungeonGenerationCoroutine : MonoBehaviour
                             if (coordinatesChecker < 1)
                             {
                                 justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
-                                print(justSpawnedRoom.transform.position);
+                                if (currentRoomAmount == maxRoomAmount - 2)
+                                {
+                                    justSpawnedRoom.GetComponent<Room>().winRoom = true;
+                                }
+                                //print(justSpawnedRoom.transform.position);
                                 occupiedCoordinates.Add(justSpawnedRoom);
                                 tempRooms.Add(justSpawnedRoom);
                                 currentRoomAmount++;
@@ -101,7 +106,7 @@ public class DungeonGenerationCoroutine : MonoBehaviour
             tempRooms.Clear();
         }
         yield return new WaitForSeconds(0.1f);
-        if (currentRoomAmount < maxRoomAmount)
+        if (currentRoomAmount < maxRoomAmount - 1)
         {
             StartCoroutine(InstanciateRooms());
         }

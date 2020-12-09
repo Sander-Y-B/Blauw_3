@@ -32,28 +32,34 @@ public class DungeonGeneration : MonoBehaviour
             foreach (GameObject door in roomScript.Doors)
             {
                 doorScript = door.GetComponent<Door>();
-                if(currentRoomAmount < maxRoomAmount)
+                if (currentRoomAmount < maxRoomAmount - 1)
                 {
-                    if(doorScript.connected == false && Random.Range(0,spawnRoomChance) == 0)
+                    if (doorScript.connected == false && Random.Range(0, spawnRoomChance) == 0)
                     {
-                        if(doorScript.isThereARoomHere == false)
+                        if (doorScript.isThereARoomHere == false)
                         {
-                            foreach(GameObject coordinates in occupiedCoordinates)
+                            foreach (GameObject coordinates in occupiedCoordinates)
                             {
-                                if(doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
+                                if (doorScript.spawnRoomLocation.transform.position == coordinates.transform.position)
                                 {
+                                    //print(coordinates.transform.position);
                                     coordinatesChecker++;
                                     doorScript.isThereARoomHere = true;
                                 }
                             }
-                            if(coordinatesChecker < 1)
+                            if (coordinatesChecker < 1)
                             {
-                                justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0,roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                if (currentRoomAmount == maxRoomAmount - 2)
+                                {
+                                    justSpawnedRoom.GetComponent<Room>().winRoom = true;
+                                }
+                                //print(justSpawnedRoom.transform.position);
                                 occupiedCoordinates.Add(justSpawnedRoom);
                                 tempRooms.Add(justSpawnedRoom);
                                 currentRoomAmount++;
                                 DecideDoor(justSpawnedRoom, door, doorNumber);
-                                foreach(GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
+                                foreach (GameObject justSpawnedDoor in justSpawnedRoom.GetComponent<Room>().Doors)
                                 {
                                     doorScript = justSpawnedDoor.GetComponent<Door>();
                                     foreach (GameObject coordinates in occupiedCoordinates)
@@ -64,11 +70,11 @@ public class DungeonGeneration : MonoBehaviour
                                             doorScript.roomAtSpawnLocation = coordinates;
                                         }
                                     }
-                                    if(doorScript.roomAtSpawnLocation != null)
+                                    if (doorScript.roomAtSpawnLocation != null)
                                     {
                                         if (doorScript.connected == false)
                                         {
-                                            if(Random.Range(0,connectDoorChance) == 0)
+                                            if (Random.Range(0, connectDoorChance) == 0)
                                             {
                                                 DecideDoor(doorScript.roomAtSpawnLocation, justSpawnedDoor, doorNumber2);
                                             }
@@ -90,7 +96,7 @@ public class DungeonGeneration : MonoBehaviour
             }
             doorNumber = 0;
         }
-        if(tempRooms.Count > 0)
+        if (tempRooms.Count > 0)
         {
             foreach(GameObject room in tempRooms)
             {

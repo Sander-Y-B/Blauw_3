@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRoomInteraction : MonoBehaviour
 {
@@ -11,8 +12,15 @@ public class PlayerRoomInteraction : MonoBehaviour
     {
         if(o.gameObject.tag == roomTagName)
         {
-            spawnEnemies = o.gameObject.GetComponent<SpawnEnemies>();
-            spawnEnemies.RoomStart();
+            if(o.gameObject.GetComponent<Room>().winRoom == false)
+            {
+                spawnEnemies = o.gameObject.GetComponent<SpawnEnemies>();
+                spawnEnemies.RoomStart();
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }
