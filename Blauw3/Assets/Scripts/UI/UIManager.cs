@@ -57,15 +57,19 @@ public class UIManager : MonoBehaviour
                 OpenMainPause();
             }
             pause.SetActive(false);
-            player.GetComponent<PlayerLook>().lookAllow = true;
+            player.GetComponentInChildren<PlayerLook>().lookAllow = true;
+            player.GetComponentInChildren<GunManager>().shootAllow = true;
+            player.GetComponent<PlayerMove>().moveAllow = true;
             isPaused = false;
         }
         else
         {
             pause.SetActive(true);
-            isPaused = true;
-            player.GetComponent<PlayerLook>().lookAllow = false;
+            player.GetComponentInChildren<PlayerLook>().lookAllow = false;
+            player.GetComponentInChildren<GunManager>().shootAllow = false;
+            player.GetComponent<PlayerMove>().moveAllow = false;
             Cursor.lockState = CursorLockMode.Confined;
+            isPaused = true;
         }
     }
     public void OpenOptions()

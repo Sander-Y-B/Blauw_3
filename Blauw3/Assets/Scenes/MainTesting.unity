@@ -2109,7 +2109,7 @@ MonoBehaviour:
   clipSizeText: {fileID: 1948038165}
   reloadSpeedText: {fileID: 2138637361}
   recoilText: {fileID: 1464460315}
-  player: {fileID: 798443844}
+  player: {fileID: 454609020}
   pause: {fileID: 456604403}
   options: {fileID: 1930727435}
   mainPause: {fileID: 1804292698}
@@ -3944,12 +3944,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750825257}
   m_CullTransparentMesh: 0
---- !u!1 &798443844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 962142995238599041, guid: 19b40f6860edf094e8d6b524107b3034,
-    type: 3}
-  m_PrefabInstance: {fileID: 1781958005}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &798443848 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 962142995238599043, guid: 19b40f6860edf094e8d6b524107b3034,

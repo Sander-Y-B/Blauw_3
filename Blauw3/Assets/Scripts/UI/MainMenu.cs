@@ -12,6 +12,10 @@ public class MainMenu : MonoBehaviour
     public GameObject main, options;
     public Slider mainSlider, musicSlider, sfxSlider, sensSlider;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;   
+    }
     public void buttonPress()
     {
         buttonSound.Play();

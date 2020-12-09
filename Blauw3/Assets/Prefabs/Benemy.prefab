@@ -319,10 +319,11 @@ MonoBehaviour:
     m_Bits: 512
   health: 10
   healthSlider: {fileID: 4329410719061270204}
+  spawnEnemies: {fileID: 0}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1.5
-  damage: 10
+  damage: 5
   sightRange: 20
   attackRange: 2
   playerInSightRange: 0
