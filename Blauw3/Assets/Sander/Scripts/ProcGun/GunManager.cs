@@ -90,7 +90,6 @@ public class GunManager : MonoBehaviour
         currentShotSpeed = statsBody.baseShotSpeed + statsLoader.modShotSpeed + statsBarrel.modShotSpeed;
         currentSpread = statsBody.baseShotSpread + statsLoader.modShotSpread + statsBarrel.modShotSpread;
         currentScopedSpread = statsBody.baseShotSpread + statsLoader.modScopedSpread + statsBarrel.modScopedSpread - 0.5f;
-
         if (currentScopedSpread <0)
         {
             currentScopedSpread = 0;
