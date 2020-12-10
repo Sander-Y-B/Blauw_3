@@ -13,4 +13,8 @@ public class RangedEnemy : Enemy
         currentBullet.GetComponent<Projectile>().speed = bulletSpeed;
         currentBullet.GetComponent<Projectile>().damage = damage;
     }
+    public override void Walk()
+    {
+        animator.SetBool("Walking", true);
+    }
 }

@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
 
     private void Patroling()
     {
+        Walk();
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour
     }
     private void SearchWalkPoint()
     {
+        Walk();
         //Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
@@ -80,6 +82,7 @@ public class Enemy : MonoBehaviour
 
     private void ChasePlayer()
     {
+        Walk();
         agent.SetDestination(player.position);
     }
 
@@ -119,6 +122,11 @@ public class Enemy : MonoBehaviour
 
     public virtual void Attack()
     {
+        //attack override
+    }
 
+    public virtual void Walk()
+    {
+        //walk animation override
     }
 }
