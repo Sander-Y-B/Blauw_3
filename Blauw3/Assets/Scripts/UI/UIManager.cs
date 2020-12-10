@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public static bool isPaused;
     private float newHealthPercent, newAmmoPercent;
     public TextMeshProUGUI damageText, shotSpeedText, spreadText, scopeSpreadText, clipSizeText, reloadSpeedText, recoilText;
-    public GameObject player, pause, options, mainPause;
+    public GameObject player, pause, options, mainPause, hud;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, ammoSlider, sensSlider;
 
     private void Update()
@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
                 OpenMainPause();
             }
             pause.SetActive(false);
+            hud.SetActive(true);
             player.GetComponentInChildren<PlayerLook>().lookAllow = true;
             player.GetComponentInChildren<GunManager>().shootAllow = true;
             player.GetComponent<PlayerMove>().moveAllow = true;
@@ -65,6 +66,7 @@ public class UIManager : MonoBehaviour
         else
         {
             pause.SetActive(true);
+            hud.SetActive(false);
             player.GetComponentInChildren<PlayerLook>().lookAllow = false;
             player.GetComponentInChildren<GunManager>().shootAllow = false;
             player.GetComponent<PlayerMove>().moveAllow = false;
