@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DungeonGeneration : MonoBehaviour
 {
+    public GameObject winRoom;
+    public GameObject shopRoom;
     public int maxRoomAmount;
     private int currentRoomAmount;
     public int spawnRoomChance;
@@ -49,10 +51,17 @@ public class DungeonGeneration : MonoBehaviour
                             }
                             if (coordinatesChecker < 1)
                             {
-                                justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
-                                if (currentRoomAmount == maxRoomAmount - 2)
+                                if(currentRoomAmount == maxRoomAmount / 2)
                                 {
-                                    justSpawnedRoom.GetComponent<Room>().winRoom = true;
+                                    justSpawnedRoom = Instantiate(shopRoom, doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                }
+                                else if(currentRoomAmount == maxRoomAmount - 2)
+                                {
+                                    justSpawnedRoom = Instantiate(winRoom, doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
+                                }
+                                else
+                                {
+                                    justSpawnedRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
                                 }
                                 //print(justSpawnedRoom.transform.position);
                                 occupiedCoordinates.Add(justSpawnedRoom);
