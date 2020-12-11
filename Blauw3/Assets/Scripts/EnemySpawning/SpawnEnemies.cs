@@ -17,7 +17,7 @@ public class SpawnEnemies : MonoBehaviour
     private GameObject justSpawnedEnemy;
     private float timeSinceLastSpawn;
     private bool timerBool;
-    private bool roomCleared;
+    [HideInInspector] public bool roomCleared;
     [HideInInspector] public bool roomStarted;
 
     void Start()
