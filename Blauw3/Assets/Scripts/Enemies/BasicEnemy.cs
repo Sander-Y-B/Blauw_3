@@ -14,4 +14,15 @@ public class BasicEnemy : Enemy
     {
         animator.SetBool("Walking", true);
     }
+
+    public override void DestroyEnemy()
+    {
+        animator.SetTrigger("Dead");
+        StartCoroutine(Die());
+    }
+    IEnumerator Die()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+        base.DestroyEnemy();
+    }
 }
