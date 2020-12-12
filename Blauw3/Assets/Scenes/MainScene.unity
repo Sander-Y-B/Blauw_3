@@ -7526,7 +7526,7 @@ MonoBehaviour:
   winRoom: {fileID: 3755261910311575637, guid: ee8e3242591b1b645b79b1a0da7c2c0e, type: 3}
   shopRoom: {fileID: 3755261910311575637, guid: 4d4f8ad0a4bbef54aa67899880e30dfc,
     type: 3}
-  maxRoomAmount: 50
+  maxRoomAmount: 10
   spawnRoomChance: 3
   connectDoorChance: 3
   roomPrefabs:

@@ -554,7 +554,7 @@ MonoBehaviour:
   - {fileID: 3755261910062343594}
   - {fileID: 3755261911725522865}
   - {fileID: 3755261910390609200}
-  winRoom: 0
+  winRoom: 1
 --- !u!65 &61336364722978772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -600,6 +600,7 @@ MonoBehaviour:
   - {fileID: 8224042846460241345, guid: 12bb084992e7b3a4fa87d4749f0d2300, type: 3}
   - {fileID: 3385106693450596533, guid: d4f612730fe60504ca4c718d0da4c408, type: 3}
   enemiesAlive: []
+  roomCleared: 0
   roomStarted: 0
 --- !u!1 &3755261910390609200
 GameObject:
@@ -1487,7 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.73947906, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
