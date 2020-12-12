@@ -4,14 +4,8 @@ ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -4347229405640643931
-    second: metarig|Attack 1 (Tank)
-  - first:
-      74: -3524339841001421644
-    second: metarig|Attack 2(Tank)
-  - first:
-      74: 9202066127409649168
-    second: metarig|Attack 3 (Tank)
+      74: 5796165218961598485
+    second: metarig|Cube.008Action
   - first:
       74: 6270596696150350471
     second: metarig|Death (Tank)
@@ -21,9 +15,6 @@ ModelImporter:
   - first:
       74: 179816024192736914
     second: metarig|T-Pose (Tank)
-  - first:
-      74: -7713534029221744351
-    second: metarig|Walk (Tank)
   externalObjects: {}
   materials:
     materialImportMode: 1
