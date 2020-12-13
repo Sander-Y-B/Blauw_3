@@ -7,20 +7,15 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
-
     public Animator animator;
-
     public Transform player;
-
+    public GameObject prefab;
     public LayerMask whatIsGround, whatIsPlayer;
-
-    public float health;
-
+    public float health, dissolveTime;
     private float maxHealth, healthPercent;
-
     public Slider healthSlider;
-
     public SpawnEnemies spawnEnemies;
+    public Material dissolve;
 
     //Patroling
     public Vector3 walkPoint;

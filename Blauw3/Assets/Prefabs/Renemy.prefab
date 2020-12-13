@@ -461,9 +461,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3833108215722462840}
   - {fileID: 633863858580901411}
   - {fileID: 8370335165128192699}
-  - {fileID: 3833108215722462840}
   - {fileID: 5067049598024178885}
   - {fileID: 485140446043092638}
   m_Father: {fileID: 0}
@@ -547,6 +547,7 @@ MonoBehaviour:
   agent: {fileID: 3385106693450596522}
   animator: {fileID: 8655969624794770366}
   player: {fileID: 0}
+  prefab: {fileID: 246209540877597803}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -554,8 +555,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   health: 7
+  dissolveTime: 5
   healthSlider: {fileID: 4663132078536065346}
   spawnEnemies: {fileID: 0}
+  dissolve: {fileID: 2100000, guid: 8216f266c463d9a409ac4bf4e94f00a7, type: 2}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
@@ -569,6 +572,7 @@ MonoBehaviour:
     type: 3}
   currentBullet: {fileID: 0}
   bulletSpeed: 0.3
+  bottom: {fileID: 3172888506424679126}
 --- !u!195 &3385106693450596522
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -779,7 +783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3385106693450596524}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5990384331268063958
 GameObject:
@@ -812,7 +816,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.25, z: 0.2}
   m_Children: []
   m_Father: {fileID: 3385106693450596524}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6627753973653823620
 MeshFilter:
@@ -1038,7 +1042,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: effdf6eca22b9f04593753ff174c188b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: effdf6eca22b9f04593753ff174c188b,
         type: 3}
@@ -1077,15 +1081,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: effdf6eca22b9f04593753ff174c188b, type: 3}
---- !u!1 &246209540877597803 stripped
+--- !u!1 &3172888506424679126 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: effdf6eca22b9f04593753ff174c188b,
+  m_CorrespondingSourceObject: {fileID: -2575207849982312524, guid: effdf6eca22b9f04593753ff174c188b,
     type: 3}
   m_PrefabInstance: {fileID: 8091661569930126690}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3833108215722462840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: effdf6eca22b9f04593753ff174c188b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8091661569930126690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &246209540877597803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: effdf6eca22b9f04593753ff174c188b,
     type: 3}
   m_PrefabInstance: {fileID: 8091661569930126690}
   m_PrefabAsset: {fileID: 0}
