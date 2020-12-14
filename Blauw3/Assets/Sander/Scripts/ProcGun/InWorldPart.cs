@@ -8,6 +8,8 @@ public class InWorldPart : MonoBehaviour
 
     GunManager gunManager;
 
+    bool isPickedUp = false;
+
     private void Start()
     {
         gunManager = FindObjectOfType<GunManager>();
@@ -15,15 +17,21 @@ public class InWorldPart : MonoBehaviour
 
     public void PickUpPart()
     {
-        StartCoroutine(gunManager.UpdateGunPart(partPrefab));
+        if (!isPickedUp)
+        {
+            StartCoroutine(gunManager.UpdateGunPart(partPrefab));
+            isPickedUp = true;
+        }
+
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && Input.GetButtonDown("Interact"))
         {
             PickUpPart();
         }
     }
+
 
 }
