@@ -780,6 +780,7 @@ MonoBehaviour:
   agent: {fileID: 8224042846460241374}
   animator: {fileID: 0}
   player: {fileID: 0}
+  prefab: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -787,8 +788,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   health: 4
+  dissolveTime: 0
   healthSlider: {fileID: 4210516870610677730}
   spawnEnemies: {fileID: 0}
+  dissolve: {fileID: 0}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
@@ -797,6 +800,8 @@ MonoBehaviour:
   attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
+  explosionFX: {fileID: 1696553400415088279, guid: 178a4e8f69cb002488417f8ae9595758,
+    type: 3}
 --- !u!195 &8224042846460241374
 NavMeshAgent:
   m_ObjectHideFlags: 0
