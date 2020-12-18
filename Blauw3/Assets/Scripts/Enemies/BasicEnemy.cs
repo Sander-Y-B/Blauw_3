@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
-    private bool isTrueDead;
+    private bool startedDeath, isTrueDead;
+    private Renderer prefRenderer;
     public override void Attack()
     {
         animator.SetBool("Walking", false);
@@ -21,25 +22,29 @@ public class BasicEnemy : Enemy
 
     public override void DestroyEnemy()
     {
+        if (startedDeath == false)
+        {
         animator.SetTrigger("Dead");
         healthSlider.gameObject.SetActive(false);
-        prefab.GetComponentInChildren<Renderer>().material = dissolve;
+        prefRenderer = prefab.GetComponentInChildren<Renderer>();
+        prefRenderer.material = new Material(dissolve);
         StartCoroutine(Dissolve());
         StartCoroutine(Die());
+        startedDeath = true;
+        }
     }
 
     IEnumerator Dissolve()
     {
-        if (dissolve.GetFloat("Vector1_AF64FB50") < 1)
+        if (prefRenderer.material.GetFloat("Vector1_AF64FB50") < 1)
         {
-            dissolve.SetFloat("Vector1_AF64FB50", dissolve.GetFloat("Vector1_AF64FB50") + 0.02f);
+            prefRenderer.material.SetFloat("Vector1_AF64FB50", prefRenderer.material.GetFloat("Vector1_AF64FB50") + 0.02f);
             yield return new WaitForSeconds(0.05f);
             StartCoroutine(Dissolve());
         }
         else if (isTrueDead == true)
         {
             base.DestroyEnemy();
-            dissolve.SetFloat("Vector1_AF64FB50", 0);
             isTrueDead = false;
         }
     }
