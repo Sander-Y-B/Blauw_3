@@ -42,10 +42,9 @@ public class BasicEnemy : Enemy
             yield return new WaitForSeconds(0.05f);
             StartCoroutine(Dissolve());
         }
-        else if (isTrueDead == true)
+        else
         {
             base.DestroyEnemy();
-            isTrueDead = false;
         }
     }
     IEnumerator Die()
