@@ -1074,6 +1074,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBarrels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunLoaders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBodies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBarrels.Array.data[1]
+      value: 
+      objectReference: {fileID: 7882468474053914369, guid: f673bbb2a61215e4fac00017f91a0502,
+        type: 3}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunLoaders.Array.data[1]
+      value: 
+      objectReference: {fileID: 2517991379790834304, guid: 172795ed1d881ea4fbfc80c0051e9d9d,
+        type: 3}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: gunBodies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8916328033231282590, guid: b73c7b236269b7f4bae8eab20f2df299,
+        type: 3}
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: testPart
+      value: 
+      objectReference: {fileID: 2517991379790834304, guid: 172795ed1d881ea4fbfc80c0051e9d9d,
+        type: 3}
     - target: {fileID: 962142995371658064, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: m_Name

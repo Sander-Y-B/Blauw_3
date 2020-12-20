@@ -66,7 +66,7 @@ public class GunManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             StartCoroutine(UpdateGunPart(testPart));
-            print("neef");
+
         }
     }
 
