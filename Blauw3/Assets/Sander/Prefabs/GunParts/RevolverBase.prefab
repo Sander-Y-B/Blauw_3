@@ -168,3 +168,5 @@ MonoBehaviour:
   modReloadSpeed: 0
   modScopedSpread: 0
   partIndex: 0
+  inWorldPrefab: {fileID: 1660847460382286833, guid: c4f75dfd2dc1b7042a0a68178d5670f7,
+    type: 3}

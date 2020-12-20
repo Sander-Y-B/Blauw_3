@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2525261794805029687}
   - component: {fileID: 6616446432825439013}
   m_Layer: 8
-  m_Name: DrumMag(InWorld item)
+  m_Name: ShotgunBarrel(InWorld item)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660847460382286833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8955152, y: 0.81, z: 17.216135}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660847460382286833}
-  m_Mesh: {fileID: 4987309331198744589, guid: ef6652514197d3a44838dd4bf2644aaf, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: 291dbae68e8a80c4ea321a511fc24122, type: 3}
 --- !u!23 &1094469248184489773
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0b2fc68417cd4941907d8318ca544e9, type: 2}
+  - {fileID: 2100000, guid: 699bd48491437ab46a77d70951062118, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,5 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0197d465b5bd2d4da9f9193afd7453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partPrefab: {fileID: 7361042555633234493, guid: 7efb2dce45ce1c64c9056c67030b9cf0,
+  partPrefab: {fileID: 7882468474053914369, guid: f673bbb2a61215e4fac00017f91a0502,
     type: 3}
+  isInShop: 0

@@ -29,4 +29,5 @@ public class BasePart : MonoBehaviour
 
     [Header("-!-Elke part moet dit hebben-!-")]
     public int partIndex;
+    public GameObject inWorldPrefab;
 }

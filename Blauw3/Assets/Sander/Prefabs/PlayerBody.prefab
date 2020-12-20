@@ -47,10 +47,13 @@ MonoBehaviour:
   shootAllow: 1
   gunBodies:
   - {fileID: 6085950879291950749, guid: 0e1b3a5dbbaeeea468978cba076e31ee, type: 3}
+  - {fileID: 8916328033231282590, guid: b73c7b236269b7f4bae8eab20f2df299, type: 3}
   gunLoaders:
   - {fileID: 7361042555633234493, guid: 0cd26738ee46e82468df77100d30ce48, type: 3}
+  - {fileID: 2517991379790834304, guid: 172795ed1d881ea4fbfc80c0051e9d9d, type: 3}
   gunBarrels:
   - {fileID: 2680143116937868101, guid: 64ac7e534d9ce6b4e8327b9ae41b9576, type: 3}
+  - {fileID: 7882468474053914369, guid: f673bbb2a61215e4fac00017f91a0502, type: 3}
   gunLoadout:
   - {fileID: 0}
   - {fileID: 0}

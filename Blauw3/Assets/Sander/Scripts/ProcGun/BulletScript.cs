@@ -6,12 +6,17 @@ public class BulletScript : MonoBehaviour
 {
     public float speed;
     private float damage = 1;
-
+    float timeUntilDespawn = 2;
 
     // Update is called once per frame
     void Update()
     { 
         transform.Translate(0, 0, speed * Time.deltaTime);
+        timeUntilDespawn -= Time.deltaTime;
+        if (timeUntilDespawn <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
