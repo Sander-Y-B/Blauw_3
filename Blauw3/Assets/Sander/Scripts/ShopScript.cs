@@ -50,4 +50,15 @@ public class ShopScript : MonoBehaviour
         }
     }
 
+    public void ClearShop(GameObject saveShopPoint)
+    {
+        foreach (GameObject shopPoint in shopItemSpawnPoints)
+        {
+            if (saveShopPoint != shopPoint)
+            {
+                Destroy(shopPoint);
+            }
+        }
+        
+    }
 }

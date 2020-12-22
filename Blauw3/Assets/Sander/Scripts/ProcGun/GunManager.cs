@@ -211,4 +211,11 @@ public class GunManager : MonoBehaviour
         }
 
     }
+
+    public void SaveGunparts()
+    {
+        // make sure current parts arent in the list yet
+        // add currents parts to a list in player pref
+    }
+
 }

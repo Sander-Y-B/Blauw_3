@@ -7,7 +7,7 @@ public class InWorldPart : MonoBehaviour
     public GameObject partPrefab;
 
     GunManager gunManager;
-
+    ShopScript shop;
     public GameObject myShopPoint;
 
     GameObject lastGunPart;
@@ -15,6 +15,7 @@ public class InWorldPart : MonoBehaviour
 
     private void Start()
     {
+        shop = FindObjectOfType<ShopScript>();
         gunManager = FindObjectOfType<GunManager>();
     }
 
@@ -53,6 +54,8 @@ public class InWorldPart : MonoBehaviour
         }
         newShopItem = Instantiate(lastGunPart, myShopPoint.transform);
         newShopItem.GetComponent<InWorldPart>().myShopPoint = myShopPoint;
+
+        shop.ClearShop(myShopPoint);
     }
 
 }
