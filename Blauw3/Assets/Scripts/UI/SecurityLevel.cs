@@ -9,10 +9,10 @@ public class SecurityLevel : MonoBehaviour
     //enemy buffs
     static float attackSpeed;
     static float movementSpeed;
-    static float amount;
-    static float health;
-    static float damage;
-    static float shield;
+    static float enemyAmount;
+    static float enemyHealth;
+    static float enemyDamage;
+    static float enemyShield;
 
     //player nurfs
     static float healingDown;
@@ -26,10 +26,10 @@ public class SecurityLevel : MonoBehaviour
     //individual security levels
     static float attackSpeedSL;
     static float movementSpeedSL;
-    static float amountSL;
-    static float healthSL;
-    static float damageSL;
-    static float shieldSL;
+    static float enemyAmountSL;
+    static float enemyHealthSL;
+    static float enemyDamageSL;
+    static float enemyShieldSL;
 
     static float healingDownSL;
     static float maxHealthDownSL;
@@ -49,8 +49,33 @@ public class SecurityLevel : MonoBehaviour
         
     }
 
-    public void AddOrSubtractSecurityLevel(int addOrSubtractSecurityLevel)
+    public void UpdateSecurityLevel()
     {
-        securityLevel += addOrSubtractSecurityLevel;
+
+    }
+
+    public void AttackSpeedSecurityLevel(int attackSpeedSecurityLevel)
+    {
+        attackSpeedSL += attackSpeedSecurityLevel;
+    }
+
+    public void MovementSpeedSecurityLevel(int movementSpeedSecurityLevel)
+    {
+        movementSpeedSL += movementSpeedSecurityLevel;
+    }
+
+    public void EnemyAmountSecurityLevel(int enemyAmountSecurityLevel)
+    {
+        enemyAmountSL += enemyAmountSecurityLevel;
+    }
+
+    public void EnemyHealthSecurityLevel(int enemyHealthSecurityLevel)
+    {
+        enemyHealthSL += enemyHealthSecurityLevel;
+    }
+
+    public void EnemyDamageSecurityLevel(int enemyDamageSecurityLevel)
+    {
+        enemyDamageSL += enemyDamageSecurityLevel;
     }
 }
