@@ -11,6 +11,7 @@ public class RangedEnemy : Enemy
     private Renderer prefRenderer, botRenderer;
     public override void Attack()
     {
+        base.Attack();
         animator.SetTrigger("Shooting");
         currentBullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, transform.rotation);
         currentBullet.GetComponent<Projectile>().speed = bulletSpeed;
@@ -24,15 +25,16 @@ public class RangedEnemy : Enemy
     {
         if (startedDeath == false)
         {
-        animator.SetTrigger("Dead");
-        healthSlider.gameObject.SetActive(false);
-        prefRenderer = prefab.GetComponentInChildren<Renderer>();
-        botRenderer = bottom.GetComponent<Renderer>();
-        prefRenderer.material = new Material(dissolve);
-        botRenderer.material = new Material(dissolve);
-        StartCoroutine(Dissolve());
-        StartCoroutine(Die());
-        startedDeath = true;
+            deathSound.Play();
+            animator.SetTrigger("Dead");
+            healthSlider.gameObject.SetActive(false);
+            prefRenderer = prefab.GetComponentInChildren<Renderer>();
+            botRenderer = bottom.GetComponent<Renderer>();
+            prefRenderer.material = new Material(dissolve);
+            botRenderer.material = new Material(dissolve);
+            StartCoroutine(Dissolve());
+            StartCoroutine(Die());
+            startedDeath = true;
         }
     }
 

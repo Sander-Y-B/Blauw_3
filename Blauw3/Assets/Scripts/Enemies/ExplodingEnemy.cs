@@ -7,6 +7,7 @@ public class ExplodingEnemy : Enemy
     public GameObject explosionFX;
     public override void Attack()
     {
+        base.Attack();
         Instantiate(explosionFX, transform.position, transform.rotation);
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange);
         foreach(var hitCollider in hitColliders)

@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public Slider healthSlider;
     public SpawnEnemies spawnEnemies;
     public Material dissolve;
+    public AudioSource attackSound, deathSound;
 
     //Patroling
     public Vector3 walkPoint;
@@ -120,7 +121,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void Attack()
     {
-        //attack override
+        attackSound.Play();
     }
 
     public virtual void Walk()

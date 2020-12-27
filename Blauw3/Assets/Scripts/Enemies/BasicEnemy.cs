@@ -8,6 +8,7 @@ public class BasicEnemy : Enemy
     private Renderer prefRenderer;
     public override void Attack()
     {
+        base.Attack();
         animator.SetBool("Walking", false);
         animator.SetTrigger("Attack");
         int randomAttack = Random.Range(1, 3);
@@ -24,13 +25,14 @@ public class BasicEnemy : Enemy
     {
         if (startedDeath == false)
         {
-        animator.SetTrigger("Dead");
-        healthSlider.gameObject.SetActive(false);
-        prefRenderer = prefab.GetComponentInChildren<Renderer>();
-        prefRenderer.material = new Material(dissolve);
-        StartCoroutine(Dissolve());
-        StartCoroutine(Die());
-        startedDeath = true;
+            deathSound.Play();
+            animator.SetTrigger("Dead");
+            healthSlider.gameObject.SetActive(false);
+            prefRenderer = prefab.GetComponentInChildren<Renderer>();
+            prefRenderer.material = new Material(dissolve);
+            StartCoroutine(Dissolve());
+            StartCoroutine(Die());
+            startedDeath = true;
         }
     }
 
