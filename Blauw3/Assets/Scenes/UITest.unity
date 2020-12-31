@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9454173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyHealthSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9454173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +408,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 213630018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyDamageSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &213630018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,8 +770,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1743751190}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: EnemyAmountSecurityLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -875,7 +897,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 359987809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerTimerSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &359987809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,7 +1026,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 378270757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyMovementSpeedSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &378270757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1298,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 483081607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyHealthSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483081607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,7 +1427,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 633417060}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerMaxHealthDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &633417060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1490,7 +1556,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 656366845}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerHealingDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &656366845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1938,7 +2015,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 915023505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyShieldSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &915023505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2770,7 +2858,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1261134235}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerMaxHealthDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1261134235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3042,7 +3141,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1357439708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyAmountSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1357439708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,7 +3270,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1443992058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerHealingDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1443992058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3278,7 +3399,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1455578113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerTimerSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1455578113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,7 +3528,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1541971392}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyAttackSpeedSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1541971392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3591,7 +3734,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716153569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerMaxAmmoDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1716153569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3709,7 +3863,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721082259}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerAmmoRegenDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1721082259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3974,7 +4139,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807766613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyDamageSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1807766613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4092,7 +4268,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1870221258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerMaxAmmoDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1870221258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4287,7 +4474,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1909775245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyAttackSpeedSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1909775245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4405,7 +4603,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1922147974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyShieldSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1922147974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,7 +4732,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923136522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: EnemyMovementSpeedSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923136522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4641,7 +4861,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1953206330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1743751190}
+        m_MethodName: PlayerAmmoRegenDownSecurityLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1953206330
 MonoBehaviour:
   m_ObjectHideFlags: 0
