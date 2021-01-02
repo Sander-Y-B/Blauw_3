@@ -11,9 +11,7 @@ public class Door : MonoBehaviour
     public GameObject wall;
     public GameObject hallway;
     public GameObject door;
-
-
-
+    public AudioSource closeSound;
     public void Connect()
     {
         hallway.SetActive(true);
@@ -24,6 +22,7 @@ public class Door : MonoBehaviour
 
     public void CloseDoors()
     {
+        closeSound.Play();
         door.SetActive(true);
     }
     public void OpenDoors()

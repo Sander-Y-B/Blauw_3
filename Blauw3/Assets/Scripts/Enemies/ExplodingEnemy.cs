@@ -19,4 +19,10 @@ public class ExplodingEnemy : Enemy
         }
         DestroyEnemy();
     }
+
+    public override void DestroyEnemy()
+    {
+        base.DestroyEnemy();
+        Instantiate(explosionFX, transform.position, transform.rotation);
+    }
 }

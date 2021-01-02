@@ -5116,6 +5116,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 443989048861255563, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17499995
+      objectReference: {fileID: 0}
     - target: {fileID: 3755261910311575636, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5176,10 +5181,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: '"Room"'
       objectReference: {fileID: 0}
+    - target: {fileID: 5521440471247924030, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17499995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168028836730190621, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.175
+      objectReference: {fileID: 0}
     - target: {fileID: 8244241817893680532, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448969928367146608, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17499995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5847f8037a70104598d0be8ed4ee111, type: 3}
