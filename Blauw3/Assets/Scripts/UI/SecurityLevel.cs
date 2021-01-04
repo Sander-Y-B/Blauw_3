@@ -7,14 +7,14 @@ public class SecurityLevel : MonoBehaviour
     static int securityLevel; //need to check what lvl this is at to see what rewards can available
 
     //amount take off/added per lvl
-    public float enemyAttackSpeed;
-    public float enemyMovementSpeed;
+    public float enemyAttackSpeed; //percent
+    public float enemyMovementSpeed; //percent
     public float enemyAmount;
-    public float enemyHealth;
-    public float enemyDamage;
+    public float enemyHealth; //percent
+    public float enemyDamage; //percent
     public float enemyShield;
 
-    public float playerHealingDown;
+    public float playerHealingDown; //percent
     public float playerMaxHealthDown;
     public float playerAmmoRegenDown;
     public float playerMaxAmmoDown;
@@ -196,5 +196,74 @@ public class SecurityLevel : MonoBehaviour
         }
         playerTimerSL += playerTimerSecurityLevel;
         UpdateSecurityLevel(playerTimerSecurityLevel);
+    }
+
+    public void LoadLevel()
+    {
+        if(enemyAttackSpeedSL > 0)
+        {
+            enemyAttackSpeedAS = enemyAttackSpeed * enemyAttackSpeedSL;
+        }
+
+        if (enemyMovementSpeedSL > 0)
+        {
+            enemyMovementSpeedAS = enemyMovementSpeed * enemyMovementSpeedSL;
+        }
+
+        if (enemyAmountSL > 0)
+        {
+            enemyAmountAS = enemyAmount * enemyAmountSL;
+        }
+
+
+        if (enemyHealthSL > 0)
+        {
+            enemyHealthAS = enemyHealth * enemyHealthSL;
+        }
+
+        if (enemyDamageSL > 0)
+        {
+            enemyDamageAS = enemyDamage * enemyDamageSL;
+        }
+
+        if (enemyShieldSL > 0)
+        {
+            enemyShieldAS = enemyShield * enemyShieldSL;
+        }
+
+        if (playerHealingDownSL > 0)
+        {
+            playerHealingDownAS = playerHealingDown * playerHealingDownSL;
+        }
+
+        if (playerMaxHealthDownSL > 0)
+        {
+            playerMaxHealthDownAS = playerMaxHealthDown * playerMaxHealthDownSL;
+        }
+
+        if (playerAmmoRegenDownSL > 0)
+        {
+            playerAmmoRegenDownAS = playerAmmoRegenDown * playerAmmoRegenDownSL;
+        }
+
+        if (playerMaxAmmoDownSL > 0)
+        {
+            playerMaxAmmoDownAS = playerMaxAmmoDown * playerMaxAmmoDownSL;
+        }
+
+        if (playerTimerSL > 0)
+        {
+            if(playerTimerSL == 1)
+            {
+                playerTimerAS = playerTimerLvl1;
+            }
+            else
+            {
+                playerTimerAS = playerTimerLvl1 - (playerTimer * playerTimerSL);
+            }
+
+        }
+
+        //load next scene
     }
 }
