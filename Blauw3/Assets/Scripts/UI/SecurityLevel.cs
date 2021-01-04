@@ -4,39 +4,56 @@ using UnityEngine;
 
 public class SecurityLevel : MonoBehaviour
 {
-    static int securityLevel;
+    static int securityLevel; //need to check what lvl this is at to see what rewards can available
 
-    //enemy buffs
-    static float enemyAttackSpeed;
-    static float enemyMovementSpeed;
-    static float enemyAmount;
-    static float enemyHealth;
-    static float enemyDamage;
-    static float enemyShield;
+    //amount take off/added per lvl
+    public float enemyAttackSpeed;
+    public float enemyMovementSpeed;
+    public float enemyAmount;
+    public float enemyHealth;
+    public float enemyDamage;
+    public float enemyShield;
 
-    //player nurfs
-    static float playerHealingDown;
-    static float playerMaxHealthDown;
-    static float playerAmmoRegenDown;
-    static float playerMaxAmmoDown;
+    public float playerHealingDown;
+    public float playerMaxHealthDown;
+    public float playerAmmoRegenDown;
+    public float playerMaxAmmoDown;
 
-    //other
-    static float playerTimer;
+    public float playerTimerLvl1; //amount of time you get when timer is lvl 1
+    public float playerTimer; //amount of time taken of per lvl from lvl1
+
+
+    //AS = Actual Stat 
+    static float enemyAttackSpeedAS;
+    static float enemyMovementSpeedAS;
+    static float enemyAmountAS;
+    static float enemyHealthAS;
+    static float enemyDamageAS;
+    static float enemyShieldAS;
+
+    static float playerHealingDownAS;
+    static float playerMaxHealthDownAS;
+    static float playerAmmoRegenDownAS;
+    static float playerMaxAmmoDownAS;
+
+    static float playerTimerAS;
+
 
     //individual security levels
-    static float enemyAttackSpeedSL;
-    static float enemyMovementSpeedSL;
-    static float enemyAmountSL;
-    static float enemyHealthSL;
-    static float enemyDamageSL;
-    static float enemyShieldSL;
+    private float enemyAttackSpeedSL;
+    private float enemyMovementSpeedSL;
+    private float enemyAmountSL;
+    private float enemyHealthSL;
+    private float enemyDamageSL;
+    private float enemyShieldSL;
 
-    static float playerHealingDownSL;
-    static float playerMaxHealthDownSL;
-    static float playerAmmoRegenDownSL;
-    static float playerMaxAmmoDownSL;
+    private float playerHealingDownSL;
+    private float playerMaxHealthDownSL;
+    private float playerAmmoRegenDownSL;
+    private float playerMaxAmmoDownSL;
 
-    static float playerTimerSL;
+    private float playerTimerSL;
+
 
     //max securitLevel
     private float enemyAttackSpeedML;
