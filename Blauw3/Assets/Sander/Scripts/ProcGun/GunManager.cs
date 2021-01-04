@@ -31,17 +31,20 @@ public class GunManager : MonoBehaviour
     [HideInInspector] public float currentReloadSpeed;
     [HideInInspector] public float currentRecoil;
 
+    GameObject muzzelFlash;
     GameObject bullet;
     GameObject newBullet;
 
     public float currentAmmoAmount;
 
-    public AudioSource shotFx;
+    public AudioSource shotSFX;
 
     UIManager uIManager;
     PlayerLook playerLookScript;
 
     public GameObject testPart;
+
+    List<GameObject> savedParts = new List<GameObject>();
 
     void Awake()
     {
@@ -93,6 +96,11 @@ public class GunManager : MonoBehaviour
         statsBarrel = currentBarrel.GetComponent<BasePart>();
 
         bullet = statsLoader.bullet;
+        if (statsLoader.shotSFX != null)
+        {
+            shotSFX = statsLoader.shotSFX;
+        }
+        muzzelFlash = statsBarrel.muzzelFlashFx;
 
         currentShotSpeed = statsBody.baseShotSpeed + statsLoader.modShotSpeed + statsBarrel.modShotSpeed;
         currentSpread = statsBody.baseShotSpread + statsLoader.modShotSpread + statsBarrel.modShotSpread;
@@ -169,7 +177,7 @@ public class GunManager : MonoBehaviour
                 newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
                 playerLookScript.AddRecoil();
 
-                shotFx.Play();
+                shotSFX.Play();
                 currentAmmoAmount--;
                 if (uIManager != null)
                 {
@@ -214,8 +222,14 @@ public class GunManager : MonoBehaviour
 
     public void SaveGunparts()
     {
-        // make sure current parts arent in the list yet
-        // add currents parts to a list in player pref
+        foreach (GameObject partToSave in gunLoadout)
+        {
+            if (savedParts.Contains(partToSave))
+            {
+                savedParts.Add(partToSave);
+            }
+        }
+        // save to plyer pref? maybe using the part index or a static thing?
     }
 
 }
