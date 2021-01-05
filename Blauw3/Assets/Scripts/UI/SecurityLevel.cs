@@ -261,7 +261,6 @@ public class SecurityLevel : MonoBehaviour
             {
                 playerTimerAS = playerTimerLvl1 - (playerTimer * playerTimerSL);
             }
-
         }
 
         //load next scene
