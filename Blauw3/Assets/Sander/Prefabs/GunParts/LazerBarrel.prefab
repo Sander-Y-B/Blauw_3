@@ -98,10 +98,13 @@ MonoBehaviour:
   modDamage: 0
   modRecoil: 0
   bullet: {fileID: 0}
+  shotSFX: {fileID: 0}
   baseClipsize: 0
   baseReloadSpeed: 0
   baseDamage: 0
   modShotSpeed: 0
+  muzzelFlashFx: {fileID: 222409345508622193, guid: 805713307d623bc43a21a0a640cd22d6,
+    type: 3}
   baseRecoil: 12
   modShotSpread: 1
   modReloadSpeed: 0.2

@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: f8a9618db6c0d9645a86372dabcc9714, type: 3}
+  - {fileID: 2100000, guid: 2280a623cdaf29146b4f77f48e39b9e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,10 +97,12 @@ MonoBehaviour:
   modDamage: 0
   modRecoil: 0
   bullet: {fileID: 4382016167113689774, guid: f3cac921ff8729c48b3eacb590159a36, type: 3}
+  shotSFX: {fileID: 0}
   baseClipsize: 8
   baseReloadSpeed: 0.5
   baseDamage: 3
   modShotSpeed: 0.4
+  muzzelFlashFx: {fileID: 0}
   baseRecoil: 0
   modShotSpread: 0
   modReloadSpeed: 0
