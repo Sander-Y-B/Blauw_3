@@ -48,12 +48,15 @@ MonoBehaviour:
   gunBodies:
   - {fileID: 6085950879291950749, guid: 0e1b3a5dbbaeeea468978cba076e31ee, type: 3}
   - {fileID: 8916328033231282590, guid: b73c7b236269b7f4bae8eab20f2df299, type: 3}
+  - {fileID: 4254330837968332846, guid: 1bf482d8a727a60499ecbaedbe29b040, type: 3}
   gunLoaders:
   - {fileID: 7361042555633234493, guid: 0cd26738ee46e82468df77100d30ce48, type: 3}
   - {fileID: 2517991379790834304, guid: 172795ed1d881ea4fbfc80c0051e9d9d, type: 3}
+  - {fileID: 1268968995484000023, guid: 23a66045cda2ff5468083cdad089e534, type: 3}
   gunBarrels:
   - {fileID: 2680143116937868101, guid: 64ac7e534d9ce6b4e8327b9ae41b9576, type: 3}
   - {fileID: 7882468474053914369, guid: f673bbb2a61215e4fac00017f91a0502, type: 3}
+  - {fileID: 1010779721227238209, guid: b983bf30246b3474db9c64ed3674879d, type: 3}
   gunLoadout:
   - {fileID: 0}
   - {fileID: 0}
@@ -66,9 +69,9 @@ MonoBehaviour:
   currentReloadSpeed: 0
   currentRecoil: 0
   currentAmmoAmount: 0
-  shotFx: {fileID: 744001518}
-  testPart: {fileID: 7361042555633234493, guid: 7efb2dce45ce1c64c9056c67030b9cf0,
-    type: 3}
+  shotSFX: {fileID: 744001518}
+  debugPart: {fileID: 0}
+  savedGunBodies: 
 --- !u!82 &744001518
 AudioSource:
   m_ObjectHideFlags: 0

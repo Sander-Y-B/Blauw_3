@@ -42,9 +42,16 @@ public class GunManager : MonoBehaviour
     UIManager uIManager;
     PlayerLook playerLookScript;
 
-    public GameObject testPart;
+    public GameObject debugPart;
 
-    List<GameObject> savedParts = new List<GameObject>();
+   public List<int> savedGunBodies = new List<int>();
+    List<int> savedGunLoaders = new List<int>();
+    List<int> savedGunBarrels = new List<int>();
+    int savedGunBodyCount;
+    int savedGunLoaderCount;
+    int savedGunBarrelCount;
+
+    int partId;
 
     void Awake()
     {
@@ -68,8 +75,7 @@ public class GunManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            StartCoroutine(UpdateGunPart(testPart));
-
+            StartCoroutine(UpdateGunPart(debugPart));
         }
     }
 
@@ -175,6 +181,9 @@ public class GunManager : MonoBehaviour
                 newBullet = Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
                 newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
                 newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
+
+                Instantiate(muzzelFlash, shotPoint.transform.position, shotPoint.transform.rotation);
+
                 playerLookScript.AddRecoil();
 
                 shotSFX.Play();
@@ -224,12 +233,108 @@ public class GunManager : MonoBehaviour
     {
         foreach (GameObject partToSave in gunLoadout)
         {
-            if (savedParts.Contains(partToSave))
+            partId = partToSave.GetComponent<BasePart>().partIndex;
+
+            switch (partToSave.tag)
             {
-                savedParts.Add(partToSave);
+                case "GunBody":
+                    SaveGunBodyList();
+                    break;
+
+                case "GunLoader":
+                    SaveGunLoaderList();
+                    break;
+
+                case "GunBarrel":
+                    SaveGunBarrelList();
+                    break;
+
+                default:
+                    print("!!No tag or no object!!");
+                    break;
             }
         }
-        // save to plyer pref? maybe using the part index or a static thing?
+    }
+
+    void SaveGunBodyList()
+    {
+        if (!savedGunBodies.Contains(partId))
+        {
+            savedGunBodies.Add(partId);
+
+            for (int i = 0; i < savedGunBodies.Count; i++)
+            {
+                PlayerPrefs.SetInt("savedGunBodies" + i, savedGunBodies[i]);
+            }
+
+            PlayerPrefs.SetInt("savedGunBodiesCount", savedGunBodies.Count);
+        }
+    }
+
+    void SaveGunLoaderList()
+    {
+        if (!savedGunLoaders.Contains(partId))
+        {
+            savedGunLoaders.Add(partId);
+
+            for (int i = 0; i < savedGunLoaders.Count; i++)
+            {
+                PlayerPrefs.SetInt("savedGunLoaders" + i, savedGunLoaders[i]);
+            }
+
+            PlayerPrefs.SetInt("savedGunLoadersCount", savedGunLoaders.Count);
+        }
+    }
+
+    void SaveGunBarrelList()
+    {
+        if (!savedGunBarrels.Contains(partId))
+        {
+            savedGunBarrels.Add(partId);
+
+            for (int i = 0; i < savedGunBarrels.Count; i++)
+            {
+                PlayerPrefs.SetInt("savedGunBarrels" + i, savedGunBarrels[i]);
+            }
+
+            PlayerPrefs.SetInt("savedGunBarrelsCount", savedGunBarrels.Count);
+        }
+    }
+    
+    void LoadGunBodyList()
+    {
+        savedGunBodies.Clear();
+        savedGunBodyCount = PlayerPrefs.GetInt("savedGunBodiesCount");
+
+        for (int i = 0; i < savedGunBodyCount; i++)
+        {
+            partId = PlayerPrefs.GetInt("savedGunBodies" + i);
+            savedGunBodies.Add(partId);
+        }
+    }
+
+    void LoadGunLoaderList()
+    {
+        savedGunLoaders.Clear();
+        savedGunLoaderCount = PlayerPrefs.GetInt("savedGunLoaderCount");
+
+        for (int i = 0; i < savedGunLoaderCount; i++)
+        {
+            partId = PlayerPrefs.GetInt("savedGunLoaders" + i);
+            savedGunLoaders.Add(partId);
+        }
+    }
+
+    void LoadGunBarrelList()
+    {
+        savedGunBarrels.Clear();
+        savedGunBarrelCount = PlayerPrefs.GetInt("savedGunBarrelsCount");
+
+        for (int i = 0; i < savedGunBarrelCount; i++)
+        {
+            partId = PlayerPrefs.GetInt("savedGunBarrels" + i);
+            savedGunBarrels.Add(partId);
+        }
     }
 
 }
