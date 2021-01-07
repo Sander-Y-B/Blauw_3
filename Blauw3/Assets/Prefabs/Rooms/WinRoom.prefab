@@ -980,6 +980,7 @@ MonoBehaviour:
   wall: {fileID: 4533195993767482533}
   hallway: {fileID: 2879318560669299723}
   door: {fileID: 8442185122210148051}
+  closeSound: {fileID: 0}
 --- !u!1 &3755261910285098450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1236,7 @@ MonoBehaviour:
   wall: {fileID: 4032934815301874858}
   hallway: {fileID: 5683704885855401250}
   door: {fileID: 2965808766901167307}
+  closeSound: {fileID: 0}
 --- !u!1 &3755261910565025507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1384,7 @@ MonoBehaviour:
   wall: {fileID: 6942068975181559543}
   hallway: {fileID: 7830370113372352787}
   door: {fileID: 7755686700014724714}
+  closeSound: {fileID: 0}
 --- !u!1 &3755261911725522865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1438,7 @@ MonoBehaviour:
   wall: {fileID: 2800702808756659509}
   hallway: {fileID: 8579714935075855168}
   door: {fileID: 4034009430007272538}
+  closeSound: {fileID: 0}
 --- !u!1 &4032934815301874858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,7 +1719,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: b72f647f62f4a1f4db02b25ba34fb589, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &5549498819204011873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,7 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.82566833, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

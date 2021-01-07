@@ -11,8 +11,6 @@ public class BasicEnemy : Enemy
         base.Attack();
         animator.SetBool("Walking", false);
         animator.SetTrigger("Attack");
-        int randomAttack = Random.Range(1, 3);
-        animator.SetInteger("Attack Number",randomAttack);
         player.GetComponent<Health>().DoDamage(damage);
     }
 

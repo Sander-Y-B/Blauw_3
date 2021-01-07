@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 61336364722978772, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3755261909697342059, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -37,6 +42,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dacd24c80a8bd94bacabca106e48ee7, type: 2}
+    - target: {fileID: 3755261910285098447, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3755261910311575636, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_Name
-      value: RoomTemp
+      value: RoomTemp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3755261910326645530, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
