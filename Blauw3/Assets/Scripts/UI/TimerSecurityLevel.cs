@@ -33,32 +33,31 @@ public class TimerSecurityLevel : MonoBehaviour
 
             if(timerMinutes < 10)
             {
-                textTimerMinutes.text = "0" + timerMinutes.ToString();
+                textTimerMinutes.text = "0" + Mathf.RoundToInt(timerMinutes).ToString();
             }
             else
             {
-                textTimerMinutes.text = timerMinutes.ToString();
+                textTimerMinutes.text = Mathf.RoundToInt(timerMinutes).ToString();
             }
 
             if (timerSeconds < 10)
             {
-                textTimerSeconds.text = "0" + timerSeconds.ToString();
+                textTimerSeconds.text = "0" + Mathf.RoundToInt(timerSeconds).ToString();
             }
             else
             {
-                textTimerSeconds.text = timerSeconds.ToString();
+                textTimerSeconds.text = Mathf.RoundToInt(timerSeconds).ToString();
             }
-
         }
-    }
-
-    public void PauseTimer()
-    {
-        runTimer = false;
     }
 
     public void StartTimer()
     {
         runTimer = true;
+    }
+
+    public void PauseTimer()
+    {
+        runTimer = false;
     }
 }
