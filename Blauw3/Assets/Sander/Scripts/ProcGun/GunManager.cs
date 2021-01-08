@@ -44,9 +44,9 @@ public class GunManager : MonoBehaviour
 
     public GameObject debugPart;
 
-   public List<int> savedGunBodies = new List<int>();
-    List<int> savedGunLoaders = new List<int>();
-    List<int> savedGunBarrels = new List<int>();
+    public List<int> savedGunBodies = new List<int>();
+    public List<int> savedGunLoaders = new List<int>();
+    public List<int> savedGunBarrels = new List<int>();
     int savedGunBodyCount;
     int savedGunLoaderCount;
     int savedGunBarrelCount;
@@ -75,7 +75,8 @@ public class GunManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            StartCoroutine(UpdateGunPart(debugPart));
+            // StartCoroutine(UpdateGunPart(debugPart));
+            SaveGunparts();
         }
     }
 
@@ -238,15 +239,15 @@ public class GunManager : MonoBehaviour
             switch (partToSave.tag)
             {
                 case "GunBody":
-                    SaveGunBodyList();
+                    SaveGunBodyList();  
                     break;
 
                 case "GunLoader":
-                    SaveGunLoaderList();
+                    SaveGunLoaderList(); 
                     break;
 
                 case "GunBarrel":
-                    SaveGunBarrelList();
+                    SaveGunBarrelList(); 
                     break;
 
                 default:
@@ -254,6 +255,13 @@ public class GunManager : MonoBehaviour
                     break;
             }
         }
+    }
+    
+    public void LoadGunparts()
+    {
+        LoadGunBodyList();
+        LoadGunLoaderList();
+        LoadGunBarrelList();
     }
 
     void SaveGunBodyList()
@@ -275,7 +283,7 @@ public class GunManager : MonoBehaviour
     {
         if (!savedGunLoaders.Contains(partId))
         {
-            savedGunLoaders.Add(partId);
+            savedGunLoaders.Add(partId); 
 
             for (int i = 0; i < savedGunLoaders.Count; i++)
             {
@@ -300,6 +308,7 @@ public class GunManager : MonoBehaviour
             PlayerPrefs.SetInt("savedGunBarrelsCount", savedGunBarrels.Count);
         }
     }
+
     
     void LoadGunBodyList()
     {
@@ -316,7 +325,7 @@ public class GunManager : MonoBehaviour
     void LoadGunLoaderList()
     {
         savedGunLoaders.Clear();
-        savedGunLoaderCount = PlayerPrefs.GetInt("savedGunLoaderCount");
+        savedGunLoaderCount = PlayerPrefs.GetInt("savedGunLoadersCount");
 
         for (int i = 0; i < savedGunLoaderCount; i++)
         {

@@ -8,6 +8,7 @@ public class InWorldPart : MonoBehaviour
 
     GunManager gunManager;
     ShopScript shop;
+    public bool shouldClearShop = false; 
     public GameObject myShopPoint;
 
     GameObject lastGunPart;
@@ -37,25 +38,33 @@ public class InWorldPart : MonoBehaviour
 
     void ReplaceShopItem()
     {
-        switch (partPrefab.tag)
+        if (myShopPoint != null)
         {
-            case "GunBody":
-                lastGunPart = gunManager.gunLoadout[0].GetComponent<BasePart>().inWorldPrefab;
-                break;
-            case "GunLoader":
-                lastGunPart = gunManager.gunLoadout[1].GetComponent<BasePart>().inWorldPrefab;
-                break;
-            case "GunBarrel":
-                lastGunPart = gunManager.gunLoadout[2].GetComponent<BasePart>().inWorldPrefab;
-                break;
-            default:
-                print("!!No tag or no object!! for pickup and replace");
-                break;
-        }
-        newShopItem = Instantiate(lastGunPart, myShopPoint.transform);
-        newShopItem.GetComponent<InWorldPart>().myShopPoint = myShopPoint;
+            switch (partPrefab.tag)
+            {
+                case "GunBody":
+                    lastGunPart = gunManager.gunLoadout[0].GetComponent<BasePart>().inWorldPrefab;
+                    break;
+                case "GunLoader":
+                    lastGunPart = gunManager.gunLoadout[1].GetComponent<BasePart>().inWorldPrefab;
+                    break;
+                case "GunBarrel":
+                    lastGunPart = gunManager.gunLoadout[2].GetComponent<BasePart>().inWorldPrefab;
+                    break;
+                default:
+                    print("!!No tag or no object!! for pickup and replace");
+                    break;
+            }
+            newShopItem = Instantiate(lastGunPart, myShopPoint.transform);
+            newShopItem.GetComponent<InWorldPart>().myShopPoint = myShopPoint;
 
-        shop.ClearShop(myShopPoint);
+            if (shouldClearShop)
+            {
+                shop.ClearShop(myShopPoint);
+            }
+
+        }
+        
     }
 
 }

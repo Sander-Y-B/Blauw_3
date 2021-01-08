@@ -101,7 +101,7 @@ MonoBehaviour:
   baseClipsize: 30
   baseReloadSpeed: 2
   baseDamage: 0.5
-  modShotSpeed: -0.6
+  modShotSpeed: 0
   muzzelFlashFx: {fileID: 0}
   baseRecoil: 0
   modShotSpread: 0
