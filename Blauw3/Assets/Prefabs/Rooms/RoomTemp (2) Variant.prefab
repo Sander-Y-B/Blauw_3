@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_Name
-      value: RoomTemp (2)
+      value: RoomTemp (2) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3755261910326645530, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
