@@ -20,7 +20,7 @@ public class SecurityLevel : MonoBehaviour
     public float playerMaxAmmoDown;
 
     public float playerTimerLvl1; //amount of time you get when timer is lvl 1
-    public float playerTimer; //amount of time taken of per lvl from lvl1
+    public float playerTimer; //amount of time taken off per lvl from lvl1
 
 
     //AS = Actual Stat 
@@ -70,17 +70,6 @@ public class SecurityLevel : MonoBehaviour
 
     private float playerTimerML;
 
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 
     public void UpdateSecurityLevel(int updateSecurityLevel)
     {
@@ -204,10 +193,18 @@ public class SecurityLevel : MonoBehaviour
         {
             enemyAttackSpeedAS = enemyAttackSpeed * enemyAttackSpeedSL;
         }
+        else
+        {
+            enemyAttackSpeedAS = 1;
+        }
 
         if (enemyMovementSpeedSL > 0)
         {
             enemyMovementSpeedAS = enemyMovementSpeed * enemyMovementSpeedSL;
+        }
+        else
+        {
+            enemyMovementSpeedAS = 1;
         }
 
         if (enemyAmountSL > 0)
@@ -220,10 +217,18 @@ public class SecurityLevel : MonoBehaviour
         {
             enemyHealthAS = enemyHealth * enemyHealthSL;
         }
+        else
+        {
+            enemyHealthAS = 1;
+        }
 
         if (enemyDamageSL > 0)
         {
             enemyDamageAS = enemyDamage * enemyDamageSL;
+        }
+        else
+        {
+            enemyDamageAS = 1;
         }
 
         if (enemyShieldSL > 0)
@@ -234,6 +239,10 @@ public class SecurityLevel : MonoBehaviour
         if (playerHealingDownSL > 0)
         {
             playerHealingDownAS = playerHealingDown * playerHealingDownSL;
+        }
+        else
+        {
+            playerHealingDownAS = 1;
         }
 
         if (playerMaxHealthDownSL > 0)
