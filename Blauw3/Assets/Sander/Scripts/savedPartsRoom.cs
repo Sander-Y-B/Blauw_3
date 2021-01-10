@@ -17,8 +17,6 @@ public class savedPartsRoom : MonoBehaviour
         SpawnSavedParts();
     }
 
-
-
     void SpawnSavedParts()
     {
         for (int i = 0; i < gunManager.savedGunBodies.Count; i++)
