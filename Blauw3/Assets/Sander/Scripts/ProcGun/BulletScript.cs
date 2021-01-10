@@ -26,7 +26,12 @@ public class BulletScript : MonoBehaviour
             other.transform.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
-        else if (other.gameObject.layer == 8)
+        else if (other.gameObject.tag == "TargetDummy")
+        {
+            other.transform.GetComponent<Dummy>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.layer == 8)
         {
             Destroy(gameObject);
         }

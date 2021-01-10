@@ -3940,9 +3940,10 @@ GameObject:
   - component: {fileID: 5759824240045047538}
   - component: {fileID: 5759824240045047539}
   - component: {fileID: 5759824240045047536}
+  - component: {fileID: 8767294897918840376}
   m_Layer: 0
   m_Name: Dummy
-  m_TagString: Enemy
+  m_TagString: TargetDummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4042,6 +4043,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!114 &8767294897918840376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759824240045047551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782ea86b8ad0208449aa3348e71e7512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  health: 10
+  dissolveTime: 0
+  healthSlider: {fileID: 3576734606250659343}
 --- !u!1 &5775927067540731899
 GameObject:
   m_ObjectHideFlags: 0

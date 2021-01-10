@@ -14,6 +14,7 @@ TagManager:
   - GunLoader
   - GunBarrel
   - Room
+  - TargetDummy
   layers:
   - Default
   - TransparentFX

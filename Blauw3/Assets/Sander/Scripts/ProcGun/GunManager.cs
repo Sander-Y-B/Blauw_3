@@ -75,8 +75,7 @@ public class GunManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            // StartCoroutine(UpdateGunPart(debugPart));
-            SaveGunparts();
+            StartCoroutine(UpdateGunPart(debugPart));
         }
     }
 
