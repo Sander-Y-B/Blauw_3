@@ -31,11 +31,23 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public SecurityLevel securityLevel;
+    public string securityLevelTag;
+    private int shield;
+
     private void Awake()
     {
+        securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
+        timeBetweenAttacks -= timeBetweenAttacks * securityLevel.enemyAttackSpeedAS;
+        //health and movement
+        damage += damage * securityLevel.enemyDamageAS;
+        agent.speed += agent.speed * securityLevel.enemyMovementSpeedAS;
+        health += health * securityLevel.enemyHealthAS;
+        shield = securityLevel.enemyShieldAS;
         maxHealth = health;
         player = GameObject.Find("PlayerBody").transform;
         agent = GetComponent<NavMeshAgent>();
+
     }
 
     private void Update()
@@ -89,6 +101,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if(shield > 0)
+        {
+            shield--;
+            //update shield UI
+            return;
+        }
         health -= damage;
 
         if (health <= 0) { DestroyEnemy();}

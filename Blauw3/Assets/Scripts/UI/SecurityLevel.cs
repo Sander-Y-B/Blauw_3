@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SecurityLevel : MonoBehaviour
 {
-    static int securityLevel; //need to check what lvl this is at to see what rewards can available
+    [HideInInspector] public int totalSecurityLevel; //need to check what lvl this is at to see what rewards can available
 
     //amount take off/added per lvl
     public float enemyAttackSpeed; //percent
     public float enemyMovementSpeed; //percent
-    public float enemyAmount;
     public float enemyHealth; //percent
     public float enemyDamage; //percent
-    public float enemyShield;
+    public int enemyAmount;
+    public int enemyShield;
 
     public float playerHealingDown; //percent
     public float playerMaxHealthDown;
@@ -24,44 +25,45 @@ public class SecurityLevel : MonoBehaviour
 
 
     //AS = Actual Stat 
-    static float enemyAttackSpeedAS;
-    static float enemyMovementSpeedAS;
-    static float enemyAmountAS;
-    static float enemyHealthAS;
-    static float enemyDamageAS;
-    static float enemyShieldAS;
+    [HideInInspector] public float enemyAttackSpeedAS;
+    [HideInInspector] public float enemyMovementSpeedAS;
+    [HideInInspector] public float enemyHealthAS;
+    [HideInInspector] public float enemyDamageAS;
+    [HideInInspector] public int enemyAmountAS;
+    [HideInInspector] public int enemyShieldAS;
 
-    static float playerHealingDownAS;
-    static float playerMaxHealthDownAS;
-    static float playerAmmoRegenDownAS;
-    static float playerMaxAmmoDownAS;
+    [HideInInspector] public float playerHealingDownAS;
+    [HideInInspector] public float playerMaxHealthDownAS;
+    [HideInInspector] public float playerAmmoRegenDownAS;
+    [HideInInspector] public float playerMaxAmmoDownAS;
 
-    static float playerTimerAS;
+    [HideInInspector] public float playerTimerAS;
 
 
     //individual security levels
-    private float enemyAttackSpeedSL;
-    private float enemyMovementSpeedSL;
-    private float enemyAmountSL;
-    private float enemyHealthSL;
-    private float enemyDamageSL;
-    private float enemyShieldSL;
+    [HideInInspector] public float enemyAttackSpeedSL;
+    [HideInInspector] public float enemyMovementSpeedSL;
+    [HideInInspector] public float enemyHealthSL;
+    [HideInInspector] public float enemyDamageSL;
+    [HideInInspector] public int enemyAmountSL;
+    [HideInInspector] public int enemyShieldSL;
 
-    private float playerHealingDownSL;
-    private float playerMaxHealthDownSL;
-    private float playerAmmoRegenDownSL;
-    private float playerMaxAmmoDownSL;
+    [HideInInspector] public float playerHealingDownSL;
+    [HideInInspector] public float playerMaxHealthDownSL;
+    [HideInInspector] public float playerAmmoRegenDownSL;
+    [HideInInspector] public float playerMaxAmmoDownSL;
 
-    private float playerTimerSL;
+    [HideInInspector] public float playerTimerSL;
 
+    [Header("Max Level")]
 
     //max securitLevel
-    private float enemyAttackSpeedML;
-    private float enemyMovementSpeedML;
-    private float enemyAmountML;
-    private float enemyHealthML;
-    private float enemyDamageML;
-    private float enemyShieldML;
+    public float enemyAttackSpeedML;
+    public float enemyMovementSpeedML;
+    public float enemyAmountML;
+    public float enemyHealthML;
+    public float enemyDamageML;
+    public float enemyShieldML;
 
     private float playerHealingDownML;
     private float playerMaxHealthDownML;
@@ -70,11 +72,15 @@ public class SecurityLevel : MonoBehaviour
 
     private float playerTimerML;
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void UpdateSecurityLevel(int updateSecurityLevel)
     {
-        securityLevel += updateSecurityLevel;
-        //update text.text
+        totalSecurityLevel += updateSecurityLevel;
+        // .text = Mathf.RoundToInt(totalSecurityLevel).ToString();
     }
 
     public void EnemyAttackSpeedSecurityLevel(int enemyAttackSpeedSecurityLevel)
@@ -189,22 +195,16 @@ public class SecurityLevel : MonoBehaviour
 
     public void LoadLevel()
     {
+        enemyAttackSpeedAS = 1;
         if(enemyAttackSpeedSL > 0)
         {
-            enemyAttackSpeedAS = enemyAttackSpeed * enemyAttackSpeedSL;
-        }
-        else
-        {
-            enemyAttackSpeedAS = 1;
+            enemyAttackSpeedAS += enemyAttackSpeed * enemyAttackSpeedSL / 100;
         }
 
+        enemyMovementSpeedAS = 1;
         if (enemyMovementSpeedSL > 0)
         {
-            enemyMovementSpeedAS = enemyMovementSpeed * enemyMovementSpeedSL;
-        }
-        else
-        {
-            enemyMovementSpeedAS = 1;
+            enemyMovementSpeedAS += enemyMovementSpeed * enemyMovementSpeedSL / 100;
         }
 
         if (enemyAmountSL > 0)
@@ -213,22 +213,16 @@ public class SecurityLevel : MonoBehaviour
         }
 
 
+        enemyHealthAS = 1;
         if (enemyHealthSL > 0)
         {
-            enemyHealthAS = enemyHealth * enemyHealthSL;
-        }
-        else
-        {
-            enemyHealthAS = 1;
+            enemyHealthAS += enemyHealth * enemyHealthSL / 100;
         }
 
+        enemyDamageAS = 1;
         if (enemyDamageSL > 0)
         {
-            enemyDamageAS = enemyDamage * enemyDamageSL;
-        }
-        else
-        {
-            enemyDamageAS = 1;
+            enemyDamageAS += enemyDamage * enemyDamageSL / 100;
         }
 
         if (enemyShieldSL > 0)
@@ -236,13 +230,10 @@ public class SecurityLevel : MonoBehaviour
             enemyShieldAS = enemyShield * enemyShieldSL;
         }
 
+        playerHealingDownAS = 1;
         if (playerHealingDownSL > 0)
         {
-            playerHealingDownAS = playerHealingDown * playerHealingDownSL;
-        }
-        else
-        {
-            playerHealingDownAS = 1;
+            playerHealingDownAS += playerHealingDown * playerHealingDownSL / 100;
         }
 
         if (playerMaxHealthDownSL > 0)

@@ -152,13 +152,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1226900118}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 149}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.587, y: 0.624}
+  m_AnchorMax: {x: 0.67079175, y: 0.6521851}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9454172
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyHealthSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -358,13 +358,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 248955823}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 207}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.587, y: 0.67800003}
+  m_AnchorMax: {x: 0.67079175, y: 0.7056297}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213630017
 MonoBehaviour:
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyDamageSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -718,13 +718,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1073330838}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 329}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.791}
+  m_AnchorMax: {x: 0.67079175, y: 0.81837046}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345134795
 MonoBehaviour:
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyAmountSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -847,13 +847,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 990282992}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -289}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.21722223}
+  m_AnchorMax: {x: 0.67079175, y: 0.246}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359987808
 MonoBehaviour:
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerTimerSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -976,13 +976,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1042912847}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 91}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.5696296}
+  m_AnchorMax: {x: 0.75987494, y: 0.59840745}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378270756
 MonoBehaviour:
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyMovementSpeedSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -1325,13 +1325,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1269968523}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 149}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.624}
+  m_AnchorMax: {x: 0.75987494, y: 0.6521851}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483081606
 MonoBehaviour:
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyHealthSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -1454,13 +1454,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 844728653}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -221}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.28122222}
+  m_AnchorMax: {x: 0.67079175, y: 0.30900002}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633417059
 MonoBehaviour:
@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerMaxHealthDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -1583,13 +1583,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 290302175}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: -89}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.40370372}
+  m_AnchorMax: {x: 0.75987494, y: 0.43129632}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &656366844
 MonoBehaviour:
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerHealingDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -1781,6 +1781,95 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &686617349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686617351}
+  - component: {fileID: 686617350}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &686617350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686617349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7402e934931e1834db807c672cb55cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalSecurityLevel: 0
+  enemyAttackSpeed: 10
+  enemyMovementSpeed: 10
+  enemyAmount: 0
+  enemyHealth: 10
+  enemyDamage: 10
+  enemyShield: 0
+  playerHealingDown: 10
+  playerMaxHealthDown: 5
+  playerAmmoRegenDown: 1
+  playerMaxAmmoDown: 5
+  playerTimerLvl1: 10
+  playerTimer: 1
+  enemyAttackSpeedAS: 0
+  enemyMovementSpeedAS: 0
+  enemyAmountAS: 0
+  enemyHealthAS: 0
+  enemyDamageAS: 0
+  enemyShieldAS: 0
+  playerHealingDownAS: 0
+  playerMaxHealthDownAS: 0
+  playerAmmoRegenDownAS: 0
+  playerMaxAmmoDownAS: 0
+  playerTimerAS: 0
+  enemyAttackSpeedSL: 0
+  enemyMovementSpeedSL: 0
+  enemyAmountSL: 0
+  enemyHealthSL: 0
+  enemyDamageSL: 0
+  enemyShieldSL: 0
+  playerHealingDownSL: 0
+  playerMaxHealthDownSL: 0
+  playerAmmoRegenDownSL: 0
+  playerMaxAmmoDownSL: 0
+  playerTimerSL: 0
+  enemyAttackSpeedML: 5
+  enemyMovementSpeedML: 5
+  enemyAmountML: 5
+  enemyHealthML: 5
+  enemyDamageML: 5
+  enemyShieldML: 2
+--- !u!224 &686617351
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686617349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743751189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &778092157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,13 +2209,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1761353618}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 33}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.5166296}
+  m_AnchorMax: {x: 0.76039577, y: 0.545}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915023504
 MonoBehaviour:
@@ -2171,7 +2260,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyShieldSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -2547,6 +2636,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042912846}
   m_CullTransparentMesh: 0
+--- !u!1 &1055494826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055494827}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1055494827
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055494826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 345134794}
+  - {fileID: 1357439706}
+  - {fileID: 1909775243}
+  - {fileID: 1541971390}
+  - {fileID: 213630016}
+  - {fileID: 1807766611}
+  - {fileID: 9454171}
+  - {fileID: 483081605}
+  - {fileID: 1923136520}
+  - {fileID: 378270755}
+  - {fileID: 1922147972}
+  - {fileID: 915023503}
+  - {fileID: 1953206328}
+  - {fileID: 1721082257}
+  - {fileID: 1443992056}
+  - {fileID: 656366843}
+  - {fileID: 1716153567}
+  - {fileID: 1870221256}
+  - {fileID: 633417058}
+  - {fileID: 1261134233}
+  - {fileID: 359987807}
+  - {fileID: 1455578111}
+  m_Father: {fileID: 1743751189}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1063761707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,13 +3165,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1117282465}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: -221}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.28122222}
+  m_AnchorMax: {x: 0.75987494, y: 0.30900002}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261134234
 MonoBehaviour:
@@ -3070,7 +3216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerMaxHealthDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -3302,13 +3448,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 475424338}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 329}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.791}
+  m_AnchorMax: {x: 0.75987494, y: 0.81929636}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357439707
 MonoBehaviour:
@@ -3353,7 +3499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyAmountSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -3431,13 +3577,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 778092158}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -89}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.40370372}
+  m_AnchorMax: {x: 0.67079175, y: 0.43129632}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443992057
 MonoBehaviour:
@@ -3482,7 +3628,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerHealingDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -3560,13 +3706,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 853926444}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: -289}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.21722223}
+  m_AnchorMax: {x: 0.75987494, y: 0.246}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1455578112
 MonoBehaviour:
@@ -3611,7 +3757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerTimerSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -3766,13 +3912,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1871081868}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 268}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.73455554}
+  m_AnchorMax: {x: 0.75987494, y: 0.762}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541971391
 MonoBehaviour:
@@ -3817,7 +3963,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyAttackSpeedSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -3972,13 +4118,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2129501083}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -153}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.3442963}
+  m_AnchorMax: {x: 0.67079175, y: 0.37214816}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716153568
 MonoBehaviour:
@@ -4023,7 +4169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerMaxAmmoDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4101,13 +4247,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 275663987}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: -28}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.46}
+  m_AnchorMax: {x: 0.75987494, y: 0.48800004}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721082258
 MonoBehaviour:
@@ -4152,7 +4298,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerAmmoRegenDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4227,28 +4373,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 345134794}
-  - {fileID: 1357439706}
-  - {fileID: 1909775243}
-  - {fileID: 1541971390}
-  - {fileID: 213630016}
-  - {fileID: 1807766611}
-  - {fileID: 9454171}
-  - {fileID: 483081605}
-  - {fileID: 1923136520}
-  - {fileID: 378270755}
-  - {fileID: 1922147972}
-  - {fileID: 915023503}
-  - {fileID: 1953206328}
-  - {fileID: 1721082257}
-  - {fileID: 1443992056}
-  - {fileID: 656366843}
-  - {fileID: 1716153567}
-  - {fileID: 1870221256}
-  - {fileID: 633417058}
-  - {fileID: 1261134233}
-  - {fileID: 359987807}
-  - {fileID: 1455578111}
+  - {fileID: 686617351}
+  - {fileID: 1055494827}
   m_Father: {fileID: 659804450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4269,18 +4395,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7402e934931e1834db807c672cb55cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalSecurityLevel: 0
   enemyAttackSpeed: 10
   enemyMovementSpeed: 10
-  enemyAmount: 1
+  enemyAmount: 0
   enemyHealth: 10
   enemyDamage: 10
-  enemyShield: 1
+  enemyShield: 0
   playerHealingDown: 10
   playerMaxHealthDown: 5
   playerAmmoRegenDown: 1
   playerMaxAmmoDown: 5
   playerTimerLvl1: 10
   playerTimer: 1
+  enemyAttackSpeedAS: 0
+  enemyMovementSpeedAS: 0
+  enemyAmountAS: 0
+  enemyHealthAS: 0
+  enemyDamageAS: 0
+  enemyShieldAS: 0
+  playerHealingDownAS: 0
+  playerMaxHealthDownAS: 0
+  playerAmmoRegenDownAS: 0
+  playerMaxAmmoDownAS: 0
+  playerTimerAS: 0
+  enemyAttackSpeedSL: 0
+  enemyMovementSpeedSL: 0
+  enemyAmountSL: 0
+  enemyHealthSL: 0
+  enemyDamageSL: 0
+  enemyShieldSL: 0
+  playerHealingDownSL: 0
+  playerMaxHealthDownSL: 0
+  playerAmmoRegenDownSL: 0
+  playerMaxAmmoDownSL: 0
+  playerTimerSL: 0
+  enemyAttackSpeedML: 0
+  enemyMovementSpeedML: 0
+  enemyAmountML: 0
+  enemyHealthML: 0
+  enemyDamageML: 0
+  enemyShieldML: 0
 --- !u!1 &1761353617
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,13 +4544,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1063761708}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 207}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.67800003}
+  m_AnchorMax: {x: 0.75987494, y: 0.7056297}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807766612
 MonoBehaviour:
@@ -4440,7 +4595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyDamageSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4518,13 +4673,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1139201148}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: -153}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.67675006, y: 0.3442963}
+  m_AnchorMax: {x: 0.75987494, y: 0.37214816}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870221257
 MonoBehaviour:
@@ -4569,7 +4724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerMaxAmmoDownSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4724,13 +4879,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2024770759}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 268}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.587, y: 0.73455554}
+  m_AnchorMax: {x: 0.67079175, y: 0.762}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909775244
 MonoBehaviour:
@@ -4775,7 +4930,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyAttackSpeedSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4853,13 +5008,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1281560706}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 33}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.5166296}
+  m_AnchorMax: {x: 0.67079175, y: 0.544}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922147973
 MonoBehaviour:
@@ -4904,7 +5059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyShieldSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -4982,13 +5137,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566926059}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: 91}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.58752084, y: 0.5705555}
+  m_AnchorMax: {x: 0.67079175, y: 0.59840745}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923136521
 MonoBehaviour:
@@ -5033,7 +5188,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: EnemyMovementSpeedSecurityLevel
         m_Mode: 3
         m_Arguments:
@@ -5111,13 +5266,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 198332655}
-  m_Father: {fileID: 1743751189}
+  m_Father: {fileID: 1055494827}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -28}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.587, y: 0.46}
+  m_AnchorMax: {x: 0.67079175, y: 0.48800004}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1953206329
 MonoBehaviour:
@@ -5162,7 +5317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743751190}
+      - m_Target: {fileID: 686617350}
         m_MethodName: PlayerAmmoRegenDownSecurityLevel
         m_Mode: 3
         m_Arguments:
