@@ -17,7 +17,7 @@ public class SecurityLevel : MonoBehaviour
 
     public float playerHealingDown; //percent
     public float playerMaxHealthDown;
-    public float playerAmmoRegenDown;
+    public float playerAmmoRegenDown; //percent
     public float playerMaxAmmoDown;
 
     public float playerTimerLvl1; //amount of time you get when timer is lvl 1
@@ -241,9 +241,10 @@ public class SecurityLevel : MonoBehaviour
             playerMaxHealthDownAS = playerMaxHealthDown * playerMaxHealthDownSL;
         }
 
+        playerAmmoRegenDownAS = 1;
         if (playerAmmoRegenDownSL > 0)
         {
-            playerAmmoRegenDownAS = playerAmmoRegenDown * playerAmmoRegenDownSL;
+            playerAmmoRegenDownAS += playerAmmoRegenDown * playerAmmoRegenDownSL / 100;
         }
 
         if (playerMaxAmmoDownSL > 0)
@@ -263,6 +264,6 @@ public class SecurityLevel : MonoBehaviour
             }
         }
 
-        //load next scene
+        SceneManager.LoadScene(1);
     }
 }
