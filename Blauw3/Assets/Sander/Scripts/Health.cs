@@ -16,7 +16,10 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
-        maxHealth -= securityLevel.playerMaxHealthDownAS;
+        if(securityLevel != null)
+        {
+            maxHealth -= securityLevel.playerMaxHealthDownAS;
+        }
         currentHealth = maxHealth;
     }
 

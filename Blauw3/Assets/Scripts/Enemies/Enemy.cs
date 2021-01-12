@@ -38,11 +38,14 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
-        timeBetweenAttacks -= timeBetweenAttacks * securityLevel.enemyAttackSpeedAS;
-        damage += damage * securityLevel.enemyDamageAS;
-        agent.speed += agent.speed * securityLevel.enemyMovementSpeedAS;
-        health += health * securityLevel.enemyHealthAS;
-        shield = securityLevel.enemyShieldAS;
+        if (securityLevel != null)
+        {
+            timeBetweenAttacks -= timeBetweenAttacks * securityLevel.enemyAttackSpeedAS;
+            damage += damage * securityLevel.enemyDamageAS;
+            agent.speed += agent.speed * securityLevel.enemyMovementSpeedAS;
+            health += health * securityLevel.enemyHealthAS;
+            shield = securityLevel.enemyShieldAS;
+        }
         maxHealth = health;
         player = GameObject.Find("PlayerBody").transform;
         agent = GetComponent<NavMeshAgent>();
