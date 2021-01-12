@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    public SecurityLevel securityLevel;
+    [HideInInspector] public SecurityLevel securityLevel;
     public string securityLevelTag;
     private int shield;
 
@@ -39,7 +39,6 @@ public class Enemy : MonoBehaviour
     {
         securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
         timeBetweenAttacks -= timeBetweenAttacks * securityLevel.enemyAttackSpeedAS;
-        //health and movement
         damage += damage * securityLevel.enemyDamageAS;
         agent.speed += agent.speed * securityLevel.enemyMovementSpeedAS;
         health += health * securityLevel.enemyHealthAS;

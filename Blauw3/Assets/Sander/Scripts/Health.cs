@@ -9,8 +9,14 @@ public class Health : MonoBehaviour
     public float maxHealth = 10;
     public float currentHealth = 10;
 
+    [HideInInspector] public SecurityLevel securityLevel;
+    [Header("Security Level")]
+    public string securityLevelTag;
+
     private void Awake()
     {
+        securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
+        maxHealth -= securityLevel.playerMaxHealthDownAS;
         currentHealth = maxHealth;
     }
 

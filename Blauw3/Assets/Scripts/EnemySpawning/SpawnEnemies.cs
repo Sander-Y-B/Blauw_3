@@ -19,10 +19,15 @@ public class SpawnEnemies : MonoBehaviour
     private bool timerBool;
     [HideInInspector] public bool roomCleared;
     [HideInInspector] public bool roomStarted;
+    [HideInInspector] public SecurityLevel securityLevel;
+    [Header("Security Level")]
+    public string securityLevelTag;
 
     void Start()
     {
         //RoomStart(); //for testing purposes only
+        securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
+        totalEnemies += securityLevel.enemyAmountAS;
     }
 
     void Update()

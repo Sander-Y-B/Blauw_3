@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 686617350}
   m_Layer: 5
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: SecurityLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1813,9 +1813,9 @@ MonoBehaviour:
   totalSecurityLevel: 0
   enemyAttackSpeed: 10
   enemyMovementSpeed: 10
-  enemyAmount: 0
   enemyHealth: 10
   enemyDamage: 10
+  enemyAmount: 0
   enemyShield: 0
   playerHealingDown: 10
   playerMaxHealthDown: 5
@@ -1825,9 +1825,9 @@ MonoBehaviour:
   playerTimer: 1
   enemyAttackSpeedAS: 0
   enemyMovementSpeedAS: 0
-  enemyAmountAS: 0
   enemyHealthAS: 0
   enemyDamageAS: 0
+  enemyAmountAS: 0
   enemyShieldAS: 0
   playerHealingDownAS: 0
   playerMaxHealthDownAS: 0
@@ -1836,9 +1836,9 @@ MonoBehaviour:
   playerTimerAS: 0
   enemyAttackSpeedSL: 0
   enemyMovementSpeedSL: 0
-  enemyAmountSL: 0
   enemyHealthSL: 0
   enemyDamageSL: 0
+  enemyAmountSL: 0
   enemyShieldSL: 0
   playerHealingDownSL: 0
   playerMaxHealthDownSL: 0
@@ -3057,6 +3057,8 @@ MonoBehaviour:
   textTimerMinutes: {fileID: 420085405}
   textTimerSeconds: {fileID: 1517080405}
   runTimer: 0
+  securityLevel: {fileID: 0}
+  securityLevelTag: SecurityLevel
 --- !u!1 &1226900117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,9 +4400,9 @@ MonoBehaviour:
   totalSecurityLevel: 0
   enemyAttackSpeed: 10
   enemyMovementSpeed: 10
-  enemyAmount: 0
   enemyHealth: 10
   enemyDamage: 10
+  enemyAmount: 0
   enemyShield: 0
   playerHealingDown: 10
   playerMaxHealthDown: 5
@@ -4410,9 +4412,9 @@ MonoBehaviour:
   playerTimer: 1
   enemyAttackSpeedAS: 0
   enemyMovementSpeedAS: 0
-  enemyAmountAS: 0
   enemyHealthAS: 0
   enemyDamageAS: 0
+  enemyAmountAS: 0
   enemyShieldAS: 0
   playerHealingDownAS: 0
   playerMaxHealthDownAS: 0
@@ -4421,9 +4423,9 @@ MonoBehaviour:
   playerTimerAS: 0
   enemyAttackSpeedSL: 0
   enemyMovementSpeedSL: 0
-  enemyAmountSL: 0
   enemyHealthSL: 0
   enemyDamageSL: 0
+  enemyAmountSL: 0
   enemyShieldSL: 0
   playerHealingDownSL: 0
   playerMaxHealthDownSL: 0

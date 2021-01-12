@@ -15,6 +15,7 @@ TagManager:
   - GunBarrel
   - Room
   - TargetDummy
+  - SecurityLevel
   layers:
   - Default
   - TransparentFX

@@ -11,9 +11,19 @@ public class TimerSecurityLevel : MonoBehaviour
     public Text textTimerSeconds;
     public bool runTimer;
 
+    [HideInInspector] public SecurityLevel securityLevel;
+    [Header("Security Level")]
+    public string securityLevelTag;
+
     void Start()
     {
-        
+        securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
+        if(securityLevel.playerTimerSL > 0)
+        {
+            timerMinutes = securityLevel.playerTimerAS;
+            return;
+        }
+        gameObject.SetActive(false);
     }
 
     void Update()
