@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public Animator animator;
     public Transform player;
-    public GameObject prefab;
+    public GameObject prefab, dropPoint;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health, dissolveTime;
     private float maxHealth, healthPercent;
@@ -17,7 +17,9 @@ public class Enemy : MonoBehaviour
     public SpawnEnemies spawnEnemies;
     public Material dissolve;
     public AudioSource attackSound, deathSound;
-
+    private int randomNum;
+    public GameObject[] Drops;
+    private GameObject currentDrop, currentDropPoint;
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -117,6 +119,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void DestroyEnemy()
     {
+        RandomDrop();
         spawnEnemies.enemiesAlive.Remove(gameObject);
         Destroy(gameObject);
     }
@@ -129,5 +132,17 @@ public class Enemy : MonoBehaviour
     public virtual void Walk()
     {
         //walk animation override
+    }
+
+    public void RandomDrop()
+    {
+        randomNum = Random.Range(0,4);
+
+        if (randomNum == 2)
+        {
+            currentDropPoint = Instantiate(dropPoint, transform.position, transform.rotation);
+            currentDrop = Instantiate(Drops[Random.Range(0, Drops.Length)], currentDropPoint.transform.position, currentDropPoint.transform.rotation);
+            currentDrop.GetComponent<InWorldPart>().myShopPoint = currentDropPoint;
+        }
     }
 }

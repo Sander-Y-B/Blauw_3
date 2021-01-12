@@ -1100,6 +1100,8 @@ MonoBehaviour:
   enemiesAlive: []
   roomCleared: 0
   roomStarted: 0
+  securityLevel: {fileID: 0}
+  securityLevelTag: SecurityLevel
 --- !u!82 &682684322585074517
 AudioSource:
   m_ObjectHideFlags: 0

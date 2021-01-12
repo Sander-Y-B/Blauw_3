@@ -550,6 +550,8 @@ MonoBehaviour:
   animator: {fileID: 8655969624794770366}
   player: {fileID: 0}
   prefab: {fileID: 246209540877597803}
+  dropPoint: {fileID: 1334572380147848804, guid: 9e5ea1c7392d7fa4b996aaa729bb2ad1,
+    type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -563,6 +565,16 @@ MonoBehaviour:
   dissolve: {fileID: 2100000, guid: 8216f266c463d9a409ac4bf4e94f00a7, type: 2}
   attackSound: {fileID: 1342982569843839153}
   deathSound: {fileID: 8361235394070835664}
+  Drops:
+  - {fileID: 1660847460382286833, guid: 6f8a8649c28e97e4cbe399fe03b48175, type: 3}
+  - {fileID: 1660847460382286833, guid: 7fff4d837b105534e895dcb51b142f0d, type: 3}
+  - {fileID: 1660847460382286833, guid: 3a8ea824fff6ee64a8d703b72e66f5ae, type: 3}
+  - {fileID: 1660847460382286833, guid: ca0879ee31cc7a24384d57ae2dc242b4, type: 3}
+  - {fileID: 1660847460382286833, guid: ecc30ea9c9f47aa40ad8ef3d31c28626, type: 3}
+  - {fileID: 1660847460382286833, guid: e822fbd84db9c6e428dc501fe7dd677b, type: 3}
+  - {fileID: 1660847460382286833, guid: c4f75dfd2dc1b7042a0a68178d5670f7, type: 3}
+  - {fileID: 1660847460382286833, guid: 641b60fd5188e2a45aecae66b14b03df, type: 3}
+  - {fileID: 1660847460382286833, guid: 405fa4ba6a4089844a3d8df3984b6ca3, type: 3}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
@@ -571,6 +583,8 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
+  securityLevel: {fileID: 0}
+  securityLevelTag: SecurityLevel
   bulletSpawn: {fileID: 5969182602053609972}
   bulletPrefab: {fileID: 9029048551226336628, guid: 8ef0fac1312bd174f8951e0c7f6907c5,
     type: 3}
