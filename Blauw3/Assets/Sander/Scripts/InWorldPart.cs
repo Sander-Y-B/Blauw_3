@@ -14,10 +14,13 @@ public class InWorldPart : MonoBehaviour
     GameObject lastGunPart;
     GameObject newShopItem;
 
+    AudioSource pickUpSFX;
+
     private void Start()
     {
         shop = FindObjectOfType<ShopScript>();
         gunManager = FindObjectOfType<GunManager>();
+        pickUpSFX = Camera.main.GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -30,6 +33,7 @@ public class InWorldPart : MonoBehaviour
 
     IEnumerator PickUpPart()
     {
+        pickUpSFX.Play();
         ReplaceShopItem();
         StartCoroutine(gunManager.UpdateGunPart(partPrefab));
         yield return new WaitForEndOfFrame();

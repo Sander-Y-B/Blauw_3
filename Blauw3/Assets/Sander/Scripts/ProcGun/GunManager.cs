@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
+    SecurityLevel securityManager;
+
     [HideInInspector] public bool shootAllow = true; // this is for other scripts to completely prefent the player from shooting
     bool canShoot = true; // this one is for functions here to prefent shooting
     [SerializeField] GameObject[] gunBodies;
@@ -15,9 +17,9 @@ public class GunManager : MonoBehaviour
     GameObject barrelPoint;
     GameObject shotPoint;
 
-    GameObject currentBody;
-    GameObject currentLoader;
-    GameObject currentBarrel;
+    [HideInInspector] public GameObject currentBody;
+    [HideInInspector] public GameObject currentLoader;
+    [HideInInspector] public GameObject currentBarrel;
 
     BasePart statsBody;
     BasePart statsLoader;
@@ -58,6 +60,11 @@ public class GunManager : MonoBehaviour
         playerLookScript = Camera.main.GetComponent<PlayerLook>();
         uIManager = FindObjectOfType<UIManager>();
         SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
+    }
+
+    void Start()
+    {
+        securityManager = FindObjectOfType<SecurityLevel>();
     }
 
     void Update()
@@ -117,9 +124,24 @@ public class GunManager : MonoBehaviour
         } 
 
         currentDamge = statsLoader.baseDamage + statsBody.modDamage + statsBarrel.modDamage;
-        currentMaxClipsize = statsLoader.baseClipsize;
+        if (securityManager.playerMaxAmmoDown > 0)
+        {
+            currentMaxClipsize = statsLoader.baseClipsize - securityManager.playerMaxAmmoDownAS;
+        }
+        else
+        {
+            currentMaxClipsize = statsLoader.baseClipsize;
+        }
         currentAmmoAmount = currentMaxClipsize;
-        currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
+
+        if (securityManager.playerAmmoRegenDown > 0)
+        {
+            currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed - securityManager.playerAmmoRegenDownAS;
+        }
+        else
+        {
+            currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed;
+        }
 
         currentRecoil = statsBarrel.baseRecoil + statsBody.modRecoil + statsLoader.modRecoil;
         if (currentRecoil <0)
@@ -182,7 +204,7 @@ public class GunManager : MonoBehaviour
                 newBullet.GetComponent<BulletScript>().UpdateDamage(currentDamge);
                 newBullet.GetComponent<BulletScript>().AddSpread(spreadAmount);
 
-                Instantiate(muzzelFlash, shotPoint.transform.position, shotPoint.transform.rotation);
+                Instantiate(muzzelFlash, shotPoint.transform.position, shotPoint.transform.rotation, shotPoint.transform);
 
                 playerLookScript.AddRecoil();
 

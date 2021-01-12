@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6632918865723255764}
   - component: {fileID: 1094469248184489773}
   - component: {fileID: 8825241371454483801}
-  - component: {fileID: 2525261794805029687}
   - component: {fileID: 6616446432825439013}
   m_Layer: 8
   m_Name: GrenadeBarrel(InWorld item) 3
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1660847460382286833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,25 +91,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 0.6
   m_Height: 0.5
   m_Direction: 0
-  m_Center: {x: 0, y: 0.087887675, z: 0}
---- !u!114 &2525261794805029687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660847460382286833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f19c7f94c794c5097d8bd11e39c750d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpinSpeed: 50
-  RotationRange: 15
-  Motion: 0
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!114 &6616446432825439013
 MonoBehaviour:
   m_ObjectHideFlags: 0
