@@ -16,6 +16,7 @@ TagManager:
   - Room
   - TargetDummy
   - SecurityLevel
+  - TimerSecurityLevel
   layers:
   - Default
   - TransparentFX
