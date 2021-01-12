@@ -10135,7 +10135,7 @@ MonoBehaviour:
   rooms:
   - {fileID: 1069795974}
   occupiedCoordinates:
-  - {fileID: 1069795974}
+  - {fileID: 0}
   tempRooms: []
 --- !u!4 &1604586736
 Transform:
