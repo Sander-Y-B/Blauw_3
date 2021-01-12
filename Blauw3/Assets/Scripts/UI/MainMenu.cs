@@ -9,7 +9,7 @@ using EZCameraShake;
 public class MainMenu : MonoBehaviour
 {
     public AudioSource buttonSound;
-    public GameObject main, options;
+    public GameObject main, options, security, corners;
     public Slider mainSlider, musicSlider, sfxSlider, sensSlider;
 
     private void Start()
@@ -38,8 +38,20 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetFloat("musicVol", musicSlider.value);
         PlayerPrefs.SetFloat("sfxVol", sfxSlider.value);
         PlayerPrefs.SetFloat("mouseSens", sensSlider.value);
+        if (corners.activeSelf == false)
+        {
+            corners.SetActive(true);
+        }
         options.SetActive(false);
         main.SetActive(true);
+    }
+
+    public void OpenSecurity()
+    {
+        CameraShaker.Instance.ShakeOnce(4f, 1f, .1f, .1f);
+        main.SetActive(false);
+        security.SetActive(true);
+        corners.SetActive(false);
     }
     public void LoadGame(int scene)
     {

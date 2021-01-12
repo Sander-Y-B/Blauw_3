@@ -27,7 +27,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         //RoomStart(); //for testing purposes only
         securityLevel = GameObject.FindGameObjectWithTag(securityLevelTag).GetComponent<SecurityLevel>();
-        if (securityLevel != null)
+        if (securityLevel != null)  
         {
             totalEnemies += securityLevel.enemyAmountAS;
         }
