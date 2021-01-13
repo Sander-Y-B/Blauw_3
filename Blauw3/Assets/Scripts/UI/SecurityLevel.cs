@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SecurityLevel : MonoBehaviour
 {
@@ -72,12 +73,29 @@ public class SecurityLevel : MonoBehaviour
 
     private float playerTimerML;
 
+    [Header("Text")]
+
+    //Security level numbers
+    public Text enemyAttackSpeedText;
+    public Text enemyMovementSpeedText;
+    public Text enemyAmountText;
+    public Text enemyHealthText;
+    public Text enemyDamageText;
+    public Text enemyShieldText;
+
+    public Text playerHealingDownText;
+    public Text playerMaxHealthDownText;
+    public Text playerAmmoRegenDownText;
+    public Text playerMaxAmmoDownText;
+
+    public Text playerTimerText;
+
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void UpdateSecurityLevel(int updateSecurityLevel)
+    public void UpdateTotalSecurityLevel(int updateSecurityLevel)
     {
         totalSecurityLevel += updateSecurityLevel;
         // .text = Mathf.RoundToInt(totalSecurityLevel).ToString();
@@ -90,7 +108,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyAttackSpeedSL += enemyAttackSpeedSecurityLevel;
-        UpdateSecurityLevel(enemyAttackSpeedSecurityLevel);
+        enemyAttackSpeedText.text = enemyAttackSpeedSL.ToString();
+        UpdateTotalSecurityLevel(enemyAttackSpeedSecurityLevel);
     }
 
     public void EnemyMovementSpeedSecurityLevel(int enemyMovementSpeedSecurityLevel)
@@ -100,7 +119,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyMovementSpeedSL += enemyMovementSpeedSecurityLevel;
-        UpdateSecurityLevel(enemyMovementSpeedSecurityLevel);
+        enemyMovementSpeedText.text = enemyMovementSpeedSL.ToString();
+        UpdateTotalSecurityLevel(enemyMovementSpeedSecurityLevel);
     }
 
     public void EnemyAmountSecurityLevel(int enemyAmountSecurityLevel)
@@ -110,7 +130,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyAmountSL += enemyAmountSecurityLevel;
-        UpdateSecurityLevel(enemyAmountSecurityLevel);
+        enemyAmountText.text = enemyAmountSL.ToString();
+        UpdateTotalSecurityLevel(enemyAmountSecurityLevel);
     }
 
     public void EnemyHealthSecurityLevel(int enemyHealthSecurityLevel)
@@ -120,7 +141,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyHealthSL += enemyHealthSecurityLevel;
-        UpdateSecurityLevel(enemyHealthSecurityLevel);
+        enemyHealthText.text = enemyHealthSL.ToString();
+        UpdateTotalSecurityLevel(enemyHealthSecurityLevel);
     }
 
     public void EnemyDamageSecurityLevel(int enemyDamageSecurityLevel)
@@ -130,7 +152,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyDamageSL += enemyDamageSecurityLevel;
-        UpdateSecurityLevel(enemyDamageSecurityLevel);
+        enemyDamageText.text = enemyDamageSL.ToString();
+        UpdateTotalSecurityLevel(enemyDamageSecurityLevel);
     }
 
     public void EnemyShieldSecurityLevel(int enemyShieldSecurityLevel)
@@ -140,7 +163,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         enemyShieldSL += enemyShieldSecurityLevel;
-        UpdateSecurityLevel(enemyShieldSecurityLevel);
+        enemyShieldText.text = enemyShieldSL.ToString();
+        UpdateTotalSecurityLevel(enemyShieldSecurityLevel);
     }
 
     public void PlayerHealingDownSecurityLevel(int playerHealingDownSecurityLevel)
@@ -150,7 +174,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         playerHealingDownSL += playerHealingDownSecurityLevel;
-        UpdateSecurityLevel(playerHealingDownSecurityLevel);
+        playerHealingDownText.text = playerHealingDownSL.ToString();
+        UpdateTotalSecurityLevel(playerHealingDownSecurityLevel);
     }
 
     public void PlayerMaxHealthDownSecurityLevel(int playerMaxHealthDownSecurityLevel)
@@ -160,7 +185,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         playerMaxHealthDownSL += playerMaxHealthDownSecurityLevel;
-        UpdateSecurityLevel(playerMaxHealthDownSecurityLevel);
+        playerMaxHealthDownText.text = playerMaxHealthDownSL.ToString();
+        UpdateTotalSecurityLevel(playerMaxHealthDownSecurityLevel);
     }
 
     public void PlayerAmmoRegenDownSecurityLevel(int playerAmmoRegenDownSecurityLevel)
@@ -170,7 +196,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         playerAmmoRegenDownSL += playerAmmoRegenDownSecurityLevel;
-        UpdateSecurityLevel(playerAmmoRegenDownSecurityLevel);
+        playerAmmoRegenDownText.text = playerAmmoRegenDownSL.ToString();
+        UpdateTotalSecurityLevel(playerAmmoRegenDownSecurityLevel);
     }
 
     public void PlayerMaxAmmoDownSecurityLevel(int playerMaxAmmoDownSecurityLevel)
@@ -180,7 +207,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         playerMaxAmmoDownSL += playerMaxAmmoDownSecurityLevel;
-        UpdateSecurityLevel(playerMaxAmmoDownSecurityLevel);
+        playerMaxAmmoDownText.text = playerMaxAmmoDownSL.ToString();
+        UpdateTotalSecurityLevel(playerMaxAmmoDownSecurityLevel);
     }
 
     public void PlayerTimerSecurityLevel(int playerTimerSecurityLevel)
@@ -190,7 +218,8 @@ public class SecurityLevel : MonoBehaviour
             return;
         }
         playerTimerSL += playerTimerSecurityLevel;
-        UpdateSecurityLevel(playerTimerSecurityLevel);
+        playerTimerText.text = playerTimerSL.ToString();
+        UpdateTotalSecurityLevel(playerTimerSecurityLevel);
     }
 
     public void LoadLevel()
