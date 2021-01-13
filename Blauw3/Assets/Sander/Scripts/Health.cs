@@ -38,13 +38,13 @@ public class Health : MonoBehaviour
 
     public void DoHeal (float heal)
     {
-        if (currentHealth + heal > maxHealth)
+        if (currentHealth + heal - heal * securityLevel.playerHealingDownAS > maxHealth)
         {
             currentHealth = maxHealth;
         }
         else
         {
-            currentHealth = currentHealth + heal;
+            currentHealth += heal - heal * securityLevel.playerHealingDownAS;
 
         }
         uiManager.UpdateHealthBar(currentHealth, maxHealth);
