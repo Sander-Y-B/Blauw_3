@@ -318,7 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &120281804
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &191756459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2005,17 +2005,24 @@ MonoBehaviour:
   enemyHealthML: 5
   enemyDamageML: 5
   enemyShieldML: 2
-  enemyAttackSpeedText: {fileID: 0}
-  enemyMovementSpeedText: {fileID: 0}
-  enemyAmountText: {fileID: 0}
-  enemyHealthText: {fileID: 0}
-  enemyDamageText: {fileID: 0}
-  enemyShieldText: {fileID: 0}
-  playerHealingDownText: {fileID: 0}
-  playerMaxHealthDownText: {fileID: 0}
-  playerAmmoRegenDownText: {fileID: 0}
-  playerMaxAmmoDownText: {fileID: 0}
-  playerTimerText: {fileID: 0}
+  playerHealingDownML: 5
+  playerMaxHealthDownML: 5
+  playerAmmoRegenDownML: 5
+  playerMaxAmmoDownML: 5
+  playerTimerML: 5
+  enemyAmountText: {fileID: 1525497950}
+  enemyAttackSpeedText: {fileID: 981701090}
+  enemyDamageText: {fileID: 1053551421}
+  enemyHealthText: {fileID: 1684172067}
+  enemyMovementSpeedText: {fileID: 1893883395}
+  enemyShieldText: {fileID: 191756458}
+  playerAmmoRegenDownText: {fileID: 120281803}
+  playerHealingDownText: {fileID: 1857287119}
+  playerMaxAmmoDownText: {fileID: 1082586635}
+  playerMaxHealthDownText: {fileID: 1695212006}
+  playerTimerText: {fileID: 1923748911}
+  TotalSecurityLevelText: {fileID: 1329200249}
+  turnOff: {fileID: 0}
 --- !u!224 &686617351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2623,7 +2630,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &981701091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2946,7 +2953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1053551422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3234,7 +3241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1082586636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3930,7 +3937,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1329200250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4471,7 +4478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1525497951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4754,7 +4761,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1684172068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4831,7 +4838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1695212007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5190,17 +5197,24 @@ MonoBehaviour:
   enemyHealthML: 0
   enemyDamageML: 0
   enemyShieldML: 0
-  enemyAttackSpeedText: {fileID: 0}
-  enemyMovementSpeedText: {fileID: 0}
+  playerHealingDownML: 0
+  playerMaxHealthDownML: 0
+  playerAmmoRegenDownML: 0
+  playerMaxAmmoDownML: 0
+  playerTimerML: 0
   enemyAmountText: {fileID: 0}
-  enemyHealthText: {fileID: 0}
+  enemyAttackSpeedText: {fileID: 0}
   enemyDamageText: {fileID: 0}
+  enemyHealthText: {fileID: 0}
+  enemyMovementSpeedText: {fileID: 0}
   enemyShieldText: {fileID: 0}
-  playerHealingDownText: {fileID: 0}
-  playerMaxHealthDownText: {fileID: 0}
   playerAmmoRegenDownText: {fileID: 0}
+  playerHealingDownText: {fileID: 0}
   playerMaxAmmoDownText: {fileID: 0}
+  playerMaxHealthDownText: {fileID: 0}
   playerTimerText: {fileID: 0}
+  TotalSecurityLevelText: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!1 &1761353617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5475,7 +5489,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1857287120
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5758,7 +5772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1893883396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6222,7 +6236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1923748912
 CanvasRenderer:
   m_ObjectHideFlags: 0

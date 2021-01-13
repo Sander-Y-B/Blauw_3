@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3433,6 +3433,24 @@ MonoBehaviour:
   enemyHealthML: 0
   enemyDamageML: 0
   enemyShieldML: 0
+  playerHealingDownML: 0
+  playerMaxHealthDownML: 0
+  playerAmmoRegenDownML: 0
+  playerMaxAmmoDownML: 0
+  playerTimerML: 0
+  enemyAmountText: {fileID: 0}
+  enemyAttackSpeedText: {fileID: 0}
+  enemyDamageText: {fileID: 0}
+  enemyHealthText: {fileID: 0}
+  enemyMovementSpeedText: {fileID: 0}
+  enemyShieldText: {fileID: 0}
+  playerAmmoRegenDownText: {fileID: 0}
+  playerHealingDownText: {fileID: 0}
+  playerMaxAmmoDownText: {fileID: 0}
+  playerMaxHealthDownText: {fileID: 0}
+  playerTimerText: {fileID: 0}
+  TotalSecurityLevelText: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!4 &540276468
 Transform:
   m_ObjectHideFlags: 0
@@ -8640,8 +8658,7 @@ MonoBehaviour:
   - {fileID: 3106150719022561085, guid: 419b45b587e7b994da9f71cf937628ae, type: 3}
   rooms:
   - {fileID: 1069795974}
-  occupiedCoordinates:
-  - {fileID: 0}
+  occupiedCoordinates: []
   tempRooms: []
 --- !u!4 &1604586736
 Transform:

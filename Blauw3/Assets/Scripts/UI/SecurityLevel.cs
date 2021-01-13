@@ -66,29 +66,35 @@ public class SecurityLevel : MonoBehaviour
     public float enemyDamageML;
     public float enemyShieldML;
 
-    private float playerHealingDownML;
-    private float playerMaxHealthDownML;
-    private float playerAmmoRegenDownML;
-    private float playerMaxAmmoDownML;
+    public float playerHealingDownML;
+    public float playerMaxHealthDownML;
+    public float playerAmmoRegenDownML;
+    public float playerMaxAmmoDownML;
 
-    private float playerTimerML;
+    public float playerTimerML;
 
     [Header("Text")]
 
     //Security level numbers
-    public Text enemyAttackSpeedText;
-    public Text enemyMovementSpeedText;
     public Text enemyAmountText;
-    public Text enemyHealthText;
+    public Text enemyAttackSpeedText;
     public Text enemyDamageText;
+    public Text enemyHealthText;
+    public Text enemyMovementSpeedText;
     public Text enemyShieldText;
 
-    public Text playerHealingDownText;
-    public Text playerMaxHealthDownText;
     public Text playerAmmoRegenDownText;
+    public Text playerHealingDownText;
     public Text playerMaxAmmoDownText;
+    public Text playerMaxHealthDownText;
 
     public Text playerTimerText;
+
+    public Text TotalSecurityLevelText;
+
+    [Header("StuffToTurnOff")]
+
+    public GameObject turnOff;
 
     public void Awake()
     {
@@ -98,7 +104,7 @@ public class SecurityLevel : MonoBehaviour
     public void UpdateTotalSecurityLevel(int updateSecurityLevel)
     {
         totalSecurityLevel += updateSecurityLevel;
-        // .text = Mathf.RoundToInt(totalSecurityLevel).ToString();
+        TotalSecurityLevelText.text = Mathf.RoundToInt(totalSecurityLevel).ToString();
     }
 
     public void EnemyAttackSpeedSecurityLevel(int enemyAttackSpeedSecurityLevel)
