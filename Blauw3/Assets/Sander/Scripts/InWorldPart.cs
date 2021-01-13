@@ -16,6 +16,8 @@ public class InWorldPart : MonoBehaviour
 
     AudioSource pickUpSFX;
 
+    bool canPickup = true;
+
     private void Start()
     {
         shop = FindObjectOfType<ShopScript>();
@@ -27,7 +29,7 @@ public class InWorldPart : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact") && canPickup)
             {
                 StartCoroutine(PickUpPart());
             }
@@ -37,11 +39,13 @@ public class InWorldPart : MonoBehaviour
 
     IEnumerator PickUpPart()
     {
+        canPickup = false;
         pickUpSFX.Play();
         ReplaceShopItem();
         StartCoroutine(gunManager.UpdateGunPart(partPrefab));
         yield return new WaitForEndOfFrame();
         Destroy(gameObject);
+        canPickup = true;
     }
 
     void ReplaceShopItem()

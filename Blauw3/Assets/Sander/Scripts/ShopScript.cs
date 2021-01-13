@@ -25,6 +25,7 @@ public class ShopScript : MonoBehaviour
 
                 newShopItem = Instantiate(spawnableShopItemsList[itemSpawnIndex], shopItemSpawnPoints[shopPointIndex].transform);
                 newShopItem.GetComponent<InWorldPart>().myShopPoint = shopItemSpawnPoints[shopPointIndex];
+                newShopItem.GetComponent<InWorldPart>().shouldClearShop = true;
 
                 shopPointIndex++;
             }
