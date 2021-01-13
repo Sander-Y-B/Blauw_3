@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
-    SecurityLevel securityManager;
+    public SecurityLevel securityLevel;
 
     [HideInInspector] public bool shootAllow = true; // this is for other scripts to completely prefent the player from shooting
     bool canShoot = true; // this one is for functions here to prefent shooting
@@ -59,12 +59,10 @@ public class GunManager : MonoBehaviour
     {
         playerLookScript = Camera.main.GetComponent<PlayerLook>();
         uIManager = FindObjectOfType<UIManager>();
-        SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
-    }
 
-    void Start()
-    {
-        securityManager = FindObjectOfType<SecurityLevel>();
+        securityLevel = FindObjectOfType<SecurityLevel>();
+
+        SpawnNewGun(gunBodies[Random.Range(0, gunBodies.Length)], gunLoaders[Random.Range(0, gunLoaders.Length)], gunBarrels[Random.Range(0, gunBarrels.Length)]);
     }
 
     void Update()
@@ -124,9 +122,10 @@ public class GunManager : MonoBehaviour
         } 
 
         currentDamge = statsLoader.baseDamage + statsBody.modDamage + statsBarrel.modDamage;
-        if (securityManager.playerMaxAmmoDown > 0)
+
+        if (securityLevel.playerMaxAmmoDown > 0)
         {
-            currentMaxClipsize = statsLoader.baseClipsize - securityManager.playerMaxAmmoDownAS;
+            currentMaxClipsize = statsLoader.baseClipsize - securityLevel.playerMaxAmmoDownAS;
         }
         else
         {
@@ -134,9 +133,9 @@ public class GunManager : MonoBehaviour
         }
         currentAmmoAmount = currentMaxClipsize;
 
-        if (securityManager.playerAmmoRegenDown > 0)
+        if (securityLevel.playerAmmoRegenDown > 0)
         {
-            currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed - securityManager.playerAmmoRegenDownAS;
+            currentReloadSpeed = statsLoader.baseReloadSpeed + statsBody.modReloadSpeed + statsBarrel.modReloadSpeed - securityLevel.playerAmmoRegenDownAS;
         }
         else
         {
