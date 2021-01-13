@@ -7,6 +7,12 @@ public class PlayerRoomInteraction : MonoBehaviour
 {
     public string roomTagName;
     private SpawnEnemies spawnEnemies;
+    GunManager gunManager;
+
+    private void Start()
+    {
+        gunManager = FindObjectOfType<GunManager>();
+    }
 
     public void OnTriggerEnter(Collider o)
     {
@@ -19,6 +25,7 @@ public class PlayerRoomInteraction : MonoBehaviour
             }
             else
             {
+                gunManager.SaveGunparts();
                 SceneManager.LoadScene(0);
             }
         }

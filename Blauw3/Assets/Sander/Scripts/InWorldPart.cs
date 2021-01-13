@@ -25,9 +25,13 @@ public class InWorldPart : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && Input.GetButtonDown("Interact"))
+        if (other.tag == "Player")
         {
-            StartCoroutine(PickUpPart());
+            if (Input.GetButtonDown("Interact"))
+            {
+                StartCoroutine(PickUpPart());
+            }
+            
         }
     }
 
