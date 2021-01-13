@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4725,11 +4725,11 @@ Transform:
   - {fileID: 1228100536}
   - {fileID: 219650459}
   - {fileID: 1118122730}
-  - {fileID: 493433627}
   - {fileID: 1565783646}
+  - {fileID: 607943999}
+  - {fileID: 493433627}
   - {fileID: 1232219672}
   - {fileID: 610470168}
-  - {fileID: 607943999}
   - {fileID: 1885776598}
   - {fileID: 61763838}
   - {fileID: 1017125367}
@@ -4863,7 +4863,7 @@ Transform:
   - {fileID: 1816579123}
   - {fileID: 258660267}
   m_Father: {fileID: 542567293}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &610470167
 PrefabInstance:
@@ -10776,6 +10776,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3337463335793442705, guid: 7f368cf989a12d04c9a954211bf99a38,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6574435646581f34f9f80e0c7cafdde1, type: 2}
     - target: {fileID: 3764970517859741644, guid: 7f368cf989a12d04c9a954211bf99a38,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11291,7 +11296,7 @@ Transform:
   - {fileID: 152749094}
   - {fileID: 1292973949}
   m_Father: {fileID: 542567293}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582494204
 GameObject:
@@ -16064,12 +16069,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 34f4eb89220df234eb19d340d5cac36f, type: 2}
+      objectReference: {fileID: 2100000, guid: 173cae4c7ed51fb46bf0c588e1e7c7f8, type: 2}
     - target: {fileID: 3337463336044698838, guid: 8349dce71472a524cb8631842f267c51,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: 6574435646581f34f9f80e0c7cafdde1, type: 2}
     - target: {fileID: 3337463336044698839, guid: 8349dce71472a524cb8631842f267c51,
         type: 3}
       propertyPath: m_Name

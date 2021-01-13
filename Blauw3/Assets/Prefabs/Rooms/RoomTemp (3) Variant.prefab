@@ -7391,6 +7391,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floorboards
       objectReference: {fileID: 0}
+    - target: {fileID: 541260979688668226, guid: 1290ca89c9fe3b143b630fb2c694320c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3537205562571756615, guid: 1290ca89c9fe3b143b630fb2c694320c,
         type: 3}
       propertyPath: m_LocalPosition.x
