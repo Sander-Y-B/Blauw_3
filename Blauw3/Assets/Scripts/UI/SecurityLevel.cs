@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class SecurityLevel : MonoBehaviour
 {
@@ -76,25 +77,21 @@ public class SecurityLevel : MonoBehaviour
     [Header("Text")]
 
     //Security level numbers
-    public Text enemyAmountText;
-    public Text enemyAttackSpeedText;
-    public Text enemyDamageText;
-    public Text enemyHealthText;
-    public Text enemyMovementSpeedText;
-    public Text enemyShieldText;
+    public TextMeshProUGUI enemyAmountText;
+    public TextMeshProUGUI enemyAttackSpeedText;
+    public TextMeshProUGUI enemyDamageText;
+    public TextMeshProUGUI enemyHealthText;
+    public TextMeshProUGUI enemyMovementSpeedText;
+    public TextMeshProUGUI enemyShieldText;
 
-    public Text playerAmmoRegenDownText;
-    public Text playerHealingDownText;
-    public Text playerMaxAmmoDownText;
-    public Text playerMaxHealthDownText;
+    public TextMeshProUGUI playerAmmoRegenDownText;
+    public TextMeshProUGUI playerHealingDownText;
+    public TextMeshProUGUI playerMaxAmmoDownText;
+    public TextMeshProUGUI playerMaxHealthDownText;
 
-    public Text playerTimerText;
+    public TextMeshProUGUI playerTimerText;
 
-    public Text TotalSecurityLevelText;
-
-    [Header("StuffToTurnOff")]
-
-    public GameObject turnOff;
+    public TextMeshProUGUI TotalSecurityLevelText;
 
     public void Awake()
     {
