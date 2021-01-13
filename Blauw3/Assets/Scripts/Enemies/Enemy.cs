@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public Animator animator;
     public Transform player;
-    public GameObject prefab, dropPoint;
+    public GameObject prefab, dropPoint, infoBox;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health, dissolveTime;
     private float maxHealth, healthPercent;
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     public AudioSource attackSound, deathSound;
     private int randomNum;
     public GameObject[] Drops;
-    private GameObject currentDrop, currentDropPoint;
+    private GameObject currentDrop, currentDropPoint, currentInfoBox;
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -143,6 +143,8 @@ public class Enemy : MonoBehaviour
             currentDropPoint = Instantiate(dropPoint, transform.position, transform.rotation);
             currentDrop = Instantiate(Drops[Random.Range(0, Drops.Length)], currentDropPoint.transform.position, currentDropPoint.transform.rotation);
             currentDrop.GetComponent<InWorldPart>().myShopPoint = currentDropPoint;
+            //currentInfoBox = Instantiate(infoBox, currentDropPoint.transform.position, currentDropPoint.transform.rotation);
+            //currentInfoBox.GetComponent<info>().inWorldPart = currentDrop.GetComponent<InWorldPart>();
         }
     }
 }

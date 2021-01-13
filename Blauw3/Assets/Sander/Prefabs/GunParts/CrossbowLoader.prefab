@@ -96,7 +96,7 @@ MonoBehaviour:
   baseShotSpread: 0
   modDamage: 0
   modRecoil: 0
-  bullet: {fileID: 4382016167113689774, guid: 9abb2308522b3544294dbde81dbbf341, type: 3}
+  bullet: {fileID: 7304202511286867397, guid: 395bdbfe1a47c0a4393a2d75cee45e81, type: 3}
   shotSFX: {fileID: 0}
   baseClipsize: 1
   baseReloadSpeed: 0.2

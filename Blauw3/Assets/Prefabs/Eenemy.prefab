@@ -784,6 +784,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   dropPoint: {fileID: 1334572380147848804, guid: 9e5ea1c7392d7fa4b996aaa729bb2ad1,
     type: 3}
+  infoBox: {fileID: 7926333531873083996, guid: e35840e2f3d8ec9469c3186caa87b5e3, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
