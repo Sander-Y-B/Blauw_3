@@ -17,6 +17,8 @@ TagManager:
   - TargetDummy
   - SecurityLevel
   - TimerSecurityLevel
+  - Part
+  - infoPanel
   layers:
   - Default
   - TransparentFX

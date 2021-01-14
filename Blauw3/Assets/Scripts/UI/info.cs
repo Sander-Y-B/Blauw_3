@@ -19,7 +19,7 @@ public class info : MonoBehaviour
     [HideInInspector] public float currentRecoil;
 
     GunManager gunManager;
-    public GameObject player;
+    public GameObject player, panel;
     public InWorldPart inWorldPart;
     public BasePart basePart;
     public TextMeshProUGUI damage, attackSpeed, spread, scopeSpread, clipSize, reloadSpeed, recoil;
@@ -79,13 +79,13 @@ public class info : MonoBehaviour
 
     public void UpdateText()
     {
-        damage.text = currentDamge.ToString();
-        attackSpeed.text = currentShotSpeed.ToString();
-        spread.text = currentSpread.ToString();
-        scopeSpread.text = currentScopedSpread.ToString();
-        clipSize.text = currentMaxClipsize.ToString();
-        reloadSpeed.text = currentReloadSpeed.ToString();
-        recoil.text = currentRecoil.ToString();
+        damage.text = currentDamge.ToString("f1");
+        attackSpeed.text = currentShotSpeed.ToString("f1");
+        spread.text = currentSpread.ToString("f1");
+        scopeSpread.text = currentScopedSpread.ToString("f1");
+        clipSize.text = currentMaxClipsize.ToString("f1");
+        reloadSpeed.text = currentReloadSpeed.ToString("f1");
+        recoil.text = currentRecoil.ToString("f1");
     }
 
     public void LookAtPlayer()
