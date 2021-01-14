@@ -31,9 +31,12 @@ public class InfoPanelCheck : MonoBehaviour
                     }
                     
                 }
-                else if (currentHit.activeSelf == true)
+                else if (currentHit != null)
                 {
-                    currentHit.SetActive(false);
+                    if (currentHit.activeSelf == true)
+                    {
+                        currentHit.SetActive(false);
+                    }
                 }
             }
 
