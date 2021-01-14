@@ -16,37 +16,26 @@ public class InfoPanelCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (inRange == true)
-        //{
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, rayRange))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, rayRange))
+        {
+            if (hit.transform.gameObject.tag == "Part")
             {
-                if (hit.transform.gameObject.tag == "Part")
-                {
-                    currentHit = hit.transform.GetComponentInChildren<info>().panel;
+                currentHit = hit.transform.GetComponentInChildren<info>().panel;
 
-                    if (currentHit.activeSelf == false)
-                    {
-                        currentHit.SetActive(true);
-                    }
-                    
-                }
-                else if (currentHit != null)
+                if (currentHit.activeSelf == false)
                 {
-                    if (currentHit.activeSelf == true)
-                    {
-                        currentHit.SetActive(false);
-                    }
+                    currentHit.SetActive(true);
+                }
+
+            }
+            else if (currentHit != null)
+            {
+                if (currentHit.activeSelf == true)
+                {
+                    currentHit.SetActive(false);
                 }
             }
-
-        //}
-        //else if (currentHit != null)
-        //{
-        //    if (currentHit.activeSelf == true)
-        //    {
-        //        currentHit.SetActive(false);
-        //    }
-        //}
+        }
     }
 }
