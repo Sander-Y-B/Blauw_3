@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb93d8e3233e05547bd5ca163957f15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayRange: 5
+  rayRange: 50
 --- !u!65 &8726493511959402367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13736,6 +13736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1b9a8f08beb255944b0683250a2b9951,
+        type: 3}
+      propertyPath: m_TagString
+      value: RebootTerminal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9a8f08beb255944b0683250a2b9951, type: 3}

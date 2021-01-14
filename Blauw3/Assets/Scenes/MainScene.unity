@@ -13212,11 +13212,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
-      propertyPath: debugPart
-      value: 
-      objectReference: {fileID: 7361042555633234493, guid: 7efb2dce45ce1c64c9056c67030b9cf0,
-        type: 3}
+    - target: {fileID: 744001516, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 744001516, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 962142995371658064, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: m_Name

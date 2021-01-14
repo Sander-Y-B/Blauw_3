@@ -24,9 +24,11 @@ public class RebootTerminal : MonoBehaviour
 
             if (Input.GetButtonDown("Interact") && Physics.Raycast(transform.position, transform.forward, out hit, rayRange))
             {
+                print(hit.transform + " ||  1");
                 if (hit.transform.tag == "RebootTerminal")
                 {
                     WinGame();
+                    print(hit.transform + " ||  2");
                 }
             }
         }
