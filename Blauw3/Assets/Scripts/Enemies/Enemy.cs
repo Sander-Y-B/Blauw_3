@@ -50,6 +50,10 @@ public class Enemy : MonoBehaviour
             health += health * securityLevel.enemyHealthAS;
             shield = securityLevel.enemyShieldAS;
             maxShield = shield;
+            if(shield == 0)
+            {
+                shieldSlider.gameObject.SetActive(false);
+            }
         }
         maxHealth = health;
         player = GameObject.Find("PlayerBody").transform;
