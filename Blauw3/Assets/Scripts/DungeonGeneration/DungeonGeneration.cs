@@ -20,11 +20,19 @@ public class DungeonGeneration : MonoBehaviour
     private int doorNumber;
     private int doorNumber2;
     private int coordinatesChecker;
+    private bool wait;
 
     void Start()
     {
         occupiedCoordinates.Add(rooms[0]);
-        InstanciateRooms();
+    }
+
+    private void Update()
+    {
+        if (wait == false)
+        {
+            InstanciateRooms();
+        }
     }
     public void InstanciateRooms()
     {
@@ -51,11 +59,11 @@ public class DungeonGeneration : MonoBehaviour
                             }
                             if (coordinatesChecker < 1)
                             {
-                                if(currentRoomAmount == maxRoomAmount / 2)
+                                if (currentRoomAmount == maxRoomAmount / 2)
                                 {
                                     justSpawnedRoom = Instantiate(shopRoom, doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
                                 }
-                                else if(currentRoomAmount == maxRoomAmount - 2)
+                                else if (currentRoomAmount == maxRoomAmount - 2)
                                 {
                                     justSpawnedRoom = Instantiate(winRoom, doorScript.spawnRoomLocation.transform.position, Quaternion.identity);
                                 }
@@ -107,21 +115,25 @@ public class DungeonGeneration : MonoBehaviour
         }
         if (tempRooms.Count > 0)
         {
-            foreach(GameObject room in tempRooms)
+            foreach (GameObject room in tempRooms)
             {
                 rooms.Add(room);
             }
             tempRooms.Clear();
         }
-        if(currentRoomAmount < maxRoomAmount)
+        if (currentRoomAmount < maxRoomAmount)
         {
-            InstanciateRooms();
+            wait = false;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
     private void DecideDoor(GameObject spawned, GameObject otherDoor, int door)
     {
-        if(door < 2)
+        if (door < 2)
         {
             door += 2;
         }
