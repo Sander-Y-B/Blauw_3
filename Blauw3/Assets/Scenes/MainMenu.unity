@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2746,7 +2746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BLAUW 3
+  m_text: R^3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff5f1f82d1035064d9483eeba2cca329, type: 2}
   m_sharedMaterial: {fileID: -4603887397578951509, guid: ff5f1f82d1035064d9483eeba2cca329,
@@ -2775,7 +2775,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.65
+  m_fontSize: 41.65
   m_fontSizeBase: 32.78
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2816,9 +2816,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 297526656}
-    characterCount: 7
+    characterCount: 3
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 0
     wordCount: 2
     linkCount: 0
     lineCount: 1
