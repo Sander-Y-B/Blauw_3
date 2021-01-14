@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float health, dissolveTime;
     private float maxHealth, healthPercent;
     public Slider healthSlider;
+    public Slider shieldSlider;
     public SpawnEnemies spawnEnemies;
     public Material dissolve;
     public AudioSource attackSound, deathSound;
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public SecurityLevel securityLevel;
     public string securityLevelTag;
     private int shield;
+    private int maxShield;
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class Enemy : MonoBehaviour
             agent.speed += agent.speed * securityLevel.enemyMovementSpeedAS;
             health += health * securityLevel.enemyHealthAS;
             shield = securityLevel.enemyShieldAS;
+            maxShield = shield;
         }
         maxHealth = health;
         player = GameObject.Find("PlayerBody").transform;
@@ -108,7 +111,11 @@ public class Enemy : MonoBehaviour
         if(shield > 0)
         {
             shield--;
-            //update shield UI
+            shieldSlider.value = shield / maxShield * 100;
+            if(shield == 0)
+            {
+                shieldSlider.gameObject.SetActive(false);
+            }
             return;
         }
         health -= damage;
