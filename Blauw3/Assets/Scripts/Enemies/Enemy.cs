@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public Animator animator;
     public Transform player;
-    public GameObject prefab, dropPoint, infoBox;
+    public GameObject prefab, dropPoint, infoBox, healPickup;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health, dissolveTime;
     private float maxHealth, healthPercent;
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
 
     public void RandomDrop()
     {
-        randomNum = Random.Range(0,2);
+        randomNum = Random.Range(0,3);
 
         if (randomNum == 1)
         {
@@ -146,6 +146,10 @@ public class Enemy : MonoBehaviour
             currentInfoBox = Instantiate(infoBox, currentDropPoint.transform.position, currentDropPoint.transform.rotation);
             currentInfoBox.transform.SetParent(currentDrop.transform);
             currentInfoBox.GetComponent<info>().inWorldPart = currentDrop.GetComponent<InWorldPart>();
+        }
+        else if(randomNum == 2)
+        {
+            Instantiate(healPickup, transform.position, transform.rotation);
         }
     }
 }
