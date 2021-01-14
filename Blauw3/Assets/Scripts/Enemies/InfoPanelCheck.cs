@@ -21,7 +21,6 @@ public class InfoPanelCheck : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, rayRange))
             {
-                print(hit.transform.gameObject.name);
                 if (hit.transform.gameObject.tag == "Part")
                 {
                     currentHit = hit.transform.GetComponentInChildren<info>().panel;
