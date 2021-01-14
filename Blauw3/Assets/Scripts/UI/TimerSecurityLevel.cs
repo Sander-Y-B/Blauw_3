@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TimerSecurityLevel : MonoBehaviour
@@ -24,6 +24,7 @@ public class TimerSecurityLevel : MonoBehaviour
             if (securityLevel.playerTimerSL > 0)
             {
                 timerMinutes = securityLevel.playerTimerAS;
+                UpdateTimer();
                 return;
             }
         }
@@ -39,29 +40,13 @@ public class TimerSecurityLevel : MonoBehaviour
             {
                 if(timerMinutes <= 0)
                 {
-                    //death
+                    SceneManager.LoadScene(0);
                 }
                 timerMinutes--;
                 timerSeconds = 59;
             }
 
-            if(timerMinutes < 10)
-            {
-                textTimerMinutes.text = "0" + Mathf.RoundToInt(timerMinutes).ToString();
-            }
-            else
-            {
-                textTimerMinutes.text = Mathf.RoundToInt(timerMinutes).ToString();
-            }
-
-            if (timerSeconds < 10)
-            {
-                textTimerSeconds.text = "0" + Mathf.RoundToInt(timerSeconds).ToString();
-            }
-            else
-            {
-                textTimerSeconds.text = Mathf.RoundToInt(timerSeconds).ToString();
-            }
+            UpdateTimer();
         }
     }
 
@@ -73,5 +58,26 @@ public class TimerSecurityLevel : MonoBehaviour
     public void PauseTimer()
     {
         runTimer = false;
+    }
+
+    public void UpdateTimer()
+    {
+        if (timerMinutes < 10)
+        {
+            textTimerMinutes.text = "0" + Mathf.RoundToInt(timerMinutes).ToString();
+        }
+        else
+        {
+            textTimerMinutes.text = Mathf.RoundToInt(timerMinutes).ToString();
+        }
+
+        if (timerSeconds < 10)
+        {
+            textTimerSeconds.text = "0" + Mathf.RoundToInt(timerSeconds).ToString();
+        }
+        else
+        {
+            textTimerSeconds.text = Mathf.RoundToInt(timerSeconds).ToString();
+        }
     }
 }
