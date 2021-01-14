@@ -7493,6 +7493,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 23800000, guid: 79d450654b76d8748a2fecd50de104a1,
         type: 2}
+    - target: {fileID: 8244241817893680532, guid: d5847f8037a70104598d0be8ed4ee111,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8448969928367146608, guid: d5847f8037a70104598d0be8ed4ee111,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11625,11 +11630,10 @@ MonoBehaviour:
   spawnRoomChance: 3
   connectDoorChance: 3
   roomPrefabs:
-  - {fileID: 3755261910311575637, guid: d5847f8037a70104598d0be8ed4ee111, type: 3}
+  - {fileID: 3106150719022561085, guid: 419b45b587e7b994da9f71cf937628ae, type: 3}
   - {fileID: 7848098635604046003, guid: 5a2e3ac5c11a3a342a11b726337e2e38, type: 3}
   - {fileID: 4034891500128876216, guid: df3d25f47d160be408385625a9caa7d7, type: 3}
   - {fileID: 4482666640206494744, guid: 5f50fbf313f47b94c9dbce8c2f161fc4, type: 3}
-  - {fileID: 3106150719022561085, guid: 419b45b587e7b994da9f71cf937628ae, type: 3}
   rooms:
   - {fileID: 1069795974}
   occupiedCoordinates: []
@@ -13208,6 +13212,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: debugPart
+      value: 
+      objectReference: {fileID: 7361042555633234493, guid: 7efb2dce45ce1c64c9056c67030b9cf0,
+        type: 3}
     - target: {fileID: 962142995371658064, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: m_Name

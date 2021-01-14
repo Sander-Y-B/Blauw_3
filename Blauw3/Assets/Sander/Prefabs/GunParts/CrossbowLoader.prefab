@@ -101,12 +101,12 @@ MonoBehaviour:
   baseClipsize: 1
   baseReloadSpeed: 0.2
   baseDamage: 5
-  modShotSpeed: -0.2
+  modShotSpeed: 0
   muzzelFlashFx: {fileID: 0}
   baseRecoil: 0
-  modShotSpread: 0
+  modShotSpread: -1
   modReloadSpeed: 0
-  modScopedSpread: 0
+  modScopedSpread: -1.5
   partIndex: 2
   inWorldPrefab: {fileID: 1660847460382286833, guid: 6f8a8649c28e97e4cbe399fe03b48175,
     type: 3}

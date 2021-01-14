@@ -61,6 +61,8 @@ public class UIManager : MonoBehaviour
             player.GetComponentInChildren<PlayerLook>().lookAllow = true;
             player.GetComponentInChildren<GunManager>().shootAllow = true;
             player.GetComponent<PlayerMove>().moveAllow = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             isPaused = false;
         }
         else
@@ -71,6 +73,7 @@ public class UIManager : MonoBehaviour
             player.GetComponentInChildren<GunManager>().shootAllow = false;
             player.GetComponent<PlayerMove>().moveAllow = false;
             Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             isPaused = true;
         }
     }

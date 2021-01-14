@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.None;   
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
     public void buttonPress()
     {
@@ -55,6 +56,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGame(int scene)
     {
+        Cursor.visible = false;
         SceneManager.LoadScene(scene);
     }
     public void QuitGame()

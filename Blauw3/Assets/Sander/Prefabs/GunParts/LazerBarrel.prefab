@@ -105,9 +105,9 @@ MonoBehaviour:
   modShotSpeed: 0
   muzzelFlashFx: {fileID: 222409345508622193, guid: 805713307d623bc43a21a0a640cd22d6,
     type: 3}
-  baseRecoil: 12
+  baseRecoil: 3
   modShotSpread: 1
-  modReloadSpeed: 0.2
+  modReloadSpeed: -0.1
   modScopedSpread: -2
   partIndex: 0
   inWorldPrefab: {fileID: 1660847460382286833, guid: ecc30ea9c9f47aa40ad8ef3d31c28626,

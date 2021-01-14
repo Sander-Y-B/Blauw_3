@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ec56897a9bef542843a28b65e13e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseShotSpeed: 1.7
+  baseShotSpeed: 0.6
   baseShotSpread: 1.2
-  modDamage: 3
-  modRecoil: 1
+  modDamage: 1.5
+  modRecoil: 2
   bullet: {fileID: 0}
   shotSFX: {fileID: 0}
   baseClipsize: 0
