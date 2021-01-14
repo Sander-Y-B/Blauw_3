@@ -14,10 +14,14 @@ public class Minimap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (roomscript.roomCleared == true)
+        if (roomscript != null)
         {
-            this.gameObject.GetComponent<Image>().color = Color.green;
-            this.enabled = false;
+            if (roomscript.roomCleared == true)
+            {
+                this.gameObject.GetComponent<Image>().color = Color.green;
+                this.enabled = false;
+            }
         }
+       
     }
 }

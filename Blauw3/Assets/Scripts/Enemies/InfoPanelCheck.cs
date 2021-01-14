@@ -29,12 +29,13 @@ public class InfoPanelCheck : MonoBehaviour
                     {
                         currentHit.SetActive(true);
                     }
+                    else if (currentHit.activeSelf == true)
+                    {
+                        currentHit.SetActive(false);
+                    }
                 }
             }
-            else if (currentHit.activeSelf == true)
-            {
-                currentHit.SetActive(false);
-            }
+
         //}
         //else if (currentHit != null)
         //{

@@ -19,6 +19,7 @@ TagManager:
   - TimerSecurityLevel
   - Part
   - infoPanel
+  - RebootTerminal
   layers:
   - Default
   - TransparentFX
