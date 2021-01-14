@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimerSecurityLevel : MonoBehaviour
 {
     public float timerMinutes;
     public float timerSeconds;
-    public Text textTimerMinutes;
-    public Text textTimerSeconds;
+    public TextMeshProUGUI textTimerMinutes;
+    public TextMeshProUGUI textTimerSeconds;
     public bool runTimer;
 
     [HideInInspector] public SecurityLevel securityLevel;
