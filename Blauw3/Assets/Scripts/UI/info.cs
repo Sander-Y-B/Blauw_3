@@ -26,6 +26,7 @@ public class info : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inWorldPart = GetComponentInParent<InWorldPart>();
         player = Camera.main.gameObject;
         basePart = inWorldPart.partPrefab.GetComponent<BasePart>();
         gunManager = FindObjectOfType<GunManager>();

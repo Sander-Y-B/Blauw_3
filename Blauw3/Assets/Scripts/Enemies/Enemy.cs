@@ -154,9 +154,6 @@ public class Enemy : MonoBehaviour
             currentDropPoint = Instantiate(dropPoint, transform.position, transform.rotation);
             currentDrop = Instantiate(Drops[Random.Range(0, Drops.Length)], currentDropPoint.transform.position, currentDropPoint.transform.rotation);
             currentDrop.GetComponent<InWorldPart>().myShopPoint = currentDropPoint;
-            currentInfoBox = Instantiate(infoBox, currentDropPoint.transform.position, currentDropPoint.transform.rotation);
-            currentInfoBox.transform.SetParent(currentDrop.transform);
-            currentInfoBox.GetComponent<info>().inWorldPart = currentDrop.GetComponent<InWorldPart>();
         }
         else if(randomNum == 2)
         {
