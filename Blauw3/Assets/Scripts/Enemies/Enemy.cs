@@ -136,15 +136,15 @@ public class Enemy : MonoBehaviour
 
     public void RandomDrop()
     {
-        randomNum = Random.Range(0,4);
+        randomNum = Random.Range(0,2);
 
-        if (randomNum == 2)
+        if (randomNum == 1)
         {
             currentDropPoint = Instantiate(dropPoint, transform.position, transform.rotation);
             currentDrop = Instantiate(Drops[Random.Range(0, Drops.Length)], currentDropPoint.transform.position, currentDropPoint.transform.rotation);
             currentDrop.GetComponent<InWorldPart>().myShopPoint = currentDropPoint;
-            //currentInfoBox = Instantiate(infoBox, currentDropPoint.transform.position, currentDropPoint.transform.rotation);
-            //currentInfoBox.GetComponent<info>().inWorldPart = currentDrop.GetComponent<InWorldPart>();
+            currentInfoBox = Instantiate(infoBox, currentDropPoint.transform.position, currentDropPoint.transform.rotation);
+            currentInfoBox.GetComponent<info>().inWorldPart = currentDrop.GetComponent<InWorldPart>();
         }
     }
 }

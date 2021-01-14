@@ -19,15 +19,22 @@ public class info : MonoBehaviour
     [HideInInspector] public float currentRecoil;
 
     GunManager gunManager;
+    public GameObject player;
     public InWorldPart inWorldPart;
     public BasePart basePart;
     public TextMeshProUGUI damage, attackSpeed, spread, scopeSpread, clipSize, reloadSpeed, recoil;
     // Start is called before the first frame update
     void Start()
     {
+        player = Camera.main.gameObject;
         basePart = inWorldPart.partPrefab.GetComponent<BasePart>();
         gunManager = FindObjectOfType<GunManager>();
         UpdateGunStats();
+    }
+
+    private void Update()
+    {
+        LookAtPlayer();
     }
     void UpdateGunStats()
     {
@@ -79,5 +86,10 @@ public class info : MonoBehaviour
         clipSize.text = currentMaxClipsize.ToString();
         reloadSpeed.text = currentReloadSpeed.ToString();
         recoil.text = currentRecoil.ToString();
+    }
+
+    public void LookAtPlayer()
+    {
+        transform.LookAt(player.transform.position);
     }
 }
