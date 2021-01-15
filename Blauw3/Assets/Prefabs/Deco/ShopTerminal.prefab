@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7392913482849666280}
   - component: {fileID: 4031035378940580999}
   m_Layer: 8
-  m_Name: Therminal 1
+  m_Name: ShopTerminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hallo <user> !\n\nyou have been selected to pick one of our free sample
-    parts. \n\nPlease injoy your free sample :)"
+    parts. \n\nPlease enjoy your free sample :)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

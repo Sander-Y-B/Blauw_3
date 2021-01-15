@@ -22,16 +22,19 @@ public class savedPartsRoom : MonoBehaviour
         for (int i = 0; i < gunManager.savedGunBodies.Count; i++)
         {
             int spawnIndex = gunManager.savedGunBodies[i];
+            savedBodiesPrefabs[spawnIndex].transform.SetParent(savedBodiesPrefabs[spawnIndex].GetComponent<InWorldPart>().myShopPoint.transform);
             savedBodiesPrefabs[spawnIndex].SetActive(true);
         }
         for (int i = 0; i < gunManager.savedGunLoaders.Count; i++)
         {
             int spawnIndex = gunManager.savedGunLoaders[i];
+            savedLoadersPrefabs[spawnIndex].transform.SetParent(savedLoadersPrefabs[spawnIndex].GetComponent<InWorldPart>().myShopPoint.transform);
             savedLoadersPrefabs[spawnIndex].SetActive(true);
         }
         for (int i = 0; i < gunManager.savedGunBarrels.Count; i++)
         {
             int spawnIndex = gunManager.savedGunBarrels[i];
+            savedBarrelsPrefabs[spawnIndex].transform.SetParent(savedBarrelsPrefabs[spawnIndex].GetComponent<InWorldPart>().myShopPoint.transform);
             savedBarrelsPrefabs[spawnIndex].SetActive(true);
         }
     }
