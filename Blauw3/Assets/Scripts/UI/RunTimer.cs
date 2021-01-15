@@ -6,16 +6,20 @@ public class RunTimer : MonoBehaviour
 {
     public string SecurityLevelName;
     public string timerSecurityLevelName;
+    public string playerName;
     public bool timerStarted;
 
     public void OnTriggerExit(Collider o)
     {
-        if(timerStarted == false)
+        if(o.gameObject.tag == playerName)
         {
-            if(GameObject.FindGameObjectWithTag(SecurityLevelName).GetComponent<SecurityLevel>().playerTimerSL > 0)
+            if(timerStarted == false)
             {
-                GameObject.FindGameObjectWithTag(timerSecurityLevelName).GetComponent<TimerSecurityLevel>().StartTimer();
-                timerStarted = true;
+                if(GameObject.FindGameObjectWithTag(SecurityLevelName).GetComponent<SecurityLevel>().playerTimerSL > 0)
+                {
+                    GameObject.FindGameObjectWithTag(timerSecurityLevelName).GetComponent<TimerSecurityLevel>().StartTimer();
+                    timerStarted = true;
+                }
             }
         }
     }

@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tpLocation: {x: 0, y: 2, z: 15}
+  minimap: {fileID: 0}
 --- !u!1 &544121234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a8c4aac599ba3418ba4d7b573748dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstRoom: 0
   totalEnemies: 12
   maxEnemiesAllowed: 4
   currentEnemies: 0
@@ -2968,6 +2970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SecurityLevelName: SecurityLevel
   timerSecurityLevelName: TimerSecurityLevel
+  playerName: Player
   timerStarted: 0
 --- !u!114 &1812068476
 MonoBehaviour:
