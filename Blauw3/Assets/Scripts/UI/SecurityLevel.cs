@@ -25,21 +25,22 @@ public class SecurityLevel : MonoBehaviour
     public float playerTimerLvl1; //amount of time you get when timer is lvl 1
     public float playerTimer; //amount of time taken off per lvl from lvl1
 
+    [Header("Actual stats")]
 
     //AS = Actual Stat 
-    [HideInInspector] public float enemyAttackSpeedAS;
-    [HideInInspector] public float enemyMovementSpeedAS;
-    [HideInInspector] public float enemyHealthAS;
-    [HideInInspector] public float enemyDamageAS;
-    [HideInInspector] public int enemyAmountAS;
-    [HideInInspector] public int enemyShieldAS;
+    public float enemyAttackSpeedAS;
+    public float enemyMovementSpeedAS;
+    public float enemyHealthAS;
+    public float enemyDamageAS;
+    public int enemyAmountAS;
+    public int enemyShieldAS;
 
-    [HideInInspector] public float playerHealingDownAS;
-    [HideInInspector] public float playerMaxHealthDownAS;
-    [HideInInspector] public float playerAmmoRegenDownAS;
-    [HideInInspector] public float playerMaxAmmoDownAS;
+    public float playerHealingDownAS;
+    public float playerMaxHealthDownAS;
+    public float playerAmmoRegenDownAS;
+    public float playerMaxAmmoDownAS;
 
-    [HideInInspector] public float playerTimerAS;
+    public float playerTimerAS;
 
 
     //individual security levels
@@ -227,13 +228,11 @@ public class SecurityLevel : MonoBehaviour
 
     public void LoadLevel()
     {
-        enemyAttackSpeedAS = 1;
         if(enemyAttackSpeedSL > 0)
         {
             enemyAttackSpeedAS += enemyAttackSpeed * enemyAttackSpeedSL / 100;
         }
 
-        enemyMovementSpeedAS = 1;
         if (enemyMovementSpeedSL > 0)
         {
             enemyMovementSpeedAS += enemyMovementSpeed * enemyMovementSpeedSL / 100;
@@ -244,14 +243,11 @@ public class SecurityLevel : MonoBehaviour
             enemyAmountAS = enemyAmount * enemyAmountSL;
         }
 
-
-        enemyHealthAS = 1;
         if (enemyHealthSL > 0)
         {
             enemyHealthAS += enemyHealth * enemyHealthSL / 100;
         }
 
-        enemyDamageAS = 1;
         if (enemyDamageSL > 0)
         {
             enemyDamageAS += enemyDamage * enemyDamageSL / 100;
@@ -262,7 +258,6 @@ public class SecurityLevel : MonoBehaviour
             enemyShieldAS = enemyShield * enemyShieldSL;
         }
 
-        playerHealingDownAS = 1;
         if (playerHealingDownSL > 0)
         {
             playerHealingDownAS += playerHealingDown * playerHealingDownSL / 100;
@@ -273,7 +268,6 @@ public class SecurityLevel : MonoBehaviour
             playerMaxHealthDownAS = playerMaxHealthDown * playerMaxHealthDownSL;
         }
 
-        playerAmmoRegenDownAS = 1;
         if (playerAmmoRegenDownSL > 0)
         {
             playerAmmoRegenDownAS += playerAmmoRegenDown * playerAmmoRegenDownSL / 100;
