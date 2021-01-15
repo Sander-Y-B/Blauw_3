@@ -42,6 +42,7 @@ public class GunManager : MonoBehaviour
     public AudioSource shotSFX;
 
     UIManager uIManager;
+    public GameObject reloadUi;
     PlayerLook playerLookScript;
 
     public GameObject debugPart;
@@ -241,10 +242,11 @@ public class GunManager : MonoBehaviour
     {
         if (canShoot)
         {
-            
+            reloadUi.SetActive(true);
             canShoot = false;
             yield return new WaitForSeconds(currentReloadSpeed);
             currentAmmoAmount = currentMaxClipsize;
+            reloadUi.SetActive(false);
             if (uIManager != null)
             {
                 uIManager.UpdateAmmoBar(currentAmmoAmount, currentMaxClipsize);

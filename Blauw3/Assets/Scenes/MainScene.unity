@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3857,7 +3857,7 @@ PrefabInstance:
     - target: {fileID: 2995230963827598441, guid: 787bc5a38381f3b4a89281642b6f9ae9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30.499939
+      value: -30.49997
       objectReference: {fileID: 0}
     - target: {fileID: 3475614492735095152, guid: 787bc5a38381f3b4a89281642b6f9ae9,
         type: 3}
@@ -3972,7 +3972,7 @@ PrefabInstance:
     - target: {fileID: 3495709022458797042, guid: 787bc5a38381f3b4a89281642b6f9ae9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 29.999992
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787bc5a38381f3b4a89281642b6f9ae9, type: 3}
@@ -13549,6 +13549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744001517, guid: 19b40f6860edf094e8d6b524107b3034, type: 3}
+      propertyPath: reloadUi
+      value: 
+      objectReference: {fileID: 1950416899}
     - target: {fileID: 962142995371658064, guid: 19b40f6860edf094e8d6b524107b3034,
         type: 3}
       propertyPath: m_Name
@@ -14634,8 +14638,8 @@ RectTransform:
   - {fileID: 277052069}
   - {fileID: 278449955}
   - {fileID: 1463631770}
-  - {fileID: 896097919}
   - {fileID: 1950416900}
+  - {fileID: 896097919}
   m_Father: {fileID: 647849737}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15772,12 +15776,12 @@ GameObject:
   - component: {fileID: 1950416902}
   - component: {fileID: 1950416901}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Reload Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950416900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15790,11 +15794,11 @@ RectTransform:
   m_LocalScale: {x: 0.26291943, y: 0.26291943, z: 0.26291943}
   m_Children: []
   m_Father: {fileID: 1860420961}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368, y: 176}
+  m_AnchoredPosition: {x: 318.6, y: 81.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950416901
