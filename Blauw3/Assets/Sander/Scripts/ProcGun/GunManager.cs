@@ -126,6 +126,10 @@ public class GunManager : MonoBehaviour
         if (securityLevel.playerMaxAmmoDown > 0)
         {
             currentMaxClipsize = statsLoader.baseClipsize - securityLevel.playerMaxAmmoDownAS;
+            if(currentMaxClipsize < 1)
+            {
+                currentMaxClipsize = 1;
+            }
         }
         else
         {
