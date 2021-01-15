@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2634,7 +2634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -25.954, y: 76.979004, z: -8.648001}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52.19388, y: -38.69989}
+  m_AnchoredPosition: {x: -52.193848, y: -38.69995}
   m_SizeDelta: {x: 20, y: 160}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &277052070
@@ -3854,76 +3854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1860420961}
     m_Modifications:
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503542023782861791, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 41.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142127571134795178, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 42.35
-      objectReference: {fileID: 0}
     - target: {fileID: 3475614492735095152, guid: 787bc5a38381f3b4a89281642b6f9ae9,
         type: 3}
       propertyPath: m_Name
@@ -4033,41 +3963,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8126103881067819040, guid: 787bc5a38381f3b4a89281642b6f9ae9,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 41.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787bc5a38381f3b4a89281642b6f9ae9, type: 3}
@@ -7861,7 +7756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -32.903, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.5, y: -246.00003}
+  m_AnchoredPosition: {x: 72.5, y: -246}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1102868887
