@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Speeen : MonoBehaviour
 {
-    public float speedHor, speedVer;
+    public float speedHor, speedVer, speedDepth;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class Speeen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(speedVer, speedHor, 0);
+        transform.Rotate(speedVer, speedHor, speedDepth);
     }
 }
