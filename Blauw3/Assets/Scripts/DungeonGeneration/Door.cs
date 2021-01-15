@@ -27,6 +27,7 @@ public class Door : MonoBehaviour
     }
     public void OpenDoors()
     {
+        closeSound.Play();
         door.SetActive(false);
     }
 }

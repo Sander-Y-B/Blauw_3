@@ -125,7 +125,11 @@ public class Enemy : MonoBehaviour
         }
         health -= damage;
 
-        if (health <= 0) { DestroyEnemy();}
+        if (health <= 0) 
+        { 
+            agent.speed = 0; 
+            DestroyEnemy();
+        }
         healthPercent = health / maxHealth * 100;
         healthSlider.value = healthPercent;
     }
