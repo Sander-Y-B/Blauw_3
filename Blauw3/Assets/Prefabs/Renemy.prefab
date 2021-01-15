@@ -801,6 +801,7 @@ MonoBehaviour:
   dissolveTime: 5
   healthSlider: {fileID: 4663132078536065346}
   shieldSlider: {fileID: 5191614968082798424}
+  shieldSliderGameObject: {fileID: 136354086766498477}
   spawnEnemies: {fileID: 0}
   dissolve: {fileID: 2100000, guid: 8216f266c463d9a409ac4bf4e94f00a7, type: 2}
   attackSound: {fileID: 1342982569843839153}

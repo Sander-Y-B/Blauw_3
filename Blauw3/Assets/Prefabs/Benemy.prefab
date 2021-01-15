@@ -596,6 +596,7 @@ MonoBehaviour:
   dissolveTime: 0
   healthSlider: {fileID: 4329410719061270204}
   shieldSlider: {fileID: 2217266075796507184}
+  shieldSliderGameObject: {fileID: 7402819266814581054}
   spawnEnemies: {fileID: 0}
   dissolve: {fileID: 2100000, guid: eb609e1d9c0f3624cb2a047b020bd381, type: 2}
   attackSound: {fileID: 2045788518547914192}

@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private float maxHealth, healthPercent;
     public Slider healthSlider;
     public Slider shieldSlider;
+    public GameObject shieldSliderGameObject;
     public SpawnEnemies spawnEnemies;
     public Material dissolve;
     public AudioSource attackSound, deathSound;
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
             maxShield = shield;
             if(shield == 0)
             {
-                shieldSlider.gameObject.SetActive(false);
+                shieldSliderGameObject.SetActive(false);
             }
         }
         maxHealth = health;
@@ -118,7 +119,7 @@ public class Enemy : MonoBehaviour
             shieldSlider.value = shield / maxShield * 100;
             if(shield == 0)
             {
-                shieldSlider.gameObject.SetActive(false);
+                shieldSliderGameObject.SetActive(false);
             }
             return;
         }
