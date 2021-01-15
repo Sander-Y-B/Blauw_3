@@ -14,6 +14,12 @@ public class UIManager : MonoBehaviour
     public GameObject player, pause, options, mainPause, hud;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, ammoSlider, sensSlider;
 
+
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("GunStat"))
