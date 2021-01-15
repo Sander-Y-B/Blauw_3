@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
+    public bool firstRoom;
     public int totalEnemies;
     public int maxEnemiesAllowed;
     public int currentEnemies;
@@ -41,12 +42,20 @@ public class SpawnEnemies : MonoBehaviour
             {
                 if (timeSinceLastSpawn >= minTimeBetweenSpawns && currentEnemies < totalEnemies && enemiesAlive.Count < maxEnemiesAllowed)//spawns more enemies, but not over a certain amount and there is a minimum wait time
                 {
-                    indicateSpawnEnemy();
-                    justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
-                    enemiesAlive.Add(justSpawnedEnemy);
-                    justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
-                    currentEnemies++;
-                    timeSinceLastSpawn = 0;
+                    if(firstRoom == true)
+                    {
+
+                    }
+                    else
+                    {
+                        indicateSpawnEnemy();
+                        justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
+                        enemiesAlive.Add(justSpawnedEnemy);
+                        justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
+                        currentEnemies++;
+                        timeSinceLastSpawn = 0;
+                    }
+
                 }
 
                 if (timerBool == true)
@@ -112,5 +121,16 @@ public class SpawnEnemies : MonoBehaviour
         {
             enemiesSpawnIndicator = 2;
         }
+    }
+
+    public IEnumerator WaitToSpawnEnemy()
+    {
+        yield return new WaitForSeconds(1);
+        indicateSpawnEnemy();
+        justSpawnedEnemy = Instantiate(enemiesToSpawn[enemiesSpawnIndicator], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
+        enemiesAlive.Add(justSpawnedEnemy);
+        justSpawnedEnemy.GetComponent<Enemy>().spawnEnemies = this;
+        currentEnemies++;
+        timeSinceLastSpawn = 0;
     }
 }
