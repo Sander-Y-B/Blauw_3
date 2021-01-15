@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RunTimer : MonoBehaviour
 {
+    public string SecurityLevelName;
     public string timerSecurityLevelName;
     public bool timerStarted;
 
@@ -11,8 +12,11 @@ public class RunTimer : MonoBehaviour
     {
         if(timerStarted == false)
         {
-            GameObject.FindGameObjectWithTag(timerSecurityLevelName).GetComponent<TimerSecurityLevel>().StartTimer();
-            timerStarted = true;
+            if(GameObject.FindGameObjectWithTag(SecurityLevelName).GetComponent<SecurityLevel>().playerTimerSL > 0)
+            {
+                GameObject.FindGameObjectWithTag(timerSecurityLevelName).GetComponent<TimerSecurityLevel>().StartTimer();
+                timerStarted = true;
+            }
         }
     }
 }
