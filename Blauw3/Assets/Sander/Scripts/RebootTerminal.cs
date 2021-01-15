@@ -10,11 +10,13 @@ public class RebootTerminal : MonoBehaviour
 
     Camera player;
     GunManager gunManager;
+    public SecurityLevel securityLevel;
 
     private void Start()
     {
         player = Camera.main;
         gunManager = FindObjectOfType<GunManager>();
+        securityLevel = GameObject.FindGameObjectWithTag("SecurityLevel").GetComponent<SecurityLevel>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -37,6 +39,7 @@ public class RebootTerminal : MonoBehaviour
     void WinGame()
     {
         gunManager.SaveGunparts();
+        securityLevel.SelfDestruct();
         //Cursor.lockState = CursorLockMode.Confined;
         //show win menu?
         SceneManager.LoadScene(0);

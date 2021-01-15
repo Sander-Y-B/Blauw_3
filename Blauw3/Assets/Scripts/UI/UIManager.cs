@@ -14,10 +14,13 @@ public class UIManager : MonoBehaviour
     public GameObject player, pause, options, mainPause, hud;
     public Slider mainSlider, musicSlider, sfxSlider, healthSlider, ammoSlider, sensSlider;
 
+    public SecurityLevel securityLevel;
+
 
     private void Start()
     {
         Cursor.visible = false;
+        securityLevel = GameObject.FindGameObjectWithTag("SecurityLevel").GetComponent<SecurityLevel>();
     }
 
     private void Update()
@@ -104,6 +107,7 @@ public class UIManager : MonoBehaviour
     }
     public void SceneSwitch(int sceneIndex)
     {
+        securityLevel.SelfDestruct();
         SceneManager.LoadScene(sceneIndex);
     }
     public void buttonPress()

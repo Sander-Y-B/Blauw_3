@@ -226,35 +226,9 @@ public class SecurityLevel : MonoBehaviour
         UpdateTotalSecurityLevel(playerTimerSecurityLevel);
     }
 
-    public void ResetValues()
+    public void SelfDestruct()
     {
-        enemyAttackSpeedSL = 0;
-        enemyMovementSpeedSL = 0;
-        enemyHealthSL = 0;
-        enemyDamageSL = 0;
-        enemyAmountSL = 0;
-        enemyShieldSL = 0;
-
-        playerHealingDownSL = 0;
-        playerMaxHealthDownSL = 0;
-        playerAmmoRegenDownSL = 0;
-        playerMaxAmmoDownSL = 0;
-
-        playerTimerSL = 0;
-
-        enemyAttackSpeedAS = 0;
-        enemyMovementSpeedAS = 0;
-        enemyHealthAS = 0;
-        enemyDamageAS = 0;
-        enemyAmountAS = 0;
-        enemyShieldAS = 0;
-
-        playerHealingDownAS = 0;
-        playerMaxHealthDownAS = 0;
-        playerAmmoRegenDownAS = 0;
-        playerMaxAmmoDownAS = 0;
-
-        playerTimerAS = 0;
+        Destroy(gameObject);
     }
 
     public void LoadLevel()

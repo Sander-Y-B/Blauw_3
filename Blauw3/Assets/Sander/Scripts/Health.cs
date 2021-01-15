@@ -52,8 +52,8 @@ public class Health : MonoBehaviour
 
     void Death()
     {
+        securityLevel.SelfDestruct();
         SceneManager.LoadScene(0);
-
     }
 
     private void Update()
